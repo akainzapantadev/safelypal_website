@@ -1,0 +1,18 @@
+/*navbar*/
+.navbar{
+    background-color: var(--main-color-bg);
+}
+.nav-link{
+    font-weight:bold;
+}
+.navbar-brand{
+    color: var(--main-color-text);
+    padding:0 .5em;
+}
+.nav-link {
+    color: white !important;
+}
+.nav-link:hover {
+    color: black!important;
+}
+
