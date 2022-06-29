@@ -111,6 +111,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="quicklinks">
 					<span>cdn Libraries : <a href="https://cdnjs.com/libraries" target="_blank">link</a></span>
 				</div>
+				<div class="quicklinks">
+					<span>Icon8 : <a href="https://icons8.com/icons/" target="_blank">link</a></span>
+				</div>
 			</div>
 			<div class="col-6">
 				<div class="quicklinks">
@@ -125,6 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="quicklinks">
 					<span>Mocking bird : <a href="https://gomockingbird.com/home" target="_blank">link</a></span>
 				</div>
+				
 
 				unsplash random image : https://source.unsplash.com/600x900/?potato
 			</div>

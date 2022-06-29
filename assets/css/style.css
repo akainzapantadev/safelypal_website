@@ -1,8 +1,37 @@
-/*navbar*/
+/* main setup design ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap%27');
+body, html{
+  font-family: var(--main-font);
+}
+*, ::after, ::before {
+box-sizing: border-box;
+}
+:root {
+  --light-color: #F3F8F8;
+  --dark-main-color: #220e5d;
+  --black-color: #0c0c0c;
+  --main-color: #5426de;
+  --sec-color: #b0de26;
+  --main-font: 'Poppins', sans-serif;
+  --sec-font: 'JetBrains Mono', monospace;
+}
+.main-color{color:#5426de;}
+.sec-color{color:#b0de26;}
+.dark-main-color {color:#220e5d;} 
+.black-color{color:#0c0c0c;}
+.light-color{color:#F3F8F8;}
+
+.dnone{display:none;}
+.round-btn{
+  border-radius: 50px!important;
+}
+
+
+/* customized design ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .navbar{
-    background-color: rgba(0, 0, 0, 0.3)!important;
-    height: 80px;
-    z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3)!important;
+  height: 80px;
+  z-index: 1;
 }
 .nav-link{
   font-family: "JetBrains Mono",monospace;
@@ -12,91 +41,22 @@
   padding-left: 2rem!important;
 }
 .nav-link:hover {
-    color: var(--main-color)!important;
+  color: var(--main-color)!important;
 }
 .navbar-brand img{
   height: 48px !important;
 }
 
-/* splash img */
+/* splash section with transparent topnav, with image and gradient overlay */
 .card{
     border:0!important;
-    position:absolute;
-    top: -80px;
-}
+    top: -80px;  /* depends on the height of navbar */
+  }
 .card img{
     object-fit: cover;
-    height:40rem!important;
+    height:40rem!important; /* height of whole splash */
 }
 .card .card-img-overlay {
     background: linear-gradient(0deg, var(--main-color)  0%, rgba(0, 0, 0, .7) 100%);
     border-color:transparent;
-}
-
-.splash-text{
-  color: var(--light-color)!important;
-  font-weight: bold!important;
-  font-size: 6rem !important;
-  margin-top:2rem;
-}
-.splash-subtext{
-  font-size: 1.2rem !important;
-  color: var(--sec-color)!important;
-}
-.splash-buttons{
-  margin:auto 0!important;
-}
-
-.button-splash {
-  align-items: center;
-  appearance: none;
-  background-color: #FCFCFD;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395A;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: var(--sec-font)!important;
-  height: 48px;
-  min-width: 12rem!important;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-}
-
-.button-splash:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-
-.button-splash:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  background-color: var(--main-color);
-  color: var(--light-color);
-  font-weight: bold;
-  transform: translateY(-2px);
-}
-
-.button-splash:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
-  background-color: #FCFCFD;
-  color: var(--dark-main-color);
-}
-#splash_container{
-  padding-top: 8rem;
 }
