@@ -128,8 +128,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="quicklinks">
 					<span>Mocking bird : <a href="https://gomockingbird.com/home" target="_blank">link</a></span>
 				</div>
+				<div class="quicklinks">
+					<span>hex to filter : <a href="https://isotropic.co/tool/hex-color-to-css-filter" target="_blank">link</a></span>
+				</div>
 				
-
 				unsplash random image : https://source.unsplash.com/600x900/?potato
 			</div>
 		</div>

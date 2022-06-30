@@ -1,12 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -27,9 +24,22 @@
         --sec-font: 'JetBrains Mono', monospace;
       }
       .main-color{color:#5426de;}
+      .sec-color{color:#b0de26;}
+      .light-color{color:#F3F8F8;}
       .dnone{display:none;}
       .round-btn{border-radius: 50px!important;}
       .border-test{border:2px solid yellow}
+      .radius-sm{border-radius:5px;}
+      .sec-font{font-family: 'JetBrains Mono', monospace}
+      .font-md{font-size:3.5rem;font-weight:600;}
+      .font-sm{font-size:1rem;font-weight:500;}
+      .font-xsm{font-size:.8rem;font-weight: 300;}
+      .font1halfrem{font-size:1.5rem;font-weight:bold;}
+      .size60{width:60px;height:60px;}
+      .size50{width:50px;height:50px;}
+      .size30{width:30px;height:30px;}
+      .size20{width:20px;height:20px;}
+      .filter-main-color{filter: invert(27%) sepia(99%) saturate(7191%) hue-rotate(257deg) brightness(87%) contrast(99%);}
     </style>
 
     <title>Safety Pal</title>
@@ -66,13 +76,13 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link navlink" href="#">Features</a>
+              <a id="features_nav" class="nav-link navlink hover-link-test" href="#">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navlink" href="#">Guides</a>
+              <a id="guides_nav" class="nav-link navlink" href="#">Guides</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navlink" href="#">Explore</a>
+              <a id="explore_nav" class="nav-link navlink" href="#">Explore</a>
             </li>
           </ul>
         </div>
@@ -80,6 +90,127 @@
         <i class="fa fa-bars fa-inverse dnone" aria-hidden="true"></i>
       </div>
     </nav>
+    <style>
+      #features_hover{
+        width:30rem;;
+        height:auto;
+        z-index: 10;
+        position:absolute;
+        background-color: var(--light-color);
+      }
+      #guides_hover{
+        width:30rem;
+        height:auto;
+        z-index: 10;
+        position:absolute;
+        background-color: var(--light-color);
+      }
+      #explore_hover{
+        width:30rem;
+        height:auto;
+        z-index: 10;
+        position:absolute;
+        background-color: var(--light-color);
+      }
+      .boxshad{
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+      }
+    </style>
+    <div id="features_hover" class="dnone radius-sm p-2">
+      <div class="boxshad p-4">
+        <div class= p-2">
+          <h1 class="main-color font-md">App features</h1>
+          <small class="text-muted font1halfrem">Overview</small>
+        </div>
+        <div class="row mt-2">
+          <div class="col-1 p-2">
+            <img class="size30 filter-main-color" src="assets\imgs\hover_links\mining1.png">
+          </div>
+          <div class="col-10">
+            <div class="py-1">
+              <span class="font-sm"> Daily mining</span><br>
+              <span class="font-xsm text-muted"> Lorem ipsum tengene</span>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="row pt-2 mt-1">
+          <div class="col-1 p-2">
+            <img class="size30 filter-main-color" src="assets\imgs\hover_links\mining2.png">
+          </div>
+          <div class="col-10">
+            <div class="py-1">
+              <span class="font-sm "> Regular mining</span><br>
+              <span class="font-xsm text-muted"> Lorem ipsum tengene peklat</span>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="row pt-2 mt-1">
+          <div class="col-1 p-2">
+            <img class="size30 filter-main-color" src="assets\imgs\hover_links\trading.png">
+          </div>
+          <div class="col-10">
+            <div class="py-1">
+              <span class="font-sm"> Rise and Fall contract</span><br>
+              <span class="font-xsm text-muted"> Lorem ipsum tengene peklat</span>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="row pt-2 mt-1">
+          <div class="col-1 p-2">
+            <img class="size30 filter-main-color" src="assets\imgs\hover_links\trading.png">
+          </div>
+          <div class="col-10">
+            <div class="py-1">
+              <span class="font-sm"> Long and Short contract</span><br>
+              <span class="font-xsm text-muted"> Lorem ipsum tengene peklat</span>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <hr>
+        <!--  -->
+        <div class="row pt-2 mt-1">
+          <div class="col-1 p-2">
+            <img class="size30 filter-main-color" src="assets\imgs\hover_links\multiwallet.png">
+          </div>
+          <div class="col-10">
+            <div class="py-1">
+              <span class="font-sm"> Multi network wallet</span><br>
+              <span class="font-xsm text-muted"> SafetyPal is on Trc20, Erc20, and Bep20 Networks!</span>
+            </div>
+          </div>
+        </div><!-- boxshad -->
+      </div>
+      <!--  -->
+    </div><!-- features_hover -->
+    <div id="guides_hover" class="dnone black-color radius-sm p-2">
+      <div class="boxshad p-4">
+        <h1 class="main-color font-md">Guides</h1>
+        <small class="text-muted font1halfrem">how to use SafetyPal?</small>
+      </div> <!-- boxshad -->
+    </div>
+    <div id="explore_hover" class="dnone radius-sm p-2">
+      <div class="boxshad p-4">
+        <div class= p-2">
+          <h1 class="main-color font-md">Explore</h1>
+          <small class="text-muted font1halfrem">Discover the space with us!</small>
+        </div>
+        <div class="row mt-2">
+          <div class="col-1 p-2">
+            <img class="size30 filter-main-color" src="assets\imgs\hover_links\blog.png">
+          </div>
+          <div class="col-10">
+            <div class="py-1">
+              <span class="font-sm"> Blogs</span><br>
+              <span class="font-xsm text-muted"> know more about crypto space</span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- boxshad -->
+    </div>
     <!-- splash section /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <div class="card">
       <style>
@@ -163,7 +294,7 @@
           <span class="splash-text">SafetyPal Wallet</span>
           <p class="splash-subtext">A multi network wallet where you can stake, play, and earn crypto!</p>
           <div class="splash-buttons mt-5 p-5">
-            <button class="button-splash mx-5">Learn more</button>
+            <button class="button-splash mx-5">Sign up now</button>
             <button class="button-splash mx-5">Get safetypal</button>
           </div>
         </div>
@@ -198,7 +329,7 @@
             </div>
             <div class="col-8 mt-5">
               <div class="display-4 mobile-screenshot-title text-center">
-                Earn and claim rewards on SafetyPal mobile app!
+                Earn and claim rewards on mobile and web app!
               </div>
               <div class="row justify-content-center my-5">
                 <div class="col-3 border-crops mx-3">
@@ -306,7 +437,112 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-  const d = new Date();
-  let year = d.getFullYear();
-  document.getElementById("year_now").innerHTML = year;
+  // year today
+    const d = new Date();
+    let year = d.getFullYear();
+    document.getElementById("year_now").innerHTML = year;
+
+  // hover effect nav links
+    ////////////////////////////////////////////////features
+    var features_nav = document.querySelector("#features_nav");
+    var features_hover = document.querySelector("#features_hover");
+    features_nav.addEventListener("mouseover", mOverl1, false);
+    features_hover.addEventListener("mouseover", mOverl1, false);
+    features_hover.addEventListener("mouseout", mOutl1, false);
+
+    function mOverl1() {
+      features_hover.setAttribute("style", "display:block;");
+      guides_hover.setAttribute("style", "display:none;");
+      explore_hover.setAttribute("style", "display:none;");
+      var xl1 = getOffset( document.getElementById('features_nav')).left;
+      var yl1 = getOffset( document.getElementById('features_nav')).top;
+      $('#features_hover').css('top',yl1+50+'px');
+      $('#features_hover').css('right',xl1+100+'px');
+    }
+    function mOutl1() {  
+      features_hover.setAttribute("style", "display:none;");
+    }
+
+    $(document).mouseup(function(e){
+      var container = $("#features_hover");
+      if (!container.is(e.target) && container.has(e.target).length === 0) 
+        {
+          features_hover.setAttribute("style", "display:none;");
+        }
+    });
+    ////////////////////////////////////////////////Guides
+    var guides_nav = document.querySelector("#guides_nav");
+    var guides_hover = document.querySelector("#guides_hover");
+    guides_nav.addEventListener("mouseover", mOverl2, false);
+    guides_hover.addEventListener("mouseover", mOverl2, false);
+    guides_hover.addEventListener("mouseout", mOutl2, false);
+
+    function mOverl2() {
+      guides_hover.setAttribute("style", "display:block;");
+      features_hover.setAttribute("style", "display:none;");
+      explore_hover.setAttribute("style", "display:none;");
+      var xl2 = getOffset( document.getElementById('guides_nav')).left;
+      var yl2 = getOffset( document.getElementById('guides_nav')).top;
+      $('#guides_hover').css('top',yl2+50+'px');
+      $('#guides_hover').css('right',xl2+(-150)+'px');
+    }
+
+    function mOutl2() {  
+      guides_hover.setAttribute("style", "display:none;");
+      features_hover.setAttribute("style", "display:none;");
+      explore_hover.setAttribute("style", "display:none;");
+    }
+    $(document).mouseup(function(e){
+      var container1 = $("#guides_hover");
+      if (!container1.is(e.target) && container.has(e.target).length === 0) 
+        {
+          guides_hover.setAttribute("style", "display:none;");
+        }
+    });
+    ////////////////////////////////////////////////explore
+    var explore_nav = document.querySelector("#explore_nav");
+    explore_nav.addEventListener("mouseover", mOverl3, false);
+    explore_hover.addEventListener("mouseover", mOverl3, false);
+    explore_hover.addEventListener("mouseout", mOutl3, false);
+
+    function mOverl3() {
+      explore_hover.setAttribute("style", "display:block;");
+      guides_hover.setAttribute("style", "display:none;");
+      features_hover.setAttribute("style", "display:none;");
+      var xl3 = getOffset( document.getElementById('explore_nav')).left;
+      var yl3 = getOffset( document.getElementById('explore_nav')).top;
+      $('#explore_hover').css('top',yl3+50+'px');
+      $('#explore_hover').css('left',xl3+(-50)+'px');
+    }
+
+    function mOutl3() {  
+      explore_hover.setAttribute("style", "display:none;");
+      guides_hover.setAttribute("style", "display:none;");
+      features_hover.setAttribute("style", "display:none;");
+    }
+
+    $(document).mouseup(function(e){
+      var container2 = $("#guides_hover");
+      if (!container2.is(e.target) && container.has(e.target).length === 0) 
+        {
+          explore_hover.setAttribute("style", "display:none;");
+        }
+    });
+  /////////////////////////////////////////////////// hover effect nav links//////////////////////
+    $('#explore_nav').on("click", function(){
+
+    });
+
+    function getOffset( el ) {
+      var _x = 0;
+      var _y = 0;
+      while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
+            _x += el.offsetLeft - el.scrollLeft;
+            _y += el.offsetTop - el.scrollTop;
+            el = el.offsetParent;
+      }
+      return { top: _y, left: _x };
+    }
+    // hover effect nav links _ end
+
 </script>
