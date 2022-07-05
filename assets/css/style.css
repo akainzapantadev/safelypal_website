@@ -25,6 +25,7 @@ box-sizing: border-box;
 .sec-font{font-family: 'JetBrains Mono', monospace}
 .font-md{font-size:3.5rem;font-weight:600;}
 .font-sm{font-size:1rem;font-weight:500;}
+.font-1rem{font-size: 1rem;}
 .font-xsm{font-size:.8rem;font-weight: 300;}
 .font1halfrem{font-size:1.5rem;font-weight:bold;}
 .size60{width:60px;height:60px;}
