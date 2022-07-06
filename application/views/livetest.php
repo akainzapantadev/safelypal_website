@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/features-cards.css">
-    <title>Safety Pal</title>
+    <link rel="icon" href="assets/imgs/icon-text.png" type="image/gif">
+    <title class="main-color">SafelyPal</title>
   </head>
   <body>
     <!-- nav section /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -38,8 +39,9 @@
     <!-- nav section end//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- nav link hover///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
       <div id="features_hover" class="dnone radius-sm p-2">
+        <style>.overhide{overflow: hidden;}</style>
         <div class="boxshad p-4">
-          <div class= p-2">
+          <div class= "">
             <h1 class="main-color font-lg">App features</h1>
             <small class="text-muted font1halfrem">Overview</small>
           </div>
@@ -48,9 +50,9 @@
               <img class="size30 filter-main-color" src="assets\imgs\hover_links\mining1.png">
             </div>
             <div class="col-10">
-              <div class="py-1">
+              <div class="py-1 overhide">
                 <span class="font-sm"> Daily mining</span><br>
-                <span class="font-xsm text-muted"> Lorem ipsum tengene</span>
+                <span class="font-xsm text-muted text-truncate"> Users can choose any coin to mine with different minimum purchase amount alloted for 24 hours time frame.</span>
               </div>
             </div>
           </div>
@@ -60,9 +62,9 @@
               <img class="size30 filter-main-color" src="assets\imgs\hover_links\mining2.png">
             </div>
             <div class="col-10">
-              <div class="py-1">
+              <div class="py-1 overhide">
                 <span class="font-sm "> Regular mining</span><br>
-                <span class="font-xsm text-muted"> Lorem ipsum tengene peklat</span>
+                <span class="font-xsm text-muted text-truncate"> Users can select their chosen time period for receiving more and a lump sum proportion of profit.</span>
               </div>
             </div>
           </div>
@@ -72,9 +74,9 @@
               <img class="size30 filter-main-color" src="assets\imgs\hover_links\trading.png">
             </div>
             <div class="col-10">
-              <div class="py-1">
+              <div class="py-1 overhide">
                 <span class="font-sm"> Rise and Fall contract</span><br>
-                <span class="font-xsm text-muted"> Lorem ipsum tengene peklat</span>
+                <span class="font-xsm text-muted text-truncate"> It offers an opportunity to traders to make profit from both rising and falling markets.</span>
               </div>
             </div>
           </div>
@@ -84,9 +86,9 @@
               <img class="size30 filter-main-color" src="assets\imgs\hover_links\trading.png">
             </div>
             <div class="col-10">
-              <div class="py-1">
+              <div class="py-1 overhide">
                 <span class="font-sm"> Long and Short contract</span><br>
-                <span class="font-xsm text-muted"> Lorem ipsum tengene peklat</span>
+                <span class="font-xsm text-muted text-truncate"> It gives the investors a chance to benefit from changes in market prices without owning the underlying asset.</span>
               </div>
             </div>
           </div>
@@ -98,9 +100,9 @@
               <img class="size30 filter-main-color" src="assets\imgs\hover_links\multiwallet.png">
             </div>
             <div class="col-10">
-              <div class="py-1">
+              <div class="py-1 overhide">
                 <span class="font-sm"> Multi network wallet</span><br>
-                <span class="font-xsm text-muted"> safelypal is on Trc20, Erc20, and Bep20 Networks!</span>
+                <span class="font-xsm text-muted text-truncate"> SafelyPal is on Trc20, Erc20, and Bep20 Networks!</span>
               </div>
             </div>
           </div>
@@ -111,7 +113,7 @@
       <div id="guides_hover" class="dnone black-color radius-sm p-2">
         <div class="boxshad p-4">
           <h1 class="main-color font-lg">Guides</h1>
-          <small class="text-muted font1halfrem">how to use safelypal?</small>
+          <small class="text-muted font1halfrem">how to use SafelyPal</small>
         </div>
       </div>
 
@@ -151,7 +153,7 @@
               }
             </style>
           <div id="splash_container" class="mt-5">
-            <span class="splash-text">safelypal Wallet</span>
+            <span class="splash-text">SafelyPal Wallet</span>
             <p class="splash-subtext">A multi network wallet where you can stake, play, and earn crypto!</p>
             <div class="splash-buttons mt-5 p-5">
               <!-- <button class="button-splash mx-5">Sign up now</button> -->
@@ -219,17 +221,17 @@
                 }
 
               </style>
-              <div class="text-center pt-3 main-color"><h6 class="font-bold">Why safelypal</h6></div>
+              <div class="text-center pt-3 main-color"><h6 class="font-bold">Why SafelyPal</h6></div>
               <div class="text-center"><h3 class="font-w500">Smart security at your hands</h3></div>
               <div class="text-center">
                 <h3 class="text-muted font-thin font-1rem"> 
-                  <span class="main-color font-normal">safelypal</span> 
-                  uses blockchain technology for every transactions. <br> You don't have to worry about extra fees as safelypal is on Tron, Ethereum, and binance smart chain network.
+                  <span class="main-color font-normal">SafelyPal</span> 
+                  uses blockchain technology for every transactions. <br> You don't have to worry about extra fees as SafelyPal is on Tron, Ethereum, and binance smart chain network.
                 </h3>
               </div>
               <div id="video_teaser_container" class="container mt-5">
                 <div id="video_iframe">
-                  <iframe src="https://www.youtube.com/embed/HOJn2c7KB94?playlist=HOJn2c7KB94&loop=1;rel=0&autoplay=1&controls=0&showinfo=0&mute=1" allow='autoplay' title="safelypal video teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/HOJn2c7KB94?playlist=HOJn2c7KB94&loop=1;rel=0&autoplay=1&controls=0&showinfo=0&mute=1" allow='autoplay' title="SafelyPal video teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -256,7 +258,7 @@
                           Multi Network Wallet
                         </div>
                         <div class="text-muted">
-                          Unlike other wallet. safelypal is connected to multi network.
+                          Unlike other wallet. SafelyPal is connected to multi network.
                         </div>
                       </div>
                       <div class="col-lg-3 col-sm-12 my-5 mini-logo-rightborder">
@@ -326,9 +328,9 @@
                   <div class="row light-color">
                    <div class="col-lg-5">
                       <div class="text-start sec-color "><h6 class="font-bold zlevel2">Features</h6></div>
-                      <div class="text-start pb-1 light-color"><h2 class="font-bold zlevel2 sub-media">Earn on Safelypal</h2></div>
+                      <div class="text-start pb-1 light-color"><h2 class="font-bold zlevel2 sub-media">Earn on SafelyPal</h2></div>
                       <div class="text-justify pb-2 light-color text1-media">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        We provide a number of opportunities for you to make money with SafelyPal and receive benefits that go beyond what you would receive from other platforms.
                       </div>
                       <div class="features-btn-media">
                         <button class="my-2 mx-0 features-btn ">Learn how</button>
@@ -347,7 +349,7 @@
                                 Rise and fall
                               </div>
                               <div class="text-muted px-3">
-                                Lorem ipsum put text description here because yes and gravity of chicken
+                                It offers an opportunity to traders to make profit from both rising and falling markets.
                               </div>
                             </div>
                             <div class="col-lg-3 my-5 mini-logo-rightborder">
@@ -355,7 +357,7 @@
                                 Short and Long
                               </div>
                               <div class="text-muted px-3">
-                              Lorem ipsum put text description here because yes and gravity of chicken
+                                It gives the investors a chance to benefit from changes in market prices without owning the underlying asset.
                               </div>
                             </div>
                             <div class="col-lg-3 my-5 mini-logo-rightborder">
@@ -363,7 +365,7 @@
                                 Daily mining
                               </div>
                               <div class="text-muted px-3">
-                                Lorem ipsum put text description here because yes and gravity of chicken
+                                Users can choose any coin to mine with different minimum purchase amount alloted for 24 hours time frame.
                               </div>
                             </div>
                             <div class="col-lg-3 my-5">
@@ -372,7 +374,7 @@
                               </div>
                               <div class="text-muted px-3 ">
                                <span class="zlevel2">
-                                Lorem ipsum put text description here because yes and gravity of chicken
+                                Users can select their chosen time period for receiving more and a lump sum proportion of profit.
                                </span> 
                             </div>
                           </div>
@@ -565,7 +567,7 @@
           </div>
 
           <div class="d-flex justify-content-between py-4 my-4 border-top">
-            <p class="">© <span id="year_now"></span> <span class="sec-link">safelypal</span>. All rights reserved.</p>
+            <p class="">© <span id="year_now"></span> <span class="sec-link">SafelyPal</span>. All rights reserved.</p>
           </div>
         </footer>
       </div>

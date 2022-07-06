@@ -140,7 +140,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<span>bootstrap cards : <a href="https://freefrontend.com/bootstrap-cards/" target="_blank">link</a></span>
 				</div>
 
-				
+				https://app.haikei.app/
 				
 				unsplash random image : https://source.unsplash.com/600x900/?potato
 			</div>
