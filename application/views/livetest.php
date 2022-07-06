@@ -31,8 +31,8 @@
               </li>
             </ul>
           </div>
-          <button class="round-btn button-splash btn-size-1 disabled" style="">Download APK ></button>
-          <i class="fa fa-bars fa-inverse dnone" aria-hidden="true"></i>
+          <button id="dl_apk" onclick="alert('ongoing development!')" class="round-btn main-btn-ui btn-size-1">Download APK</button>
+          <i id="menu_nav" class="fa fa-bars fa-inverse dnone" aria-hidden="true"></i>
         </div>
       </nav>
     <!-- nav section end//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -100,7 +100,7 @@
             <div class="col-10">
               <div class="py-1">
                 <span class="font-sm"> Multi network wallet</span><br>
-                <span class="font-xsm text-muted"> SafetyPal is on Trc20, Erc20, and Bep20 Networks!</span>
+                <span class="font-xsm text-muted"> safelypal is on Trc20, Erc20, and Bep20 Networks!</span>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@
       <div id="guides_hover" class="dnone black-color radius-sm p-2">
         <div class="boxshad p-4">
           <h1 class="main-color font-lg">Guides</h1>
-          <small class="text-muted font1halfrem">how to use SafetyPal?</small>
+          <small class="text-muted font1halfrem">how to use safelypal?</small>
         </div>
       </div>
 
@@ -139,14 +139,25 @@
       <div class="card">
         <img src="https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=639&q=80" class="w-100 img-fluid">
         <div class="card-img-overlay text-center p-5">
+            <style>
+              /* // Small devices (landscape phones, 576px and up) */
+              @media (min-width: 576px) { 
+
+              }
+
+              /* // Medium devices (tablets, 768px and up) */
+              @media (min-width: 768px) { 
+
+              }
+            </style>
           <div id="splash_container" class="mt-5">
-            <span class="splash-text">SafetyPal Wallet</span>
+            <span class="splash-text">safelypal Wallet</span>
             <p class="splash-subtext">A multi network wallet where you can stake, play, and earn crypto!</p>
             <div class="splash-buttons mt-5 p-5">
               <!-- <button class="button-splash mx-5">Sign up now</button> -->
               <!-- <button class="button-splash mx-5">Get safetypal</button> -->
-              <button class="button-splash  btn-size-1 mx-5">Pre register</button>
-              <button class="button-splash  btn-size-1 mx-5">Release notes</button>
+              <button class="main-btn-ui  btn-size-1 mx-5">Pre register</button>
+              <button class="main-btn-ui  btn-size-1 mx-5">Release notes</button>
             </div>
           </div>
         </div>
@@ -158,20 +169,20 @@
           <!-- learn more -->
             <div id="learnmore_container" class="container">
               <div class="row">
-                <div class="col-5">
+                <div class="col-lg-5 col-sm-12">
                   <div id="mobile_screenshot">
                     <img class="img-fluid" src="assets/imgs/homeview-1.png">
                   </div>
                 </div>
-                <div class="col-7 mt-5 py-5 pl-5">
-                  <div class="display-4 mobile-screenshot-title text-start">
+                <div class="col-lg-7 col-sm-12 mt-5 py-5 pl-5">
+                  <div class="display-4 mobile-screenshot-title text-start splash-res">
                     Earn and claim rewards on mobile and web app!
                   </div>
                   <div class="row mr-5 mt-3">
                     <div class="font-md text-muted text-start">
                       Many ways to earn and learn about crypto. Start your adventure with us!
                     </div>
-                    <div class="text-start">
+                    <div class="text-start learnmore_btn">
                       <button id="learnmore_btn" class="my-5">Learn more</button>
                     </div>
                   </div>
@@ -208,17 +219,17 @@
                 }
 
               </style>
-              <div class="text-center pt-3 main-color"><h6 class="font-bold">Why SafetyPal</h6></div>
+              <div class="text-center pt-3 main-color"><h6 class="font-bold">Why safelypal</h6></div>
               <div class="text-center"><h3 class="font-w500">Smart security at your hands</h3></div>
               <div class="text-center">
                 <h3 class="text-muted font-thin font-1rem"> 
-                  <span class="main-color font-normal">Safetypal</span> 
-                  uses blockchain technology for every transactions. <br> You don't have to worry about extra fees as safetypal is on Tron, Ethereum, and binance smart chain network.
+                  <span class="main-color font-normal">safelypal</span> 
+                  uses blockchain technology for every transactions. <br> You don't have to worry about extra fees as safelypal is on Tron, Ethereum, and binance smart chain network.
                 </h3>
               </div>
               <div id="video_teaser_container" class="container mt-5">
                 <div id="video_iframe">
-                  <iframe src="https://www.youtube.com/embed/HOJn2c7KB94?playlist=HOJn2c7KB94&loop=1;rel=0&autoplay=1&controls=0&showinfo=0&mute=1" allow='autoplay' title="safetypal video teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/HOJn2c7KB94?playlist=HOJn2c7KB94&loop=1;rel=0&autoplay=1&controls=0&showinfo=0&mute=1" allow='autoplay' title="safelypal video teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -226,7 +237,7 @@
               <div id="breaker1" class="container-fluid text-center mb-5" style="padding-bottom:10rem!important;">
                 <div class="container">
                   <div class="row justify-content-between">
-                    <div class="col my-5 mini-logo-rightborder">
+                    <div class="col-lg-3 col-sm-12 my-5 mini-logo-rightborder">
                         <div class="mini-logo-container p-3">
                           <img class="mini-logo" src="assets\imgs\mini-logo\api.png">
                         </div>
@@ -237,7 +248,7 @@
                           Feel safe in a blockchain environment technology. <span class="main-color font-bold font-xsm">Learn more</span>
                         </div>
                       </div>
-                      <div class="col my-5 mini-logo-rightborder">
+                      <div class="col-lg-3 col-sm-12 my-5 mini-logo-rightborder">
                         <div class="mini-logo-container p-3">
                           <img class="mini-logo" src="assets\imgs\mini-logo\wallet.png">
                         </div>
@@ -245,10 +256,10 @@
                           Multi Network Wallet
                         </div>
                         <div class="text-muted">
-                          Unlike other wallet. Safetypal is connected to multi network.
+                          Unlike other wallet. safelypal is connected to multi network.
                         </div>
                       </div>
-                      <div class="col my-5 mini-logo-rightborder">
+                      <div class="col-lg-3 col-sm-12 my-5 mini-logo-rightborder">
                         <div class="mini-logo-container p-3">
                           <img class="mini-logo" src="assets\imgs\mini-logo\secured-payment.png">
                         </div>
@@ -259,23 +270,7 @@
                           Every transaction is done thru API. Prevention from hackers is a must!
                         </div>
                       </div>
-                      <!-- <div class="col my-5 mini-logo-rightborder">
-                        <div class="mini-logo-container p-3">
-                          <img class="mini-logo" src="assets\imgs\mini-logo\track.png">
-                        </div>
-                        <div class="text-muted">
-                          Major Crypto News
-                        </div>
-                      </div>
-                      <div class="col my-5 mini-logo-rightborder">
-                        <div class="mini-logo-container p-3">
-                          <img class="mini-logo" src="assets\imgs\mini-logo\chart.png">
-                        </div>
-                        <div class="text-muted">
-                          Profit and Loss tracker
-                        </div>
-                      </div> -->
-                      <div class="col my-5">
+                      <div class="col-lg-3 col-sm-12 my-5">
                         <div class="mini-logo-container p-3">
                           <img class="mini-logo" src="assets\imgs\mini-logo\support.png">
                         </div>
@@ -294,57 +289,101 @@
           <div id="features_container" class="">
             <div class="wrapper-features pt-5"></div>
             <div id="features_cards_container">
-              <div class="container fcards pb-5">
-              <div class="text-center pb-5 main-color"><h6 class="font-bold">Features</h6></div>
-                  <div class="row border-test">
-                    <div class="col-4 border-test p-5">
-                      <div class="border-test">
-                        <img class="img-fluid" src="assets/imgs/risefall-crop.png">
+              <div class="container fcards">
+                  <style>
+                    /* // Small devices (landscape phones, 576px and up) */
+                    @media (min-width: 576px) { 
+                      .sizefcard{
+                        width:6rem;height:8rem;
+                      }
+                      .features-card-container{
+                        padding-top:.5rem!important;
+                        padding-bottom:1rem!important;
+                      }
+                    }
+
+                    /* // Medium devices (tablets, 768px and up) */
+                    @media (min-width: 768px) { 
+
+                    }
+
+                    .sizefcard{
+                      width:auto;
+                      height:20rem;
+                    }
+                    .sizefcard img{
+                      object-fit:cover;
+                      width:100%;
+                      height:100%;
+                      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                      filter: grayscale(100%);
+                      opacity: .3;
+                      border-radius:5px;
+                      /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+                      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                    }
+                  </style>
+                  <div class="row light-color">
+                   <div class="col-lg-5">
+                      <div class="text-start sec-color "><h6 class="font-bold zlevel2">Features</h6></div>
+                      <div class="text-start pb-1 light-color"><h2 class="font-bold zlevel2 sub-media">Earn on Safelypal</h2></div>
+                      <div class="text-justify pb-2 light-color text1-media">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
                       </div>
-                    </div>
-                    <div class="col-8 border-test">
-                      <div class="row text-center">
-                        <div class="col-3">
-                          <img class="img-fluid sizer2015" src="assets/imgs/risefall-crop.png">
-                        </div>
-                        <div class="col-3">
-                          <img class="img-fluid sizer2015" src="assets/imgs/claim-crop.png">
-                        </div>
-                        <div class="col-3">
-                          <img class="img-fluid sizer2015" src="assets/imgs/mining-crop.png">
-                        </div>
+                      <div class="features-btn-media">
+                        <button class="my-2 mx-0 features-btn ">Learn how</button>
                       </div>
-                      <div class="font-md">Rise and Fall</div>
+                   </div>
+                   <div class="col-lg-7 px-5 features-card-container">
+                    <div class="mt-2 justify-content-center sizefcard">
+                          <img class="fcard-img" src="https://source.unsplash.com/600x900/?defi,blockchain">
                     </div>
                   </div>
-                </div>
-                <!-- <div class="container p-5">
-                  <div class="row border-test">
-                    <div class="col-8 border-test p-5">
-                      <div class="font-md">Long and Short</div>
-                    </div>
-                    <div class="col-4 border-test p-5">
-                      <div class="border-test">
-                        <img class="img-fluid" src="assets/imgs/claim-crop.png">
+                  <div id="breaker1" class="container-fluid text-center mt-5">
+                      <div class="container">
+                        <div class="row justify-content-between">
+                          <div class="col-lg-3 my-5 mini-logo-rightborder">
+                              <div class="mini-logo-title">
+                                Rise and fall
+                              </div>
+                              <div class="text-muted px-3">
+                                Lorem ipsum put text description here because yes and gravity of chicken
+                              </div>
+                            </div>
+                            <div class="col-lg-3 my-5 mini-logo-rightborder">
+                              <div class="mini-logo-title">
+                                Short and Long
+                              </div>
+                              <div class="text-muted px-3">
+                              Lorem ipsum put text description here because yes and gravity of chicken
+                              </div>
+                            </div>
+                            <div class="col-lg-3 my-5 mini-logo-rightborder">
+                              <div class="mini-logo-title">
+                                Daily mining
+                              </div>
+                              <div class="text-muted px-3">
+                                Lorem ipsum put text description here because yes and gravity of chicken
+                              </div>
+                            </div>
+                            <div class="col-lg-3 my-5">
+                              <div class="mini-logo-title">
+                                Regular mining
+                              </div>
+                              <div class="text-muted px-3 ">
+                               <span class="zlevel2">
+                                Lorem ipsum put text description here because yes and gravity of chicken
+                               </span> 
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                   </div>
                   </div>
-                </div>
-                <div class="container p-5">
-                  <div class="row border-test">
-                    <div class="col-4 border-test p-5 fcardsend">
-                      <div class="border-test">
-                        <img class="img-fluid" src="assets/imgs/mining-crop.png">
-                      </div>
-                    </div>
-                    <div class="col-8 border-test p-5">
-                      <div class="font-md">Mining</div>
-                    </div>
-                  </div>
-                </div> -->
               </div>
             </div>
-            <div class="wrapper-features"></div>
+            <div class="wrapper-features" style="z-index: 1!important;"></div>
           </div>
             <!-- breaker1 -->
               <div id="breaker2" class="container-fluid text-center my-5 py-5">
@@ -358,11 +397,11 @@
             <div id="buycrypto_container" class="py-5">
               <div id="buycrypto_container_inner" class="my-5 py-5 container">
                 <div class="row">
-                  <div id="buycrypto_1" class="col-8 mt-2 text-center px-5">
-                    <span class="display-4 p-0">Buy crypto easier and safer</span>
+                  <div id="buycrypto_1" class="col-lg-8 mt-2 text-center px-5 text4-media">
+                    <span class="display-4 p-0 text3-media">Buy crypto easier and safer</span>
                     <div class="text-paypal text-muted py-3">Pay with paypal using debit, credit or visa card.</div>
                   </div>
-                  <div class="col-4 text-center">
+                  <div class="col-lg-4 text-center">
                     <img class="img-fluid" src="assets/imgs/paypal-buy.png">
                   </div>
                 </div>
@@ -371,45 +410,97 @@
           <!-- community -->
           <div class="wrapper-features1"></div>
           <div id="community_container" class="container-fluid">
-            <div class="text-center pt-1 main-color"><h6 class="font-bold zlevel2">community</h6></div>
+            <div class="text-center pt-1 sec-color"><h6 class="font-bold zlevel2">community</h6></div>
             <div id="community_title" class="display-4 font-bolder light-color zlevel2 text-center ">
               <span>Join our community</span>
             </div>
+            <div class="text-center pt-1 text-muted"><h6 class="font-normal text2-media">Be a part of friendly community of crypto space explorers!</h6></div>      
 
             <div class="community-logo pb-5">
               <div class="row justify-content-center pt-5">
+
                 <div class="col-lg-6 col-sm-12">
                   <div class="row justify-content-center">
-                    <div class="col-lg-6 col-sm-12 border-test p-5 sizer1010">
-                      <img class="mini-logo-soc" src="assets\imgs\mini-logo\facebook.png">
-                        <span class="light-color px-2">follow us</span><br>
-                        <span class="light-color px-2">follow us</span>
+
+                    <div class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
+                      <div class="row">
+                        <div class="col-4 text-end">
+                          <img class="mini-logo-soc" src="assets\imgs\mini-logo\facebook.png">
+                        </div>
+                        <div class="col-8 text-start">
+                          <span class="light-color">Facebook</span><br>
+                          <span class="text-muted">Join the community</span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-lg-6 col-sm-12 p-5 border-test sizer1010">
-                      <img class="mini-logo-soc" src="assets\imgs\mini-logo\ig.png">
+
+                    <div class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
+                      <div class="row">
+                        <div class="col-4 text-end">
+                          <img class="mini-logo-soc" src="assets\imgs\mini-logo\ig.png">
+                        </div>
+                        <div class="col-8 text-start">
+                          <span class="light-color">Instagram</span><br>
+                          <span class="text-muted">See the progress</span>
+                        </div>
+                      </div>
                     </div>
+
                   </div>
                 </div>
+
                 <div class="col-lg-6 col-sm-12">
                   <div class="row justify-content-center">
-                    <div class="col-6 col-sm-12 border-test p-5 sizer1010">
-                      <img class="mini-logo-soc" src="assets\imgs\mini-logo\twitter.png">
-                        <span class="light-color px-2">follow us</span><br>
-                        <span class="light-color px-2">follow us</span>
+
+                    <div class="col-6 col-sm-12 py-5 px-3 sizer1010">
+                      <div class="row">
+                        <div class="col-4 text-end">
+                          <img class="mini-logo-soc" src="assets\imgs\mini-logo\twitter.png">
+                        </div>
+                        <div class="col-8 text-start">
+                          <span class="light-color">Twitter</span><br>
+                          <span class="text-muted">Latest news</span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-6 col-sm-12 p-5 border-test sizer1010">
-                      <img class="mini-logo-soc" src="assets\imgs\mini-logo\discord.png">
+
+                    <div class="col-6 col-sm-12 px- py-5 sizer1010">
+                      <div class="row">
+                        <div class="col-4 text-end">
+                          <img class="mini-logo-soc" src="assets\imgs\mini-logo\discord.png">
+                        </div>
+                        <div class="col-8 text-start">
+                          <span class="light-color">Discord</span><br>
+                          <span class="text-muted">Be involved</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+
                 </div>
               </div> 
 
-              <div class="row justify-content-center px-2">
-                <div class="col-6 col-sm-12 p-5 border-test sizer1010">
-                  <img class="mini-logo-soc" src="assets\imgs\mini-logo\linkedin.png">
+              <div class="row justify-content-center pt-4 px-2">
+                <div class="col-6 col-sm-12 px-3 py-5 sizer1010">
+                  <div class="row">
+                    <div class="col-4 text-end">
+                      <img class="mini-logo-soc" src="assets\imgs\mini-logo\linkedin.png">
+                    </div>
+                    <div class="col-8 text-start">
+                      <span class="light-color">Linkedin</span><br>
+                      <span class="text-muted">Connect with us</span>
+                    </div>
+                  </div>
                 </div> 
-                <div class="col-6 col-sm-12 p-5 border-test sizer1010">
-                  <img class="mini-logo-soc" src="assets\imgs\mini-logo\gmail.png">
+                <div class="col-6 col-sm-12 px-3 py-5  sizer1010">
+                  <div class="row">
+                    <div class="col-4 text-end">
+                      <img class="mini-logo-soc" src="assets\imgs\mini-logo\gmail.png">
+                    </div>
+                    <div class="col-8 text-start">
+                      <span class="light-color">Gmail</span><br>
+                      <span class="text-muted">Suggest to us</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               
@@ -466,7 +557,7 @@
                 <div class="d-flex w-100 gap-2">
                   <label for="" class="visually-hidden">Email address</label>
                   <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-md-8 py-3 pt-1"><input id="" type="text" class="form-control" placeholder="Email address"></div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 py-3 pt-1"><input id="" type="text" class="form-control email-media"" placeholder="Email address"></div>
                     <div class="col-xs-12 col-md-4 col-md-4 py-3 pt-1"><button class="btn subscribe_btn" type="button">Subscribe</button></div>
                 </div>
               </form>
@@ -474,7 +565,7 @@
           </div>
 
           <div class="d-flex justify-content-between py-4 my-4 border-top">
-            <p class="">© <span id="year_now"></span> <span class="sec-link">Safetypal</span>. All rights reserved.</p>
+            <p class="">© <span id="year_now"></span> <span class="sec-link">safelypal</span>. All rights reserved.</p>
           </div>
         </footer>
       </div>

@@ -52,8 +52,17 @@ box-sizing: border-box;
 .size50{width:50px;height:50px;}
 .size30{width:30px;height:30px;}
 .size20{width:20px;height:20px;}
-.sizer2015{width:20rem;max-height:15rem!important;}
-.sizer1010{width:20rem;max-height:10rem!important;margin:1rem;}
+.sizer2015{width:20rem;max-height:12rem!important;}
+.sizer1010{width:20rem;max-height:10rem!important;margin:1rem; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 15px;}
+.sizer1010:hover{        
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #4b18e6 0 -3px 0 inset;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+.sec-btn-bg{background-color: var(--sec-color)!important;}
+.feature-card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 5px;
+}
 .btn-size-1{min-width:12rem!important;}
 .btn-size-2{min-width:20rem!important;}
 .filter-main-color{filter: invert(27%) sepia(99%) saturate(7191%) hue-rotate(257deg) brightness(87%) contrast(99%);}
@@ -75,6 +84,48 @@ box-sizing: border-box;
     transform: rotate(-4deg) scale(1.1,2.4)!important;
     z-index: 0!important;
 }
+
+.main-btn-ui{
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5426de 100%);
+    background-image: radial-gradient(100% 100% at 100% 0, #94abef 0, #5426de 100%);
+    border: 0;
+    border-radius: 12px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height:4rem;
+    width: 14rem;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    /* text-align: left; */
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 1.2rem;
+}
+.main-btn-ui:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35 , 66, .3) 0 7px 13px -3px, #4b18e6 0 -3px 0 inset;
+}
+.main-btn-ui:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #4b18e6 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
@@ -93,7 +144,7 @@ box-sizing: border-box;
         font-family: "JetBrains Mono",monospace;
         font-weight:normal;
         color: var(--light-color)!important;
-        font-size:1.2rem;
+        /* font-size:1.2rem; */
         padding-left: 2rem!important;
     }
     .nav-link:hover {
@@ -322,9 +373,53 @@ box-sizing: border-box;
     /* bg1 */
     .fcards{
         margin-top: 5rem;
+        padding-bottom: 5rem;
     }
     .fcardsend{
         margin-bottom: 5rem;
+    }
+    .features-btn{
+        align-items: center;
+        appearance: none;
+        background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, var(--main-color) 100%);
+        background-image: radial-gradient(100% 100% at 100% 0, #94abef 0, var(--main-color) 100%);
+        border: 0;
+        border-radius: 12px;
+        box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+        /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+        box-sizing: border-box;
+        color: var(--light-color);
+        cursor: pointer;
+        display: inline-flex;
+        font-family: "JetBrains Mono",monospace;
+        height: 3rem;
+        width: 12rem;
+        justify-content: center;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        transition: box-shadow .15s,transform .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow,transform;
+        font-size: 1.2rem;
+    }
+    .features-btn:focus {
+        box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35 , 66, .3) 0 7px 13px -3px, #4b18e6 0 -3px 0 inset;
+    }
+    .features-btn:hover {
+        box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #4b18e6 0 -3px 0 inset;
+        transform: translateY(-2px);
+    }
+    .fcardui{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     }
 /* community */
     #community_container{
@@ -341,3 +436,171 @@ box-sizing: border-box;
     .sec-link{
         color: var(--main-color);
     }
+
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/* media query */
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/* nav media */
+ /* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+    .navbar{
+        height:100px;
+    }
+    .p-5{
+        padding:10px!important;
+        padding-top:50px!important;
+    }
+    #splash_container{
+        padding:0px!important;
+    }
+    .splash-text{
+        font-size:4rem!important;
+        line-height: 1.2;
+    }
+    .splash-subtext{
+        font-size:.8rem!important;
+        margin-top:50px;
+    }
+    .splash-buttons{
+        padding: 2rem 2px!important;
+    }
+    .main-btn-ui{
+        font-size: 1rem;
+        margin:10px;
+    }
+    #menu_nav{
+        display:block!important;
+    }
+    #dl_apk{
+        display:none!important;
+    }
+    .text-start{
+        text-align: start!important;
+    }
+    #video_teaser_container{
+        width: auto!important;
+    }
+    h6 {
+        font-size:2rem;
+    }
+    .font-1rem{
+        font-size: 1rem!important;
+    }
+    #mobile_screenshot img{
+        height:30rem;
+    }
+    .font-md{
+        font-size: 1.2rem;
+    }
+    #learnmore_btn{
+        font-size: 1.2rem;
+        margin:10px;
+        height: 4rem;
+        width: 14rem;
+    }
+    .my-5{
+        margin-top: 2rem!important;
+        margin-bottom: 1rem!important;
+    }
+    .sub-media{
+        font-size:2rem!important;
+    }
+    h2 ,.sub-media{
+        font-size:2.5rem;
+    }
+    .text1-media{
+        text-align: justify;
+        margin-top: 10px;
+        margin-bottom: 20px!important;
+        font-size:1rem!important;
+    }
+    .text2-media{
+        margin-top: 10px;
+        margin-bottom: 20px!important;
+        font-size:1rem;
+    }
+    .features-btn-media{
+        text-align: center!important;
+        margin-bottom: 50px;
+    }
+    .email-media{
+        width:80%;
+    }
+    .display-4 ,.text3-media{
+        font-size:3.5rem!important;
+        font-weight: 500;
+        line-height: 1;
+    }
+    #buycrypto_1 , .text3-media{
+        text-align: start!important;
+    }
+    .text4-media , .px-5{
+        padding:20px !important;;
+    }
+    .display-4,.splash-res{
+        font-size: 2.3rem!important;
+        font-weight: 900;
+        line-height: 1;
+    }
+    .text-start , .learnmore_btn{
+        text-align: center!important;
+    }
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px ) and (min-width: 576px) {
+    .splash-text{
+        font-size:4.2rem!important;
+    }
+    .splash-subtext{
+        font-size:.9rem!important;
+    }
+    .splash-buttons{
+        padding: 2rem 2px!important;
+    }
+    .btn-size-1{
+        width:1rem!important;
+        height:3rem!important;
+    }
+    .main-btn-ui{
+        font-size: .9rem;
+    }
+    #menu_nav{
+        display:block!important;
+    }
+    #dl_apk{
+        display:none!important;
+        margin-left:1rem;
+        font-size:1rem;
+    }
+}
+@media (min-width: 768px) { 
+    
+    .btn-size-1{
+        min-width:10rem!important;
+    }
+    #menu_nav{
+        display:none!important;
+    }
+    #dl_apk{
+        margin-left:2rem;
+        display:block!important;
+        height:3rem;
+    }
+}
+
+/* custom media */
+@media (max-width: 870px ) and (min-width: 768px) {
+    .navbar{
+        height:100px;
+    }
+    .p-5{
+        padding:2px!important;
+        padding-left:8px!important;
+        padding-right:8px!important;
+    }
+
+}
