@@ -373,7 +373,7 @@ box-sizing: border-box;
     /* bg1 */
     .fcards{
         margin-top: 5rem;
-        padding-bottom: 5rem;
+        padding-bottom: 15rem;
     }
     .fcardsend{
         margin-bottom: 5rem;
@@ -473,7 +473,7 @@ box-sizing: border-box;
         margin:10px;
     }
     #menu_nav{
-        display:block!important;
+        display:none!important;
     }
     #dl_apk{
         display:none!important;
@@ -569,7 +569,7 @@ box-sizing: border-box;
         font-size: .9rem;
     }
     #menu_nav{
-        display:block!important;
+        display:none!important;
     }
     #dl_apk{
         display:none!important;
