@@ -17,4 +17,13 @@ class main extends CI_Controller {
 	{
 		$this->load->view('arldev_templates');
 	}
+
+	public function robots()	{
+		echo(file_get_contents("application/views/others/robots.txt"));
+	}
+
+	public function sitemap(){
+		header("Content-type: text/xml");
+		$this->load->view('others/sitemap.php');
+	}
 }
