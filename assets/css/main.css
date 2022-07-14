@@ -376,7 +376,7 @@ box-sizing: border-box;
     /* bg1 */
     .fcards{
         margin-top: 5rem;
-        padding-bottom: 15rem;
+        padding-bottom: 6rem;
     }
     .fcardsend{
         margin-bottom: 5rem;
@@ -451,7 +451,10 @@ box-sizing: border-box;
  /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) { 
     .navbar{
-        height:100px;
+        /* height:100px; */
+    }
+    .navbar-brand img{
+        height: 3.5rem!important;
     }
     .p-5{
         padding:10px!important;
@@ -480,6 +483,9 @@ box-sizing: border-box;
     }
     #dl_apk{
         display:none!important;
+        height: 3rem!important;
+        width: 2rem!important;
+        right: 0!important;
     }
     .text-start{
         text-align: start!important;
@@ -488,7 +494,7 @@ box-sizing: border-box;
         width: auto!important;
     }
     h6 {
-        font-size:2rem;
+        font-size:1.5rem;
     }
     .font-1rem{
         font-size: 1rem!important;
@@ -542,7 +548,7 @@ box-sizing: border-box;
         text-align: start!important;
     }
     .text4-media , .px-5{
-        padding:20px !important;;
+        padding:20px !important;
     }
     .display-4,.splash-res{
         font-size: 2.3rem!important;
@@ -551,6 +557,18 @@ box-sizing: border-box;
     }
     .text-start , .learnmore_btn{
         text-align: center!important;
+    }
+    #community_sub{
+        font-size:3rem;
+    }
+    .paypal_img img{
+        height: 7rem;
+    }
+    .container,.fcards{
+        padding-bottom: 2rem;
+    }
+    #breaker1{
+        /* text-align: left!important; */
     }
 }
 /* // Medium devices (tablets, 768px and up) */
