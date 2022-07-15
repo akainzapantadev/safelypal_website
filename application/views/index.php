@@ -24,14 +24,14 @@
                 <a id="features_nav" class="nav-link navlink hover-link-test" onclick="gotofeatures()" href="#">Features</a>
               </li>
               <li class="nav-item">
-                <a id="guides_nav" onclick="window.open('https://www.reddit.com/user/SafelyPal/comments/vyvk06/safelypal_newest_crypto_wallet/', '_blank');" class="nav-link navlink" href="#">Guides</a>
+                <a id="guides_nav" onclick="window.open('http://www.reddit.com/user/SafelyPal/comments/vyvk06/safelypal_newest_crypto_wallet/', '_blank');" class="nav-link navlink" href="#">Guides</a>
               </li>
               <li class="nav-item">
-                <a id="explore_nav"  onclick="window.open('https://www.reddit.com/user/SafelyPal/', '_blank');" class="nav-link navlink" href="#">Explore</a>
+                <a id="explore_nav"  onclick="window.open('http://www.reddit.com/user/SafelyPal/', '_blank');" class="nav-link navlink" href="#">Explore</a>
               </li>
             </ul>
           </div>
-          <button id="dl_apk" onclick="alert('ongoing development!')" class="round-btn main-btn-ui btn-size-1">Download APK</button>
+          <a id="dl_apk_link" class="light-color" href="assets\apk\safelypal.apk"><button id="dl_apk" class="round-btn main-btn-ui btn-size-1">Download apk</button></a>
           <i id="menu_nav" class="fa fa-bars fa-inverse dnone" aria-hidden="true"></i>
         </div>
       </nav>
@@ -353,7 +353,7 @@
                         We provide a number of opportunities for you to make money with SafelyPal and receive benefits that go beyond what you would receive from other platforms.
                       </div>
                       <div class="features-btn-media">
-                        <button onclick="window.open('https://www.reddit.com/user/SafelyPal/comments/vyvk06/safelypal_newest_crypto_wallet/', '_blank');" class="my-2 mx-0 features-btn ">Learn how</button>
+                        <button onclick="window.open('http://www.reddit.com/user/SafelyPal/comments/vyvk06/safelypal_newest_crypto_wallet/', '_blank');" class="my-2 mx-0 features-btn ">Learn how</button>
                       </div>
                    </div>
                    <div class="col-lg-7 px-5 features-card-container">
@@ -444,7 +444,7 @@
                 <div class="col-lg-6 col-sm-12">
                   <div class="row justify-content-center">
 
-                    <div onclick="window.open('https://www.facebook.com/safelypal/', '_blank');" class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
+                    <div onclick="window.open('http://www.facebook.com/safelypal/', '_blank');" class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
                       <div class="row">
                         <div class="col-4 text-end">
                           <img class="mini-logo-soc" src="assets\imgs\mini-logo\facebook.png">
@@ -456,7 +456,7 @@
                       </div>
                     </div>
 
-                    <div onclick="window.open('https://www.instagram.com/safelypal/', '_blank');" class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
+                    <div onclick="window.open('http://www.instagram.com/safelypal/', '_blank');" class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
                       <div class="row">
                         <div class="col-4 text-end">
                           <img class="mini-logo-soc" src="assets\imgs\mini-logo\ig.png">
@@ -474,7 +474,7 @@
                 <div class="col-lg-6 col-sm-12">
                   <div class="row justify-content-center">
 
-                    <div onclick="window.open('https://twitter.com/safelypal', '_blank');" class="col-6 col-sm-12 py-5 px-3 sizer1010">
+                    <div onclick="window.open('http://twitter.com/safelypal', '_blank');" class="col-6 col-sm-12 py-5 px-3 sizer1010">
                       <div class="row">
                         <div class="col-4 text-end">
                           <img class="mini-logo-soc" src="assets\imgs\mini-logo\twitter.png">
@@ -486,7 +486,7 @@
                       </div>
                     </div>
 
-                    <div onclick="window.open('https://www.reddit.com/user/SafelyPal/', '_blank');" class="col-6 col-sm-12 px- py-5 sizer1010">
+                    <div onclick="window.open('http://www.reddit.com/user/SafelyPal/', '_blank');" class="col-6 col-sm-12 px- py-5 sizer1010">
                       <div class="row">
                         <div class="col-4 text-end">
                           <img class="mini-logo-soc" src="assets\imgs\mini-logo\reddit.png">
@@ -502,7 +502,7 @@
               </div> 
 
               <div class="row justify-content-center pt-4 px-2">
-                <div onclick="window.open('https://www.linkedin.com/in/safely-pal-234123242/', '_blank');" class="col-6 col-sm-12 px-3 py-5 sizer1010">
+                <div onclick="window.open('http://www.linkedin.com/in/safely-pal-234123242/', '_blank');" class="col-6 col-sm-12 px-3 py-5 sizer1010">
                   <div class="row">
                     <div class="col-4 text-end">
                       <img class="mini-logo-soc" src="assets\imgs\mini-logo\linkedin.png">
@@ -532,8 +532,8 @@
         </div>
         <div id="getsafelypal_container" class="container my-5 text-center">
           <div class="text-center pt-1 main-color"><h6 class="font-bold">Get safelypal</h6></div>
-            <div class="mini-logo-title">Use safelypal browser <span class="main-color" onclick="window.open('https://www.testingcenter.xyz', '_blank');">click here</span></div>
-            <div class="mini-logo-title">Download safelypal APK <span class="main-color" onclick="window.open('https://safelypal.com', '_blank');">click here</span> </div>
+            <div class="mini-logo-title">Use safelypal browser <span class="main-color cursorpointer" onclick="window.open('http://www.testingcenter.xyz', '_blank');">click here</span></div>
+            <div class="mini-logo-title">Download safelypal APK <a class="main-color cursorpointer" href="assets\apk\safelypal.apk">click here</a> </div>
           </div>
       </main>
     <!-- main section end/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -572,8 +572,8 @@
             <div class="col-lg-2 col-sm-4 px-5 py-2">
               <h5 class="">Mentions</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a target="_blank" class="nav-link p-0 sec-link" href="https://icons8.com"><span>Icons: Icons8</span></a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 sec-link">Design: arldev</a></li>
+                <li class="nav-item mb-2"><a target="_blank" class="nav-link p-0 sec-link" href="https://icons8.com"><span>Icons by Icons8</span></a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 sec-link">arldev design</a></li>
               </ul>
             </div>
 

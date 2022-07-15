@@ -625,3 +625,6 @@ box-sizing: border-box;
     }
 
 }
+.cursorpointer:hover{
+    cursor: pointer;
+}
