@@ -3,9 +3,21 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title class="main-color">SafelyPal blogs</title>
+        <meta name="title" content="Crypto Wallet Is The Key To Web 3.0">
+        <meta name="description" content="The majority of people may not be aware that, twenty years ago, websites frequently displayed icons that read, 'This site has been optimized for Internet Explorer.'A struggle was fought over who would control the portal to the early consumer internet, just like there is now between Web 2.0 monopolies and Web 3.0 communities: an open-source nonprofit or a closed-source global monopoly.">
+
+        <meta name="keywords" content="safelypal, safelypal.com, safelypal crypto, safelypal wallet, safelypal crypto wallet, safelypal blog, safelypal.com blog, safelypal review, safelypal.com review, what is safelypal, web 3 wallet metamask, web3 wallet example, best crypto wallet, crypto defi wallet review, best web3 wallet, is coinbase a web3 wallet, web3 wallet extension, web3 wallet github, web 3.0 stocks, Web 3.0 crypto projects, Web 3.0 crypto coins list, Web 3.0 crypto list, Web 3.0 crypto, Web 3.0 crypto coins, best web 3.0 crypto, web 3 0 definition, when will web 3.0 be released, best web 3.0 crypto, will crypto go to 0, best web to buy crypto, buy crypto 0 fees, can crypto go to 0, Web 3.0 examples, Web 3.0 features, what is web 3.0, web 3 get token symbol, buy crypto zero fees, how to buy crypto on webull desktop, crypto wallet app, crypto wallet canada, crypto wallet australia, crypto wallet hardware, crypto wallet uk, crypto wallet address, crypto wallet robinhood, crypto wallet online, crypto wallet exodus, best crypto wallet, robinhood crypto wallet, best crypto wallet app, exodus crypto wallet, safest crypto wallet, best crypto wallet canada, best crypto wallet australia, best crypto wallet reddit, best crypto wallet uk, hardware crypto wallet, cryptocurrency wallet, crypto.com defi wallet, crypto hardware wallet, crypto cold wallet, crypto hard wallet, crypto.com wallet address, crypto.com to trust wallet, cryptocurrency best wallet, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for nft, crypto wallet hardware, crypto wallet for mining, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for nft, crypto wallet metamask, crypto wallet for mining, crypto wallets list, best crypto wallet 2022">
+
+        <meta name="robots" content="index,follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+        <meta name="author" content="SAFELYPAL-DEV">
+        <meta name="google-site-verification" content="" />
+        <meta property="og:title" content="Crypto Wallet Is The Key To Web 3.0"/>
+        <meta property="og:description" content="The majority of people may not be aware that, twenty years ago, websites frequently displayed icons that read, 'This site has been optimized for Internet Explorer.'A struggle was fought over who would control the portal to the early consumer internet, just like there is now between Web 2.0 monopolies and Web 3.0 communities: an open-source nonprofit or a closed-source global monopoly."/>
+        <meta property="og:image" content=""/>
+        <meta property="og:url" content="safelypal.com/blogs/the-key-to-web-3.0"/>
+        <title class="main-color">The key to web 3.0</title>
         <link rel="icon" href="../assets/imgs/icon-text.png" type="image/gif">
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>

@@ -3,8 +3,20 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="title" content="SafelyPal blogs - from SafelyPal Team">
+        <meta name="description" content="The expansion of the cryptocurrency business is being covered by more blogs and media outlets than ever before. There is never a lack of sources to keep up with what's occurring in crypto, from the major media companies to tiny indie websites.">
+
+        <meta name="keywords" content="cryptocurrency blog, cryptocurrency blog sites, cryptocurrency blog website, cryptocurrency blog updates, cryptocurrency blog for beginners, crypto blog, crypto update blog, best blog cryptocurrency, cryptocurrency blog sites">
+
+        <meta name="robots" content="index,follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+        <meta name="author" content="SAFELYPAL-DEV">
+        <meta name="google-site-verification" content="" />
+        <meta property="og:title" content="SafelyPal blogs - from SafelyPal Team"/>
+        <meta property="og:description" content="The expansion of the cryptocurrency business is being covered by more blogs and media outlets than ever before. There is never a lack of sources to keep up with what's occurring in crypto, from the major media companies to tiny indie websites."/>
+        <meta property="og:image" content=""/>
+        <meta property="og:url" content="safelypal.com/blogs"/>
         <title class="main-color">SafelyPal blogs</title>
         <link rel="icon" href="assets/imgs/icon-text.png" type="image/gif">
         <!-- Font Awesome icons (free version)-->
@@ -40,7 +52,7 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="blogs/newestcryptowallet">
+                        <a href="blogs/newest-crypto-wallet">
                             <h2 class="post-title">SafelyPal: Newest Crypto Wallet</h2>
                             <h3 class="post-subtitle">SafelyPal is a Crypto Wallet Platform where you can trade, earn or ...</h3>
                         </a>
@@ -54,7 +66,7 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="blogs/tipsoncryptotrading"><h2 class="post-title">5 Tips on Crypto Trading</h2>
+                        <a href="blogs/tips-on-crypto-trading"><h2 class="post-title">5 Tips on Crypto Trading</h2>
                         <h3 class="post-subtitle">It would be beneficial to agree upon a course of action before continuing... </h3>
                         </a>
                         <p class="post-meta">
@@ -67,7 +79,7 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="blogs/thekeytoweb3">
+                        <a href="blogs/the-key-to-web-3.0">
                             <h2 class="post-title">Crypto Wallet Is The Key To Web 3.0</h2>
                             <h3 class="post-subtitle">The majority of people may not be aware that, twenty years ago, websites...</h3>
                         </a>
@@ -81,7 +93,7 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="blogs/bestcryptowallet2022">
+                        <a href="blogs/best-crypto-wallet-2022">
                             <h2 class="post-title">7 Best Cryptocurrency Wallet 2022</h2>
                             <h3 class="post-subtitle">The best wallet is the only way to safeguard your cryptocurrency money...</h3>
                         </a>
