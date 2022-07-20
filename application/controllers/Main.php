@@ -8,15 +8,15 @@ class main extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
+	public function blogs()
+	{
+		$this->load->view('blogs/blogs');
+	}
 	public function livetest()
 	{
 		$this->load->view('livetest');
 	}
 
-    public function arldev()
-	{
-		$this->load->view('arldev_templates');
-	}
 
 	public function robots()	{
 		echo(file_get_contents("application/views/others/robots.txt"));
@@ -68,5 +68,22 @@ class main extends CI_Controller {
 		}
 	}
 
+		// blogposts
+	public function newestcryptowallet()
+	{
+		$this->load->view('blogs/blog-posts/newestcryptowallet');
+	}
+	public function tipsoncryptotrading()
+	{
+		$this->load->view('blogs/blog-posts/tipsoncryptotrading');
+	}
+	public function thekeytoweb3()
+	{
+		$this->load->view('blogs/blog-posts/thekeytoweb3');
+	}
+	public function bestcryptowallet2022()
+	{
+		$this->load->view('blogs/blog-posts/bestcryptowallet2022');
+	}
 
 }

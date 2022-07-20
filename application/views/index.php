@@ -127,9 +127,20 @@
               <img class="size30 filter-main-color" src="assets\imgs\hover_links\blog.png">
             </div>
             <div class="col-10">
-              <div class="py-1">
-                <span class="font-sm"> Blogs</span><br>
-                <span class="font-xsm text-muted"> know more about crypto space</span>
+              <div class="py-1 hover-links-style" onclick="window.open('http://www.reddit.com/user/SafelyPal/', '_blank');">
+                <span class="font-sm hover-links-style"> Reddit</span><br>
+                <span class="font-xsm text-muted"> Check out our blogs on reddit</span>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-1 p-2">
+              <img class="size30 filter-main-color" src="assets\imgs\hover_links\blog.png">
+            </div>
+            <div class="col-10">
+              <div class="py-1 hover-links-style">
+                <div class=""><span id="blogs_" class="font-sm hover-links-style">Blogs</span></div>
+                <span class="font-xsm text-muted"> How Safelypal impacts the cryptospace</span>
               </div>
             </div>
           </div>
@@ -190,7 +201,7 @@
                 </div>
                 <div class="col-lg-7 col-sm-12 mt-5 py-5 pl-5">
                   <div class="display-4 mobile-screenshot-title text-start splash-res">
-                    Earn and claim rewards on mobile and web app!
+                    Earn rewards on mobile and web app!
                   </div>
                   <div class="row mr-5 mt-3">
                     <div class="font-md text-muted text-start">
@@ -308,8 +319,8 @@
                 </div>
               </div>
           <!-- features cards -->
-          <div id="features_container" class="">
-            <div class="wrapper-features pt-5"></div>
+          <div id="features_container" class="pt-3">
+            <!-- <div class="wrapper-features pt-5"></div> -->
             <div id="features_cards_container">
               <div class="container fcards">
                   <style>
@@ -346,7 +357,7 @@
                     }
                   </style>
                   <div class="row light-color">
-                   <div class="col-lg-5">
+                    <div class="col-lg-5">
                       <div class="text-start sec-color "><h6 class="font-bold zlevel2">Features</h6></div>
                       <div class="text-start pb-1 light-color"><h2 class="font-bold zlevel2 sub-media">Earn on SafelyPal</h2></div>
                       <div class="text-justify pb-2 light-color text1-media">
@@ -355,8 +366,8 @@
                       <div class="features-btn-media">
                         <button onclick="window.open('http://www.reddit.com/user/SafelyPal/comments/vyvk06/safelypal_newest_crypto_wallet/', '_blank');" class="my-2 mx-0 features-btn ">Learn how</button>
                       </div>
-                   </div>
-                   <div class="col-lg-7 px-5 features-card-container">
+                    </div>
+                  <div class="col-lg-7 px-5 features-card-container">
                     <div class="mt-2 justify-content-center sizefcard">
                           <img class="fcard-img" src="https://source.unsplash.com/600x900/?defi,blockchain">
                     </div>
@@ -393,19 +404,19 @@
                                 Regular mining
                               </div>
                               <div class="text-muted px-3 ">
-                               <span class="zlevel2">
-                                Users can select their chosen time period for receiving more and a lump sum proportion of profit.
-                               </span> 
+                                <span class="zlevel2">
+                                  Users can select their chosen time period for receiving more and a lump sum proportion of profit.
+                                </span> 
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                   </div>
                   </div>
+                </div>
               </div>
             </div>
-            <div class="wrapper-features" style="z-index: 1!important;"></div>
+            <!-- <div class="wrapper-features" style="z-index: 1!important;"></div> -->
           </div>
             <!-- breaker1 -->
               <div id="breaker2" class="container-fluid text-center my-5 py-5">
@@ -430,8 +441,8 @@
               </div>
             </div>
           <!-- community -->
-          <div class="wrapper-features1"></div>
-          <div id="community_container" class="container-fluid">
+          <!-- <div class="wrapper-features1"></div> -->
+          <div id="community_container" class="container-fluid pt-5">
             <div class="text-center pt-1 sec-color"><h6 class="font-bold zlevel2">community</h6></div>
             <div id="community_title" class="display-4 font-bolder light-color zlevel2 text-center ">
               <span id="community_sub">Join our community</span>
@@ -750,15 +761,15 @@
         },
         errorPlacement: function(error, element) {
 		  	  // alert('please put email');
-		  	},
+        },
 
         submitHandler: function(form){
           var data = $('#subscribe_form').serializeArray();
 
           data.push({
-	  				'name':'ip',
-	  				'value':ip
-	  			});
+              'name':'ip',
+              'value':ip
+          });
 
           var res = ajaxShortLink('main/subscribe',data);
           console.log(res);
@@ -773,5 +784,14 @@
         }
     });
 
+    $( "#blogs_" ).click(function() {
+      // bootbox.alert({
+      //     message: ajaxLoadPage('quickLoadPage',{'pagename':'blogs'}),
+      //     size: 'large',
+      //     centerVertical: true,
+      //     closeButton: false
+      //   });
+      window.open('blogs', '_blank');
+    });
   </script>
 <!-- script section -->
