@@ -142,7 +142,7 @@
               <img class="size30 filter-main-color" src="assets\imgs\hover_links\blog.png">
             </div>
             <div class="col-10">
-              <div class="py-1 hover-links-style" onclick="window.open('http://www.reddit.com/user/SafelyPal/', '_blank');">
+              <div class="py-1 hover-links-style" onclick="window.open('https://www.reddit.com/user/SafelyPal/', '_blank');">
                 <span class="font-sm hover-links-style"> Reddit</span><br>
                 <span class="font-xsm text-muted"> Check out our blogs on reddit</span>
               </div>
@@ -186,7 +186,7 @@
               <button onclick="signupredirect()" type="button" class="main-btn-ui  btn-size-1 mx-5">Sign up</button>
                 <script>
                 function signupredirect(){
-                  var signup = window.open('http://testingcenter.xyz/', '_blank');
+                  var signup = window.open('https://wallet.safelypal.com/', '_blank');
                   signup.focus();
                   }
                 </script>
@@ -379,7 +379,7 @@
                         We provide a number of opportunities for you to make money with SafelyPal and receive benefits that go beyond what you would receive from other platforms.
                       </div>
                       <div class="features-btn-media">
-                        <button onclick="window.open('http://www.reddit.com/user/SafelyPal/comments/vyvk06/safelypal_newest_crypto_wallet/', '_blank');" class="my-2 mx-0 features-btn ">Learn how</button>
+                        <button onclick="window.open('https://www.reddit.com/user/SafelyPal/comments/vyvk06/safelypal_newest_crypto_wallet/', '_blank');" class="my-2 mx-0 features-btn ">Learn how</button>
                       </div>
                     </div>
                   <div class="col-lg-7 px-5 features-card-container">
@@ -470,7 +470,7 @@
                 <div class="col-lg-6 col-sm-12">
                   <div class="row justify-content-center">
 
-                    <div onclick="window.open('http://www.facebook.com/safelypal/', '_blank');" class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
+                    <div onclick="window.open('https://www.facebook.com/safelypal/', '_blank');" class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
                       <div class="row">
                         <div class="col-4 text-end">
                           <img class="mini-logo-soc" src="assets\imgs\mini-logo\facebook.png">
@@ -482,7 +482,7 @@
                       </div>
                     </div>
 
-                    <div onclick="window.open('http://www.instagram.com/safelypal/', '_blank');" class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
+                    <div onclick="window.open('https://www.instagram.com/safelypal/', '_blank');" class="col-lg-6 col-sm-12 py-5 px-3 sizer1010">
                       <div class="row">
                         <div class="col-4 text-end">
                           <img class="mini-logo-soc" src="assets\imgs\mini-logo\ig.png">
@@ -500,7 +500,7 @@
                 <div class="col-lg-6 col-sm-12">
                   <div class="row justify-content-center">
 
-                    <div onclick="window.open('http://twitter.com/safelypal', '_blank');" class="col-6 col-sm-12 py-5 px-3 sizer1010">
+                    <div onclick="window.open('https://twitter.com/safelypal', '_blank');" class="col-6 col-sm-12 py-5 px-3 sizer1010">
                       <div class="row">
                         <div class="col-4 text-end">
                           <img class="mini-logo-soc" src="assets\imgs\mini-logo\twitter.png">
@@ -512,7 +512,7 @@
                       </div>
                     </div>
 
-                    <div onclick="window.open('http://www.reddit.com/user/SafelyPal/', '_blank');" class="col-6 col-sm-12 px- py-5 sizer1010">
+                    <div onclick="window.open('https://www.reddit.com/user/SafelyPal/', '_blank');" class="col-6 col-sm-12 px- py-5 sizer1010">
                       <div class="row">
                         <div class="col-4 text-end">
                           <img class="mini-logo-soc" src="assets\imgs\mini-logo\reddit.png">
@@ -528,7 +528,7 @@
               </div> 
 
               <div class="row justify-content-center pt-4 px-2">
-                <div onclick="window.open('http://www.linkedin.com/in/safely-pal-234123242/', '_blank');" class="col-6 col-sm-12 px-3 py-5 sizer1010">
+                <div onclick="window.open('https://www.linkedin.com/in/safely-pal-234123242/', '_blank');" class="col-6 col-sm-12 px-3 py-5 sizer1010">
                   <div class="row">
                     <div class="col-4 text-end">
                       <img class="mini-logo-soc" src="assets\imgs\mini-logo\linkedin.png">
@@ -558,7 +558,7 @@
         </div>
         <div id="getsafelypal_container" class="container my-5 text-center">
           <div class="text-center pt-1 main-color"><h6 class="font-bold">Get safelypal</h6></div>
-            <div class="mini-logo-title">Use safelypal browser <span class="main-color cursorpointer" onclick="window.open('http://www.testingcenter.xyz', '_blank');">click here</span></div>
+            <div class="mini-logo-title">Use safelypal browser <span class="main-color cursorpointer" onclick="window.open('https://www.wallet.safelypal.com', '_blank');">click here</span></div>
             <div class="mini-logo-title">Download safelypal APK <a class="main-color cursorpointer" href="assets\apk\safelypal.apk">click here</a> </div>
           </div>
       </main>

@@ -26,6 +26,8 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="assets/css/blogs.css" rel="stylesheet" />
+        <script src="assets/js/common.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     </head>
     <body>
         <!-- Navigation-->
@@ -52,59 +54,8 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="blogs/newest-crypto-wallet">
-                            <h2 class="post-title">SafelyPal: Newest Crypto Wallet</h2>
-                            <h3 class="post-subtitle">SafelyPal is a Crypto Wallet Platform where you can trade, earn or ...</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Safelypal Team</a>
-                            on July 15, 2022
-                        </p>
+                        
                     </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="blogs/tips-on-crypto-trading"><h2 class="post-title">5 Tips on Crypto Trading</h2>
-                        <h3 class="post-subtitle">It would be beneficial to agree upon a course of action before continuing... </h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Safelypal Team</a>
-                            on July 17, 2022
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="blogs/the-key-to-web-3.0">
-                            <h2 class="post-title">Crypto Wallet Is The Key To Web 3.0</h2>
-                            <h3 class="post-subtitle">The majority of people may not be aware that, twenty years ago, websites...</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Safelypal Team</a>
-                            on July 19, 2022
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="blogs/best-crypto-wallet-2022">
-                            <h2 class="post-title">7 Best Cryptocurrency Wallet 2022</h2>
-                            <h3 class="post-subtitle">The best wallet is the only way to safeguard your cryptocurrency money...</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Safelypal Team</a>
-                            on July 20, 2022
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
                     <!-- Pager-->
                     <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
                 </div>
@@ -120,23 +71,23 @@
                                 <a href="#!">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-reddit fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-google fa-stack-1x fa-inverse"></i>
+                                    </span>                                                                                                                                                                                    
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>
@@ -148,12 +99,33 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
 </html>
 <script>
     const d = new Date();
     let year = d.getFullYear();
     document.getElementById("year_now").innerHTML = year;
+
+    var res = JSON.parse('<?php echo json_encode($res)?>')
+        for (let index = 0; index < res.length; index++) {
+            $('.post-preview').append(
+
+                // '<a href="blogs/blog'+res[index].id+'">'+
+                '<a href="blogs/'+res[index].routeLink+'">'+
+                    '<h2 class="post-title">'+res[index].title+'</h2>'+
+                    '<h3 class="post-subtitle">'+res[index].desc+'</h3>'+
+                '</a>'+
+                '<p class="post-meta">'+
+                    'Posted by'+
+                    '<a href="#!">' +res[index].author+'</a>'+
+                    ' '+res[index].dateCreated+
+                '</p>'+
+            '<hr class="my-4" />'
+            )
+        }
+        console.log(res);
+
+    function blogpost(blog){
+        
+    }
 </script>

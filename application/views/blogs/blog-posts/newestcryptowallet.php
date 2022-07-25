@@ -17,8 +17,7 @@
         <meta property="og:description" content="Safelypal is a Crypto Wallet Platform where you can trade, earn or simply store your crypto assets with prestige privacy and security."/>
         <meta property="og:image" content=""/>
         <meta property="og:url" content="safelypal.com/blogs/newest-crypto-wallet"/>
-
-        <title class="main-color">SafelyPal blogs</title>
+        <title class="main-color">Newest Crypto Wallets</title>
         <link rel="icon" href="../assets/imgs/icon-text.png" type="image/gif">
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -135,7 +134,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
 </html>
 <script>
