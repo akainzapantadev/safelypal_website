@@ -11586,6 +11586,12 @@ header.masthead .post-heading .meta a {
 	margin-top: 2rem;
 }
 
+.section-heading2 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-top: 1.5rem;
+}
+
 .caption {
 	font-size: 0.875rem;
 	font-style: italic;

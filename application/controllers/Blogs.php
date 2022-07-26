@@ -6,6 +6,12 @@ class blogs extends MY_Controller {
 	public function __construct(){
 		parent::__construct();
 	}
+
+	public function adminBlogs()
+	{
+		$this->load->view('blogs/adminBlogs');
+	}
+
 	public function blogs()
 	{
 
@@ -29,28 +35,10 @@ class blogs extends MY_Controller {
 			'res' => $res,
 		);
 
+		// echo json_encode($res);
+
 		$this->load->view('blogs/blogs',$data);
 		
-	}
-	public function adminBlogs()
-	{
-		$this->load->view('blogs/adminBlogs');
-	}
-	// blogposts
-	public function newestcryptowallet(){
-		$this->load->view('blogs/blog-posts/newestcryptowallet');
-	}
-
-	public function tipsoncryptotrading(){
-		$this->load->view('blogs/blog-posts/tipsoncryptotrading');
-	}
-
-	public function thekeytoweb3(){
-		$this->load->view('blogs/blog-posts/thekeytoweb3');
-	}
-
-	public function bestcryptowallet2022(){
-		$this->load->view('blogs/blog-posts/bestcryptowallet2022');
 	}
 
 	public function blogLoad($slug){
@@ -79,7 +67,7 @@ class blogs extends MY_Controller {
 				$seo = $this->_getRecordsData(
 					$selectfields = array(
 						"
-							seo_tags_tbl.content AS seo_content, seo_tags_tbl.name AS seo_name,seo_tags_tbl.property AS seo_property
+							seo_tags_tbl.content AS seo_content, seo_tags_tbl.name AS seo_name
 						"), 
 					$tables = array('seo_tags_tbl','blogs_tbl'),
 					$fieldName = array('blogs_tbl.routeLink'), 
@@ -101,7 +89,10 @@ class blogs extends MY_Controller {
 					'title' => $res[0]->title,
 					'desc' => $res[0]->desc,
 					'dateCreated' => $res[0]->dateCreated,
-					'seoContents' => $seo,
+					'seoTitle' => $seo[0]->seo_content,
+					'seoDesc' => $seo[1]->seo_content,
+					'seoKeywords' => $seo[2]->seo_content,
+					'seoUrl' => $seo[3]->seo_content,
 				);
 
 				$this->load->view('blogs/blog-posts/blogContainer', $data);

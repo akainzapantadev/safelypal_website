@@ -19,7 +19,7 @@ class main extends CI_Controller {
 		header("Content-type: text/xml");
 		$this->load->view('others/sitemap.php');
 	}
-lic function subscribe(){
+	public function subscribe(){
 
 		$this->db->where('ip',$_GET["ip"]);
 		$q = $this->db->get('subscribers_tbl');

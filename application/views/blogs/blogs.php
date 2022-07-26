@@ -54,7 +54,31 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
                     <div class="post-preview">
-                        
+                        <?php 
+                            for ($i=0; $i < count($res); $i++) { 
+                                echo '<a href="blogs/'.$res[$i]->routeLink.'">';
+                                echo '<h2 class="post-title">'.$res[$i]->title.'</h2>';
+                                echo '<h3 class="post-subtitle">'.$res[$i]->desc.'</h3>';
+                                echo '</a>';
+                                echo'<p class="post-meta">';
+                                echo'Posted by';
+                                echo'<a href="#!">' .$res[$i]->author.'</a>';
+                                echo' '.$res[$i]->dateCreated;
+                                echo'</p>';
+                                echo'<hr class="my-4" />';
+                            }
+                         // '<a href="blogs/'+res[index].routeLink+'">'+
+                        // '<h2 class="post-title">'+res[index].title+'</h2>'+
+                        // '<h3 class="post-subtitle">'+res[index].desc+'</h3>'+
+                        // '</a>'+
+                        // '<p class="post-meta">'+
+                        // 'Posted by'+
+                        // '<a href="#!">' +res[index].author+'</a>'+
+                        // ' '+res[index].dateCreated+
+                        // '</p>'+
+                        // '<hr class="my-4" />'
+                        ?>
+                       
                     </div>
                     <!-- Pager-->
                     <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
@@ -106,26 +130,26 @@
     let year = d.getFullYear();
     document.getElementById("year_now").innerHTML = year;
 
-    var res = JSON.parse('<?php echo json_encode($res)?>')
-        for (let index = 0; index < res.length; index++) {
-            $('.post-preview').append(
+   
+        // for (let index = 0; index < res.length; index++) {
+        //     $('.post-preview').append(
 
-                // '<a href="blogs/blog'+res[index].id+'">'+
-                '<a href="blogs/'+res[index].routeLink+'">'+
-                    '<h2 class="post-title">'+res[index].title+'</h2>'+
-                    '<h3 class="post-subtitle">'+res[index].desc+'</h3>'+
-                '</a>'+
-                '<p class="post-meta">'+
-                    'Posted by'+
-                    '<a href="#!">' +res[index].author+'</a>'+
-                    ' '+res[index].dateCreated+
-                '</p>'+
-            '<hr class="my-4" />'
-            )
-        }
-        console.log(res);
+        //         // '<a href="blogs/blog'+res[index].id+'">'+
+        //         '<a href="blogs/'+res[index].routeLink+'">'+
+        //             '<h2 class="post-title">'+res[index].title+'</h2>'+
+        //             '<h3 class="post-subtitle">'+res[index].desc+'</h3>'+
+        //         '</a>'+
+        //         '<p class="post-meta">'+
+        //             'Posted by'+
+        //             '<a href="#!">' +res[index].author+'</a>'+
+        //             ' '+res[index].dateCreated+
+        //         '</p>'+
+        //     '<hr class="my-4" />'
+        //     )
+        // }
+        // console.log(res);
 
-    function blogpost(blog){
+    // function blogpost(blog){
         
-    }
+    // }
 </script>
