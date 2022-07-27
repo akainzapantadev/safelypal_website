@@ -85,11 +85,11 @@
 </body>
 </html>
 <script>
-var p = 0;
-var t = 0;
-var t1 = 0;
-var t2 = 0;
-var contents='';
+var p = 0
+var t = 0
+var t1 = 0
+var t2 = 0
+var contents=''
 
 function addcontent(type){
   if(type=='p'){
@@ -153,12 +153,31 @@ function viewcontents_(){
   console.log(contents)
 }
 function addblog_(){
-title_input
-routeLink_input
-author_input
-sdesc_input
-dateCreated //timestamp
-contents
+
+var titleVar = $('#title_input').val()
+var routeVar = $('#routeLink_input').val()
+var authorVar = $('#author_input').val()
+var sdescVar = $('#sdesc_input').val()
+
+var descVar = $('#desc_input').val()
+var keywordsVar = $('#keywords_input').val()
+
+
+
+  var addresult = 
+  ajaxShortLink("addBlog",{
+    "title":titleVar,
+    "routeLink":routeVar,
+    "author":authorVar,
+    "sdesc":sdescVar,
+
+    "content":contents,
+
+    "desc":descVar,
+    "keywords":keywordsVar,
+  })
+
+    console.log(addresult)
 }
 
 </script>

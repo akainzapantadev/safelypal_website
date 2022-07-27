@@ -11663,8 +11663,9 @@ header.masthead .post-heading .meta a {
 	/* top: -80px; */
 }
 .card img {
+	position: relative;
 	object-fit: cover;
-	height: 25rem !important;
+	height: 30rem !important;
 }
 .card .card-img-overlay {
 	background: linear-gradient(

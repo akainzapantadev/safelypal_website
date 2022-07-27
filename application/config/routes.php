@@ -11,7 +11,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 // blogs
 $route['blogs'] = 'blogs/blogs';
-$route['admin-blogs'] = 'main/adminBlogs';
+$route['admin-blogs'] = 'blogs/adminBlogs';
+$route['addBlog'] = 'blogs/addBlog';
+
 
 $route['blogs/(:any)'] = 'blogs/blogLoad/$1';
   

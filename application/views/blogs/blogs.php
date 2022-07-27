@@ -67,18 +67,7 @@
                                 echo'</p>';
                                 echo'<hr class="my-4" />';
                             }
-                         // '<a href="blogs/'+res[index].routeLink+'">'+
-                        // '<h2 class="post-title">'+res[index].title+'</h2>'+
-                        // '<h3 class="post-subtitle">'+res[index].desc+'</h3>'+
-                        // '</a>'+
-                        // '<p class="post-meta">'+
-                        // 'Posted by'+
-                        // '<a href="#!">' +res[index].author+'</a>'+
-                        // ' '+res[index].dateCreated+
-                        // '</p>'+
-                        // '<hr class="my-4" />'
                         ?>
-                       
                     </div>
                     <!-- Pager-->
                     <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
@@ -129,27 +118,4 @@
     const d = new Date();
     let year = d.getFullYear();
     document.getElementById("year_now").innerHTML = year;
-
-   
-        // for (let index = 0; index < res.length; index++) {
-        //     $('.post-preview').append(
-
-        //         // '<a href="blogs/blog'+res[index].id+'">'+
-        //         '<a href="blogs/'+res[index].routeLink+'">'+
-        //             '<h2 class="post-title">'+res[index].title+'</h2>'+
-        //             '<h3 class="post-subtitle">'+res[index].desc+'</h3>'+
-        //         '</a>'+
-        //         '<p class="post-meta">'+
-        //             'Posted by'+
-        //             '<a href="#!">' +res[index].author+'</a>'+
-        //             ' '+res[index].dateCreated+
-        //         '</p>'+
-        //     '<hr class="my-4" />'
-        //     )
-        // }
-        // console.log(res);
-
-    // function blogpost(blog){
-        
-    // }
 </script>

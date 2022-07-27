@@ -8,10 +8,6 @@ class main extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
-	public function adminBlogs()
-	{
-		$this->load->view('blogs/adminBlogs');
-	}
 	public function robots(){
 		echo(file_get_contents("application/views/others/robots.txt"));
 	}
@@ -20,7 +16,6 @@ class main extends CI_Controller {
 		$this->load->view('others/sitemap.php');
 	}
 	public function subscribe(){
-
 		$this->db->where('ip',$_GET["ip"]);
 		$q = $this->db->get('subscribers_tbl');
 		$check = $q->result_array();
@@ -31,7 +26,6 @@ class main extends CI_Controller {
 			'ip' => $_GET["ip"],
 			'timestamp' => $timeStamp,
 		);
-
 		$saveQueryNotif = $this->db->insert("subscribers_tbl",$insertRecord);
 		if ($saveQueryNotif) {
 			echo true;

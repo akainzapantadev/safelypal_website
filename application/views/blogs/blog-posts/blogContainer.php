@@ -10,16 +10,20 @@
         <meta name="author" content="SAFELYPAL-DEV">
         <meta name="google-site-verification" content="" />
 
-        <meta name="title" content="Tips on Crypto Trading">
-        <meta name="description" content="It would be beneficial to agree upon a course of action before continuing. Cryptocurrencies are, to put it simply, a form of money that can only be used electronically. Some of the biggest problems with conventional banknotes are intended to be addressed by the technology that underpins it. It is essential to understand the new enterprise you are entering if you intend to invest in cryptocurrency for the first time. The tips listed below will assist you in navigating the field more effectively.">
-        <meta name="keywords" content="safelypal, safelypal.com, safelypal crypto, safelypal wallet, safelypal crypto wallet, safelypal blog, safelypal.com blog, safelypal review, safelypal.com review, what is safelypal, web 3 wallet metamask, web3 wallet example, best crypto wallet, crypto defi wallet review, best web3 wallet, is coinbase a web3 wallet, web3 wallet extension, web3 wallet github, web 3.0 stocks, Web 3.0 crypto projects, Web 3.0 crypto coins list, Web 3.0 crypto list, Web 3.0 crypto, Web 3.0 crypto coins, best web 3.0 crypto, top 5 web 3 0 crypto, will crypto go to 0, best web to buy crypto, buy crypto 0 fees, can crypto go to 0, web3.0 examples, web3.0 features, what is web3.0, web3 get token symbol, buy crypto zero fees, how to buy crypto on webull desktop, crypto wallet app, crypto wallet canada, crypto wallet australia, crypto wallet hardware, crypto wallet uk, crypto wallet address, crypto wallet robinhood, crypto wallet online, crypto wallet exodus, best crypto wallet, robinhood crypto wallet, best crypto wallet app, exodus crypto wallet, safest crypto wallet, best crypto wallet canada, best crypto wallet australia, best crypto wallet reddit, best crypto wallet uk, hardware crypto wallet, cryptocurrency wallet, crypto.com defi wallet, crypto hardware wallet, crypto cold wallet, crypto hard wallet, crypto.com wallet address, crypto.com to trust wallet, cryptocurrency best wallet, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for nft, crypto wallet hardware, crypto wallet for mining, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for nft, crypto wallet metamask, crypto wallet for mining, crypto wallets list, best crypto wallet 2022, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for mining, crypto wallet for nft, crypto wallet metamask, crypto wallets list, crypto wallet hardware, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for nft, crypto wallet hardware, crypto wallet for mining, crypto wallet app, crypto wallet canada, crypto wallet australia, crypto wallet hardware, crypto wallet uk, crypto wallet address, crypto wallet robinhood, crypto wallet online, crypto wallet exodus, best crypto wallet, robinhood crypto wallet, best crypto wallet app, exodus crypto wallet, safest crypto wallet, best crypto wallet canada, best crypto wallet australia, best crypto wallet reddit, best crypto wallet uk, hardware crypto wallet, cryptocurrency wallet, crypto.com defi wallet, crypto hardware wallet, crypto cold wallet, crypto hard wallet, crypto.com wallet address, crypto.com to trust wallet, cryptocurrency best wallet, how to secure your crypto wallet, coinbase wallet, crypto wallet hacked, crypto wallet app, exodus crypto wallet, how to protect your crypto on coinbase, crypto wallet tips, crypto wallet security tips, linus tech tips crypto wallet, what is the best crypto wallet to have, how to crypto wallet, how do i put money in my crypto wallet, how to put money into crypto wallet, what wallet is best for crypto, can i make my own crypto wallet">
+        <meta name="title" content="<?php echo $dataContainer['title']?>">
+        <meta name="description" content="<?php echo $dataContainer['description']?>">
+        <meta name="keywords" content="<?php echo $dataContainer['keywords']?>">
 
-        <meta property="og:title" content="Tips on Crypto Trading"/>
-        <meta property="og:description" content="It would be beneficial to agree upon a course of action before continuing. Cryptocurrencies are, to put it simply, a form of money that can only be used electronically. Some of the biggest problems with conventional banknotes are intended to be addressed by the technology that underpins it. It is essential to understand the new enterprise you are entering if you intend to invest in cryptocurrency for the first time. The tips listed below will assist you in navigating the field more effectively."/>
+        <meta property="og:title" content="<?php echo $dataContainer['title']?>"/>
+        <meta property="og:description" content="<?php echo $dataContainer['description']?>"/>
         <meta property="og:image" content=""/>
-        <meta property="og:url" content="safelypal.com/blogs/tips-on-crypto-trading"/>
+        <meta property="og:url" content="<?php echo $dataContainer['url']?>"/>
 
         <title class="main-color">Tips on crypto trading</title>
+
+        
+        
+        
         <link rel="icon" href="../assets/imgs/icon-text.png" type="image/gif">
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -129,16 +133,11 @@
     let year = d.getFullYear();
     document.getElementById("year_now").innerHTML = year;
 
-    var seoTitle = JSON.parse('<?php echo json_encode($seoTitle) ?>');
-    var seoDesc = JSON.parse('<?php echo json_encode($seoDesc) ?>');
-    var seoKeywords = JSON.parse('<?php echo json_encode($seoKeywords) ?>');
-    var seoUrl = JSON.parse('<?php echo json_encode($seoUrl) ?>');
-
-    $("meta[property='og\\title']").attr("content", seoTitle);
-    $("meta[property='og\\description']").attr("content", seoDesc);
-    $("meta[property='og\\url']").attr("content", seoUrl);
-    $("meta[name='title']").attr("content", seoTitle);
-    $("meta[name='description']").attr("content", seoDesc);
-    $("meta[name='keywords']").attr("content", seoKeywords);
+    // $("meta[property='og\\title']").attr("content", seoTitle);
+    // $("meta[property='og\\description']").attr("content", seoDesc);
+    // $("meta[property='og\\url']").attr("content", seoUrl);
+    // $("meta[name='title']").attr("content", seoTitle);
+    // $("meta[name='description']").attr("content", seoDesc);
+    // $("meta[name='keywords']").attr("content", seoKeywords);
 </script>
 
