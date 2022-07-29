@@ -11588,7 +11588,7 @@ header.masthead .post-heading .meta a {
 
 .section-heading2 {
 	font-size: 1.25rem;
-	font-weight: 600;
+	font-weight: 700;
 	margin-top: 1.5rem;
 }
 
@@ -11665,7 +11665,7 @@ header.masthead .post-heading .meta a {
 .card img {
 	position: relative;
 	object-fit: cover;
-	height: 30rem !important;
+	height: 25rem !important;
 }
 .card .card-img-overlay {
 	background: linear-gradient(
@@ -11680,7 +11680,7 @@ header.masthead .post-heading .meta a {
 	font-weight: bold !important;
 	font-family: var(--main-font) !important;
 	font-size: calc(2.375rem + 1.5vw);
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 .splash-subtext {
 	font-size: 1.2rem !important;
@@ -11690,7 +11690,7 @@ header.masthead .post-heading .meta a {
 	margin: auto 0 !important;
 }
 #splash_container {
-	padding-top: 8rem;
+	padding-top: 3rem;
 }
 :root {
 	--light-color: #f3f6f8;
@@ -11722,6 +11722,42 @@ header.masthead .post-heading .meta a {
 /* media */
 
 @media (max-width: 576px) {
+	.card img {
+		height: 35rem !important;
+	}
+
+	.splash-text {
+		color: var(--light-color) !important;
+		font-weight: bold !important;
+		font-family: var(--main-font) !important;
+		font-size: calc(1.375rem + 1.5vw);
+		/* margin-top: 1rem; */
+	}
+	.splash-subtext {
+		font-size: 1.2rem !important;
+		/* color: var(--sec-color) !important; */
+	}
+
+	.section-heading {
+		font-size: calc(1.375rem + 1.5vw);
+		font-weight: 700;
+		margin-top: 3.75rem;
+	}
+
+	.section-heading1 {
+		font-size: 1.75rem;
+		font-weight: 600;
+		margin-top: 2rem;
+	}
+
+	.section-heading2 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		margin-top: 1.5rem;
+	}
+}
+
+@media (min-width: 577px) and (max-width: 940px) {
 	.card img {
 		height: 40rem !important;
 	}

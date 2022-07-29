@@ -13,7 +13,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route['blogs'] = 'blogs/blogs';
 $route['admin-blogs'] = 'blogs/adminBlogs';
 $route['addBlog'] = 'blogs/addBlog';
-
+$route['countBlogs'] = 'blogs/countBlogs';
+$route['getUrls'] = 'blogs/getUrls';
 
 $route['blogs/(:any)'] = 'blogs/blogLoad/$1';
   

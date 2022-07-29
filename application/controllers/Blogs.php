@@ -29,9 +29,26 @@ class blogs extends MY_Controller {
 		$data = array(
 			'res' => $res,
 		);
-		// echo json_encode($res);
 		$this->load->view('blogs/blogs',$data);
 		
+	}
+	public function countBlogs(){
+		$res = $this->_getRecordsData(
+			$selectfields = array("*,DATE_FORMAT(dateCreated, '%W %M %e %Y') AS dateCreated"), 
+      $tables = array('blogs_tbl'),
+      $fieldName = null, 
+      $where = null, 
+      $join = null,	 
+      $joinType = null,
+      $sortBy = null, 
+      $sortOrder = null, 
+      $limit = null, 
+      $fieldNameLike = null, 
+      $like = null,
+      $whereSpecial = null, 
+      $groupBy = null 
+		);
+		echo count($res);
 	}
 	public function blogLoad($slug){
 			$res = $this->_getRecordsData(
@@ -168,5 +185,26 @@ class blogs extends MY_Controller {
 				echo json_encode('blog not added');
 			}
 			
+		}
+
+		public function getUrls(){
+
+			$routeLinks = $this->_getRecordsData(
+				$selectfields = array("routeLink","title","DATE_FORMAT(dateCreated, '%W %M %e %Y') AS dateCreated"), 
+				$tables = array('blogs_tbl'),
+				$fieldName = null, 
+				$where = null,
+				$join = null,	 
+				$joinType = null,
+				$sortBy = null, 
+				$sortOrder = null, 
+				$limit = null, 
+				$fieldNameLike = null, 
+				$like = null,
+				$whereSpecial = null, 
+				$groupBy = null 
+			);
+
+			echo json_encode($routeLinks);
 		}
 }
