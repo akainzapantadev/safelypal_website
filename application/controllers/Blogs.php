@@ -93,7 +93,7 @@ class blogs extends MY_Controller {
 
 				$dataContainer = [];
 
-				for ($i=0; $i < count($seo); $i++) { 	
+				for ($i=0; $i < count($seo); $i++) {
 					$dataContainer[$seo[$i]->seo_name] = $seo[$i]->seo_content;
 				}
 					
@@ -186,11 +186,102 @@ class blogs extends MY_Controller {
 			}
 			
 		}
+		public function updateBlog(){
+			$id = $_GET['id'];
+			$mainurl = 'safelypal.com/blogs/';
+
+			$title = $_GET['title'];
+			$sdesc = $_GET['sdesc'];
+			$routeLink = $_GET['routeLink'];
+			$author = $_GET['author'];
+
+			$content = $_GET['content'];
+
+			$desc = $_GET['desc'];
+			$keywords = $_GET['keywords'];
+
+			$blogs_tbl = 'blogs_tbl';
+			$update_blogs_tbl = array(
+				'title'=>$title,
+				'desc'=>$sdesc,
+				'routeLink'=>$routeLink,
+				'author'=>$author,
+				'dateCreated' => $this->_getTimeStamp24Hours(),
+			);
+
+			$updateblogs_tbl = $this->_updateRecords($blogs_tbl,array('id'), array($id), $update_blogs_tbl);
+
+			if($updateblogs_tbl!=0){
+				$blog_content_tbl = 'blog_content_tbl';
+				$update_blog_content_tbl = array(
+					'content'=>$content,
+				);
+				$this->_updateRecords($blog_content_tbl,array('blog_id'), array($id), $update_blog_content_tbl);
+
+				$seo_tags_tbl = 'seo_tags_tbl';
+				$update_seo_tags_tbl_title = array(
+					'name' => 'title',
+					'content' => $title,
+				);
+
+				$this->_updateRecords($seo_tags_tbl,array('blog_id'), array($id), $update_seo_tags_tbl_title);
+				
+				$update_seo_tags_tbl_description = array(
+					'name' => 'description',
+					'content' => $desc,
+				);
+
+				$this->_updateRecords($seo_tags_tbl,array('blog_id'), array($id), $update_seo_tags_tbl_description);
+
+				$update_seo_tags_tbl_keywords = array(
+					'name' => 'keywords',
+					'content' => $keywords,
+				);
+
+				$this->_updateRecords($seo_tags_tbl,array('blog_id'), array($id), $update_seo_tags_tbl_keywords);
+
+				$update_seo_tags_tbl_url = array(
+					'name' => 'url',
+					'content' => $mainurl.$routeLink,
+				);
+
+				$this->_updateRecords($seo_tags_tbl,array('blog_id'), array($id), $update_seo_tags_tbl_url);
+
+				echo json_encode('blog updated');
+			}else {
+				echo json_encode('blog not updated');
+			}
+
+			// echo json_encode($updateblogs_tbl);
+		}
+		public function checkIfBlogExist(){
+			$id = $_GET['id'];
+
+				$res = $this->_getRecordsData(
+					$selectfields = array("*"), 
+					$tables = array('blogs_tbl'),
+					$fieldName = array('id'), 
+					$where = array($id), 
+					$join = null,	 
+					$joinType = null,
+					$sortBy = null, 
+					$sortOrder = null, 
+					$limit = null, 
+					$fieldNameLike = null, 
+					$like = null,
+					$whereSpecial = null, 
+					$groupBy = null 
+				);
+				if(count($res)){
+					echo json_encode(true);
+				}else{
+					echo json_encode(false);
+				}
+		}
 
 		public function getUrls(){
-
 			$routeLinks = $this->_getRecordsData(
-				$selectfields = array("routeLink","title","DATE_FORMAT(dateCreated, '%W %M %e %Y') AS dateCreated"), 
+				$selectfields = array("routeLink","title","DATE_FORMAT(dateCreated, '%W %M %e %Y') AS dateCreated","id"), 
 				$tables = array('blogs_tbl'),
 				$fieldName = null, 
 				$where = null,
@@ -207,4 +298,62 @@ class blogs extends MY_Controller {
 
 			echo json_encode($routeLinks);
 		}
+
+		public function getBlog(){
+
+			$id = $_GET['id'];
+
+				$res = $this->_getRecordsData(
+					$selectfields = array(
+						"
+							blogs_tbl.*, 
+							blog_content_tbl.content AS blog_content, 
+							DATE_FORMAT(blogs_tbl.dateCreated, '%W %M %e %Y') AS dateCreated,
+						"), 
+					$tables = array('blogs_tbl','blog_content_tbl'),
+					$fieldName = array('blogs_tbl.id'), 
+					$where = array($id), 
+					$join = array("blogs_tbl.id = blog_content_tbl.blog_id"),	 
+					$joinType = array('left'),
+					$sortBy = null, 
+					$sortOrder = null, 
+					$limit = null, 
+					$fieldNameLike = null, 
+					$like = null,
+					$whereSpecial = null, 
+					$groupBy = null 
+				);
+
+				if(count($res)>=1){
+					$seo = $this->_getRecordsData(
+						$selectfields = array("*"), 
+						$tables = array('seo_tags_tbl'),
+						$fieldName = array('blog_id'), 
+						$where = array($id),
+						$join = null,	 
+						$joinType = null,
+						$sortBy = null, 
+						$sortOrder = null, 
+						$limit = null, 
+						$fieldNameLike = null, 
+						$like = null,
+						$whereSpecial = null, 
+						$groupBy = null 
+					);
+						
+					$data = array(
+						'blogDetails' => $res,
+						'contents' => $res[0]->blog_content,
+						'title' => $res[0]->title,
+						'desc' => $res[0]->desc,
+						'dateCreated' => $res[0]->dateCreated,
+						'seo' => $seo,
+					);
+
+					echo json_encode($data);
+
+				}else{
+					echo json_encode('blog not found');
+				}
+}
 }

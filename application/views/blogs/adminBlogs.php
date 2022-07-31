@@ -72,11 +72,10 @@
       <textarea id="keywords_input" class="form-control" aria-label="With textarea"></textarea>
     </div>
     <div class="py-5">
-      <button id="add_blog" class="btn btn-primary" onclick="addblog_()"><span>Add blog</span></button>
+      <button id="add_blog" class="btn btn-primary" onclick="addblog_()"><span id="addblog_span">Add blog</span></button>
       <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewurls"><span>View Added Blogs</span></button>
     </div>
   </div>
-
     <!-- view contents -->
     <div class="modal fade" id="viewcontents" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
@@ -104,7 +103,8 @@
   </body>
 </html>
 <script>
-// vars
+// gvars
+  var globalID = 0
   var p = 0
   var t = 0
   var t1 = 0
@@ -240,6 +240,16 @@ function addcontent(type){
         '<button id="btnrn'+n+'" class="btn btn-danger" type="button" onclick="popcontents_('+"'ndiv'"+','+n+')">remove</button>'+
       '</div>'
     )
+  }else if(type=='bt'){
+    bt=bt+1;
+    $('#content_container').append(
+      '<div id="btdiv'+bt+'" class="input-group mb-3">'+
+        '<span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-circle-chevron-right"></i></span>'+
+        '<input id="bt'+bt+'" type="text" class="form-control" placeholder="bullet'+bt+'">'+
+        '<button id="btnbt'+bt+'" class="btn btn-secondary" type="button" onclick="pushcontents_('+"'bt'"+','+bt+')">stack bullettitle</button>'+
+        '<button id="btnrbt'+bt+'" class="btn btn-danger" type="button" onclick="popcontents_('+"'btdiv'"+','+bt+')">remove</button>'+
+      '</div>'
+    )
   }
   // else if(type=='?'){
   //   ?=?+1;
@@ -324,6 +334,7 @@ function addblog_(){
   var sdescVar = $('#sdesc_input').val()
   var descVar = $('#desc_input').val()
   var keywordsVar = $('#keywords_input').val()
+  var updateContents = $('#contents_input').val()
 
   if(
     titleVar != '' &&
@@ -333,22 +344,41 @@ function addblog_(){
     descVar  != '' &&
     keywordsVar!= ''
   ){
-    var addresult = 
-    ajaxShortLink("addBlog",{
-    "title":titleVar,
-    "routeLink":routeVar,
-    "author":authorVar,
-    "sdesc":sdescVar,
-    "content":contents,
-    "desc":descVar,
-    "keywords":keywordsVar,
-  })
-    console.log(addresult)
-    alertthis('Blog added')
+
+    var checkIfBlogExist = ajaxShortLink("checkIfBlogExist",{"id":111}) // for testing
+    // var checkIfBlogExist = ajaxShortLink("checkIfBlogExist",{"id":globalID})
+      if(checkIfBlogExist==1){
+        var updateresult = 
+            ajaxShortLink("updateBlog",{
+            "title":titleVar,
+            "routeLink":routeVar,
+            "author":authorVar,
+            "sdesc":sdescVar,
+            "content":updateContents,
+            "desc":descVar,
+            "keywords":keywordsVar,
+            "id":'111',
+          })
+          // alertthis('Blog updated')
+          console.log(updateresult)
+      }else{
+          //   var addresult = 
+          //   ajaxShortLink("addBlog",{
+          //   "title":titleVar,
+          //   "routeLink":routeVar,
+          //   "author":authorVar,
+          //   "sdesc":sdescVar,
+          //   "content":contents,
+          //   "desc":descVar,
+          //   "keywords":keywordsVar,
+          // })
+          // console.log(addresult)
+          // alertthis('Blog added')
+      }
   }else{
     alert('please fill all blanks')
   }
-} 
+}
 async function alertthis(message){
   const x = await alert(message)
   return reloadpage()
@@ -359,17 +389,55 @@ function reloadpage(){
 function getUrls(){
   var urls = 
   ajaxShortLink("getUrls")
-  for (let index = 0; index < urls.length; index++) { 
+  for (let index = 0; index < urls.length; index++) {
     $('#viewurls_container').append(
       '<div class="mx-3">'+
-      '<a href = "https://safelypal.com/blogs/'+urls[index].routeLink+'" target="_blank" class="btn btn-outline-secondary mx-1"><span>Open</span></a>'+
-      '<span id="title'+index+'">'+urls[index].title+'</span>'+
+      '<a onclick="editblog('+urls[index].id+')" class="btn btn-outline-secondary mx-1"><span>edit</span></a>'+
+      '<a href = "https://safelypal.com/blogs/'+urls[index].routeLink+'" target="_blank" mx-1"><span id="title'+index+'">'+urls[index].title+'</span></a>'+
       '<span id="title'+index+'">'+' '+urls[index].dateCreated+'</span>'+
       '</div>'
     )
   }
 }
-function copyUrl(id){
-  console.log(id)
+function editblog(id){
+  $('#content_container').empty()
+  globalID = id
+  var editblog = 
+  ajaxShortLink("getBlog",{"id":id})
+
+  var fullDesc = editblog['seo'][1].content
+  var keywords = editblog['seo'][2].content
+  var routeLinkRaw = editblog['seo'][3].content
+  var RouteLink = routeLinkRaw.replace('safelypal.com/blogs/','')
+  var shortDesc = editblog.desc
+  var title = editblog.title
+  var author = editblog['blogDetails'][0].author
+  var contents = editblog.contents
+  
+  
+  $('#title_input').val(title)
+  $('#routeLink_input').val(RouteLink)
+  $('#author_input').val(author)
+  $('#sdesc_input').text(shortDesc)
+  $('#desc_input').text(fullDesc)
+  $('#keywords_input').text(keywords)
+
+  $('#viewurls').modal('toggle')
+  $('#addblog_span').text('Update Blog')
+  editcontents_input()
+
+  async function editcontents_input(){
+  await $('#content_container').append(
+    '<div class="input-group">'+
+      '<span class="input-group-text text-muted"> Contents</span>'+
+      '<textarea id="contents_input" class="form-control" aria-label="With textarea"></textarea>'+
+    '</div>'
+  )
+
+  return $('#contents_input').text(contents)
 }
+
+}
+
+
 </script>
