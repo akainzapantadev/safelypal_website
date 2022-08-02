@@ -42,8 +42,11 @@
       <span class="input-group-text text-muted"> Short Description</span>
       <textarea id="sdesc_input" class="form-control" aria-label="With textarea"></textarea>
     </div>
-    <div class="mb-2 mt-4"><span class="h2">Content</span></div>
-    <div class="dropdown">
+    <div class="mb-2 mt-4">
+      <span class="h2">Content</span>
+      <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewcontents" onclick="viewcontents_()">View contents</button>
+    </div>
+    <!-- <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
       Add content
       </button>
@@ -53,15 +56,45 @@
       <li><a class="dropdown-item" onclick="addcontent('t1')">Title1</a></li>
       <li><a class="dropdown-item" onclick="addcontent('t2')">Title2</a></li>
       <li><a class="dropdown-item" onclick="addcontent('b')">Bullets</a></li>
+      <li><a class="dropdown-item" onclick="addcontent('bt')">Bullets_t</a></li>
+      <li><a class="dropdown-item" onclick="addcontent('bt1')">Bullets_t1</a></li>
+      <li><a class="dropdown-item" onclick="addcontent('bt2')">Bullets_t2</a></li>
       <li><a class="dropdown-item" onclick="addcontent('n')">num</a></li>
       <li><a class="dropdown-item" onclick="addcontent('nt')">num title</a></li>
       <li><a class="dropdown-item" onclick="addcontent('nt1')">num title1</a></li>
       <li><a class="dropdown-item" onclick="addcontent('nt2')">num title2</a></li>
       <li><a class="dropdown-item" onclick="addcontent('c')">Conclusion</a></li>
       </ul>
-      <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewcontents" onclick="viewcontents_()">View contents</button>
+    </div> -->
+
+    
+    <div class="my-2"></div>
+    <div>
+      <div id="content_container" class="my-2">
+        <button class="btn btn-outline-secondary dnone" onclick="addBulletsToSTack()">Confirm bullets stack</button>
+      </div>
+      <div id="add_content_buttons">
+        <div>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('p')">Paragraph</button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('t')">Title</button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('t1')">Title1</button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('t2')">Title2</button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('c')">Conclusion</button>
+        </div>
+        <div>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('b')">Bullets</button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('bt')">Bullets_t</button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('bt1')">Bullets_t1</button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('bt2')">Bullets_t2</button>
+        </div>
+        <div>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('n')">num </button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('nt')">num title</button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('nt1')">num title1</button>
+          <button class="btn btn-secondary mt-1" type="button" onclick="addcontent('nt2')">num title2</button>
+        </div>
+      </div>
     </div>
-    <div id="content_container" class="my-2"></div>
     <div class="mb-2 mt-4"><span class="h2">Seo</span></div>
     <div class="input-group mb-2">
       <span class="input-group-text text-muted">Description</span>
@@ -112,6 +145,10 @@
   var td = 0
   var c = 0
   var b = 0
+    var addb = 0
+  var bt = 0
+  var bt1 = 0
+  var bt2 = 0
   var n = 0
   var nt = 0
   var nt1 = 0
@@ -186,11 +223,14 @@ function addcontent(type){
     )
   }else if(type=='b'){
     b=b+1;
+    addb=addb+1
     $('#content_container').append(
-      '<div id="bdiv'+b+'" class="input-group mb-3">'+
-        '<span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-circle-chevron-right"></i></span>'+
-        '<input id="b'+b+'" type="text" class="form-control" placeholder="bullet'+b+'">'+
-        '<button id="btnb'+b+'" class="btn btn-secondary" type="button" onclick="pushcontents_('+"'b'"+','+b+')">stack bullet</button>'+
+      '<div id="bdiv'+b+'" class="mb-3">'+
+      '<button id="addb'+b+'" class="btn btn-warning" type="button" onclick="addb_('+addb+')">add bullet</button>'+
+        '<div id="addbdiv'+b+'" class="my-1">'+
+          '<input id="addb1" type="text" class="form-control" placeholder="bullets'+b+'">'+
+        '</div>'+
+        '<button id="btnb'+b+'" class="btn btn-warning" type="button" onclick="pushcontents_('+"'b'"+','+b+')">stack bullets</button>'+
         '<button id="btnrb'+b+'" class="btn btn-danger" type="button" onclick="popcontents_('+"'bdiv'"+','+b+')">remove</button>'+
       '</div>'
     )
@@ -209,9 +249,9 @@ function addcontent(type){
     $('#content_container').append(
       '<div id="nt1div'+nt1+'" class="input-group mb-3">'+
         '<span class="input-group-text" id="inputGroup-sizing-sm">'+
-        // '<i class="fa-solid fa-circle"></i>'+
+        '<i class="fa-solid fa-circle"></i>'+
         '</span>'+
-        '<input id="nt1'+nt1+'" type="text" class="form-control" placeholder="Num title 1'+nt1+'">'+
+        '<input id="nt1'+nt1+'" type="text" class="form-control" placeholder="Num title 1_'+nt1+'">'+
         '<button id="btnnt1'+nt1+'" class="btn btn-secondary" type="button" onclick="pushcontents_('+"'nt1'"+','+nt1+')">stack Numtitle1</button>'+
         '<button id="btnrnt1'+nt1+'" class="btn btn-danger" type="button" onclick="popcontents_('+"'nt1div'"+','+nt1+')">remove</button>'+
       '</div>'
@@ -221,9 +261,9 @@ function addcontent(type){
     $('#content_container').append(
       '<div id="nt2div'+nt2+'" class="input-group mb-3">'+
         '<span class="input-group-text" id="inputGroup-sizing-sm">'+
-        // '<i class="fa-solid fa-circle"></i>'+
+        '<i class="fa-solid fa-circle"></i>'+
         '</span>'+
-        '<input id="nt2'+nt2+'" type="text" class="form-control" placeholder="Num title 2'+nt2+'">'+
+        '<input id="nt2'+nt2+'" type="text" class="form-control" placeholder="Num title 2_'+nt2+'">'+
         '<button id="btnnt2'+nt2+'" class="btn btn-secondary" type="button" onclick="pushcontents_('+"'nt2'"+','+nt2+')">stack Numtitle2</button>'+
         '<button id="btnrnt2'+nt2+'" class="btn btn-danger" type="button" onclick="popcontents_('+"'nt2div'"+','+nt2+')">remove</button>'+
       '</div>'
@@ -233,9 +273,9 @@ function addcontent(type){
     $('#content_container').append(
       '<div id="ndiv'+n+'" class="input-group mb-3">'+
         '<span class="input-group-text" id="inputGroup-sizing-sm">'+
-        // '<i class="fa-solid fa-circle"></i>'+
+        '<i class="fa-solid fa-circle"></i>'+
         '</span>'+
-        '<input id="n'+n+'" type="text" class="form-control" placeholder="Num'+n+'">'+
+        '<input id="n'+n+'" type="text" class="form-control" placeholder="Num_'+n+'">'+
         '<button id="btnn'+n+'" class="btn btn-secondary" type="button" onclick="pushcontents_('+"'n'"+','+n+')">stack Num</button>'+
         '<button id="btnrn'+n+'" class="btn btn-danger" type="button" onclick="popcontents_('+"'ndiv'"+','+n+')">remove</button>'+
       '</div>'
@@ -248,6 +288,30 @@ function addcontent(type){
         '<input id="bt'+bt+'" type="text" class="form-control" placeholder="bullet'+bt+'">'+
         '<button id="btnbt'+bt+'" class="btn btn-secondary" type="button" onclick="pushcontents_('+"'bt'"+','+bt+')">stack bullettitle</button>'+
         '<button id="btnrbt'+bt+'" class="btn btn-danger" type="button" onclick="popcontents_('+"'btdiv'"+','+bt+')">remove</button>'+
+      '</div>'
+    )
+  }else if(type=='bt1'){
+    bt1=bt1+1;
+    $('#content_container').append(
+      '<div id="bt1div'+bt1+'" class="input-group mb-3">'+
+        '<span class="input-group-text" id="inputGroup-sizing-sm">'+
+        '<i class="fa-solid fa-circle-chevron-right"></i>'+
+        '</span>'+
+        '<input id="bt1'+bt1+'" type="text" class="form-control" placeholder="bullet1_'+bt1+'">'+
+        '<button id="btnbt1'+bt1+'" class="btn btn-secondary" type="button" onclick="pushcontents_('+"'bt1'"+','+bt1+')">stack bullettitle1</button>'+
+        '<button id="btnrbt1'+bt1+'" class="btn btn-danger" type="button" onclick="popcontents_('+"'bt1div'"+','+bt1+')">remove</button>'+
+      '</div>'
+    )
+  }else if(type=='bt2'){
+    bt2=bt2+1;
+    $('#content_container').append(
+      '<div id="bt2div'+bt2+'" class="input-group mb-3">'+
+        '<span class="input-group-text" id="inputGroup-sizing-sm">'+
+        '<i class="fa-solid fa-circle-chevron-right"></i>'+
+        '</span>'+
+        '<input id="bt2'+bt2+'" type="text" class="form-control" placeholder="bullet2_'+bt2+'">'+
+        '<button id="btnbt2'+bt2+'" class="btn btn-secondary" type="button" onclick="pushcontents_('+"'bt2'"+','+bt2+')">stack bullettitle2</button>'+
+        '<button id="btnrbt2'+bt2+'" class="btn btn-danger" type="button" onclick="popcontents_('+"'bt2div'"+','+bt2+')">remove</button>'+
       '</div>'
     )
   }
@@ -264,6 +328,19 @@ function addcontent(type){
   //     '</div>'
   //   )
   // }
+}
+function addb_(addb){
+  addb = addb+1
+  $('#addbdiv'+b).append(
+    '<div id="addb'+addb+'" class="input-group">'+
+      '<input id="addb'+addb+'" type="text" class="form-control" placeholder="bullets'+b+'">'+
+    '<button id="addbrbtn'+addb+'" class="btn btn-danger" type="button" onclick="removeb_('+addb+')">remove</button>'+
+    '</div>'
+  )
+}
+async function removeb_(addb){
+  await $('#addb'+addb).remove();
+  return addb = addb-1
 }
 function addBulletsToSTack(){
   var sb = "\n"+stackbullets
@@ -295,6 +372,24 @@ function pushcontents_(type,order){
   }else if(type=='n'){
     numeric = '<li>'+ $('#'+type+order).val() + '</li>\n'
     stacknumerics += numeric
+  }else if(type=='bt'){
+    bullet = '<li>'+ $('#'+type+order).val() + '</li>\n'
+    stackbullets += bullet
+  }else if(type=='bt1'){
+    bullet = '<li>'+ $('#'+type+order).val() + '</li>\n'
+    stackbullets += bullet
+  }else if(type=='bt2'){
+    bullet = '<li>'+ $('#'+type+order).val() + '</li>\n'
+    stackbullets += bullet
+  }else if(type=='nt'){
+    bullet = '<li>'+ $('#'+type+order).val() + '</li>\n'
+    stackbullets += bullet
+  }else if(type=='nt1'){
+    bullet = '<li>'+ $('#'+type+order).val() + '</li>\n'
+    stackbullets += bullet
+  }else if(type=='nt2'){
+    bullet = '<li>'+ $('#'+type+order).val() + '</li>\n'
+    stackbullets += bullet
   }
 
   contents += "\n"+stack
@@ -345,8 +440,8 @@ function addblog_(){
     keywordsVar!= ''
   ){
 
-    var checkIfBlogExist = ajaxShortLink("checkIfBlogExist",{"id":111}) // for testing
-    // var checkIfBlogExist = ajaxShortLink("checkIfBlogExist",{"id":globalID})
+    // var checkIfBlogExist = ajaxShortLink("checkIfBlogExist",{"id":111}) // for testing
+    var checkIfBlogExist = ajaxShortLink("checkIfBlogExist",{"id":globalID})
       if(checkIfBlogExist==1){
         var updateresult = 
             ajaxShortLink("updateBlog",{
@@ -357,10 +452,9 @@ function addblog_(){
             "content":updateContents,
             "desc":descVar,
             "keywords":keywordsVar,
-            "id":'111',
+            "id":globalID,
           })
-          // alertthis('Blog updated')
-          console.log(updateresult)
+          alertthis('Blog updated')
       }else{
           //   var addresult = 
           //   ajaxShortLink("addBlog",{
@@ -433,6 +527,7 @@ function editblog(id){
       '<textarea id="contents_input" class="form-control" aria-label="With textarea"></textarea>'+
     '</div>'
   )
+  $('#viewcontents_container').append(contents)
 
   return $('#contents_input').text(contents)
 }

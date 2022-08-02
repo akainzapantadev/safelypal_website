@@ -11762,3 +11762,7 @@ header.masthead .post-heading .meta a {
 		height: 40rem !important;
 	}
 }
+
+.dnone{
+	display:none;
+}

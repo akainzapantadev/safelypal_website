@@ -213,39 +213,38 @@ class blogs extends MY_Controller {
 
 			if($updateblogs_tbl!=0){
 				$blog_content_tbl = 'blog_content_tbl';
+				
 				$update_blog_content_tbl = array(
 					'content'=>$content,
 				);
+
 				$this->_updateRecords($blog_content_tbl,array('blog_id'), array($id), $update_blog_content_tbl);
 
-				$seo_tags_tbl = 'seo_tags_tbl';
-				$update_seo_tags_tbl_title = array(
-					'name' => 'title',
+				$updateTitle = array(
 					'content' => $title,
 				);
-
-				$this->_updateRecords($seo_tags_tbl,array('blog_id'), array($id), $update_seo_tags_tbl_title);
-				
-				$update_seo_tags_tbl_description = array(
-					'name' => 'description',
+				$updateDesc = array(
 					'content' => $desc,
 				);
-
-				$this->_updateRecords($seo_tags_tbl,array('blog_id'), array($id), $update_seo_tags_tbl_description);
-
-				$update_seo_tags_tbl_keywords = array(
-					'name' => 'keywords',
+				$updateKeywords = array(
 					'content' => $keywords,
 				);
-
-				$this->_updateRecords($seo_tags_tbl,array('blog_id'), array($id), $update_seo_tags_tbl_keywords);
-
-				$update_seo_tags_tbl_url = array(
-					'name' => 'url',
+				$updateUrl = array(
 					'content' => $mainurl.$routeLink,
 				);
 
-				$this->_updateRecords($seo_tags_tbl,array('blog_id'), array($id), $update_seo_tags_tbl_url);
+				$seo_tags_tbl = 'seo_tags_tbl';
+				$nameContents = ['title','description','keywords','url'];
+				$contentContents = [
+					$updateTitle,
+					$updateDesc,
+					$updateKeywords,
+					$updateUrl
+				];
+				
+				for ($i=0; $i < 4; $i++) {
+					$this->_updateRecords($seo_tags_tbl,array('blog_id','name'), array($id,$nameContents[$i]), $contentContents[$i]);
+				}
 
 				echo json_encode('blog updated');
 			}else {
