@@ -53,24 +53,41 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
-                    <div class="post-preview">
+                    
                         <?php 
-                            for ($i=0; $i < count($res); $i++) { 
-                                echo '<a href="blogs/'.$res[$i]->routeLink.'">';
-                                echo '<h2 class="post-title">'.$res[$i]->title.'</h2>';
-                                echo '<h3 class="post-subtitle">'.$res[$i]->desc.'</h3>';
-                                echo '</a>';
-                                echo'<p class="post-meta">';
-                                echo'Posted by';
-                                echo'<a href="#!">' .$res[$i]->author.'</a>';
-                                echo' '.$res[$i]->dateCreated;
-                                echo'</p>';
-                                echo'<hr class="my-4" />';
-                            }
+                            echo '<div id="blogs_container_limited" class="post-preview">';
+                                for ($i=0; $i < 5; $i++) { 
+                                    echo '<a href="blogs/'.$res[$i]->routeLink.'">';
+                                    echo '<h2 class="post-title">'.$res[$i]->title.'</h2>';
+                                    echo '<h3 class="post-subtitle">'.$res[$i]->desc.'</h3>';
+                                    echo '</a>';
+                                    echo'<p class="post-meta">';
+                                    echo'Posted by';
+                                    echo'<a href="#!">' .$res[$i]->author.'</a>';
+                                    echo' '.$res[$i]->dateCreated;
+                                    echo'</p>';
+                                    echo'<hr class="my-4" />';
+                                }
+                            echo '</div>';
+
+                            echo '<div id="blogs_container_full" class="post-preview dnone">';
+                                for ($i=0; $i < count($res); $i++) { 
+                                    echo '<a href="blogs/'.$res[$i]->routeLink.'">';
+                                    echo '<h2 class="post-title">'.$res[$i]->title.'</h2>';
+                                    echo '<h3 class="post-subtitle">'.$res[$i]->desc.'</h3>';
+                                    echo '</a>';
+                                    echo'<p class="post-meta">';
+                                    echo'Posted by';
+                                    echo'<a href="#!">' .$res[$i]->author.'</a>';
+                                    echo' '.$res[$i]->dateCreated;
+                                    echo'</p>';
+                                    echo'<hr class="my-4" />';
+                                }
+                            echo '</div>';
                         ?>
                     </div>
                     <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" onclick="display_all_blogs()"><span id="olderPostSpan" value="older">Older Posts →</span></a></div>
                 </div>
             </div>
         </div>
@@ -118,4 +135,11 @@
     const d = new Date();
     let year = d.getFullYear();
     document.getElementById("year_now").innerHTML = year;
+
+    function display_all_blogs(){
+        $('#blogs_container').empty()
+        $('#blogs_container_full').toggleClass('dnone')
+        $('#blogs_container_limited').toggleClass('dnone')
+        $('#olderPostSpan').text() == 'Older Posts →' ? $('#olderPostSpan').text('back') : $('#olderPostSpan').text('Older Posts →')
+    }
 </script>
