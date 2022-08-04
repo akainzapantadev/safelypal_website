@@ -9,8 +9,7 @@ class blogs extends MY_Controller {
 	{
 		$this->load->view('blogs/adminBlogs');
 	}
-	public function blogs()
-	{
+	public function blogs(){
 		$res = $this->_getRecordsData(
 			$selectfields = array("*,DATE_FORMAT(dateCreated, '%W %M %e %Y') AS dateCreated"), 
       $tables = array('blogs_tbl'),
@@ -18,8 +17,8 @@ class blogs extends MY_Controller {
       $where = null, 
       $join = null,	 
       $joinType = null,
-      $sortBy = null, 
-      $sortOrder = null, 
+			$sortBy = array('id'), 
+			$sortOrder = array('desc'), 
       $limit = null, 
       $fieldNameLike = null, 
       $like = null,

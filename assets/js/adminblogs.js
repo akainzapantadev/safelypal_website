@@ -449,14 +449,15 @@ function editblog(id){
   }
 }
   function deleteblog(id){
-  if(confirm("You wont be able to retrieve once delete, continue?"))
-  {
-  ajaxShortLink("deleteBlog",{"id":id})
-  
-  alertthis('Blog removed!');
-  }
-  else
-  {
-      e.preventDefault();
+
+  var x = window.prompt("Kindly input 'bwakanang delete this' to proceed", "")
+
+  if(x=='bwakanang delete this'){
+    ajaxShortLink("deleteBlog",{"id":id})
+    alertthis('Blog removed!');
+  }else if(x == "null" || x == null || x == ""){
+    return;
+  }else{
+    alert('try again')
   }
 }
