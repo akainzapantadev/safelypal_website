@@ -356,18 +356,18 @@ function addblog_(){
           })
           alertthis('Blog updated')
       }else{
-          //   var addresult = 
-          //   ajaxShortLink("addBlog",{
-          //   "title":titleVar,
-          //   "routeLink":routeVar,
-          //   "author":authorVar,
-          //   "sdesc":sdescVar,
-          //   "content":contents,
-          //   "desc":descVar,
-          //   "keywords":keywordsVar,
-          // })
-          // console.log(addresult)
-          // alertthis('Blog added')
+            var addresult = 
+            ajaxShortLink("addBlog",{
+            "title":titleVar,
+            "routeLink":routeVar,
+            "author":authorVar,
+            "sdesc":sdescVar,
+            "content":contents,
+            "desc":descVar,
+            "keywords":keywordsVar,
+          })
+          console.log(addresult)
+          alertthis('Blog added')
       }
   }else{
     alert('please fill all blanks')
@@ -385,11 +385,26 @@ function getUrls(){
   ajaxShortLink("getUrls")
   for (let index = 0; index < urls.length; index++) {
     $('#viewurls_container').append(
-      '<div class="mx-3">'+
-      '<a onclick="editblog('+urls[index].id+')" class="btn btn-outline-secondary mx-1"><span>edit</span></a>'+
-      '<a href = "https://safelypal.com/blogs/'+urls[index].routeLink+'" target="_blank" mx-1"><span id="title'+index+'">'+urls[index].title+'</span></a>'+
-      '<span id="title'+index+'">'+' '+urls[index].dateCreated+'</span>'+
-      '</div>'
+      // '<div class="mx-3">'+
+      // '<a onclick="editblog('+urls[index].id+')" class="btn btn-outline-transparent"><span style="text-decoration:underline;">edit</span></a>'+
+      // '<a onclick="deleteblog('+urls[index].id+')" class="btn btn-outline-transparent"><span style="text-decoration:underline;">delete</span></a>'+
+      // '<a href = "https://safelypal.com/blogs/'+urls[index].routeLink+'" target="_blank" mx-1"><span id="title'+index+'">'+urls[index].title.substring(0,30)+'</span></a>'+
+      // '<span style="color: red !important;" id="title'+index+'">'+' '+urls[index].dateCreated+'</span>'+
+      // '</div>'
+
+      '<tr>'+
+        '<th scope="row">'+urls[index].id+'</th>'+
+        '<td>'+
+        '<a onclick="editblog('+urls[index].id+')" class="btn btn-outline-transparent"><span style="text-decoration:underline;">edit</span></a>'+
+        '<a onclick="deleteblog('+urls[index].id+')" class="btn btn-outline-transparent"><span style="text-decoration:underline;">delete</span></a>'+
+        '</td>'+
+        '<td>'+
+        '<a href = "https://safelypal.com/blogs/'+urls[index].routeLink+'" target="_blank" mx-1"><span id="title'+index+'">"'+urls[index].title.substring(0,40)+'"</span></a>'+
+        '</td>'+
+        '<td>'+
+        '<span style="color: orange !important;" id="title'+index+'">'+' '+urls[index].dateCreated+'</span>'+
+        '</td>'+
+      '</tr>'
     )
   }
 }
@@ -431,5 +446,17 @@ function editblog(id){
   $('#viewcontents_container').append(contents)
 
   return $('#contents_input').text(contents)
+  }
+}
+  function deleteblog(id){
+  if(confirm("You wont be able to retrieve once delete, continue?"))
+  {
+  ajaxShortLink("deleteBlog",{"id":id})
+  
+  alertthis('Blog removed!');
+  }
+  else
+  {
+      e.preventDefault();
   }
 }

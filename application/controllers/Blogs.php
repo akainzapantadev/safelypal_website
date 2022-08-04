@@ -253,6 +253,14 @@ class blogs extends MY_Controller {
 
 			// echo json_encode($updateblogs_tbl);
 		}
+		public function deleteBlog(){
+			$id = $_GET['id'];
+
+			$this->_deleteRecords($tableName = 'blogs_tbl',$fieldName = array('id'),$where = array($id));
+			$this->_deleteRecords($tableName = 'blog_content_tbl',$fieldName = array('blog_id'),$where = array($id));
+			$this->_deleteRecords($tableName = 'seo_tags_tbl',$fieldName = array('blog_id'),$where = array($id));
+
+		}
 		public function checkIfBlogExist(){
 			$id = $_GET['id'];
 
@@ -286,8 +294,8 @@ class blogs extends MY_Controller {
 				$where = null,
 				$join = null,	 
 				$joinType = null,
-				$sortBy = null, 
-				$sortOrder = null, 
+				$sortBy = array('id'), 
+				$sortOrder = array('desc'), 
 				$limit = null, 
 				$fieldNameLike = null, 
 				$like = null,
@@ -315,7 +323,7 @@ class blogs extends MY_Controller {
 					$join = array("blogs_tbl.id = blog_content_tbl.blog_id"),	 
 					$joinType = array('left'),
 					$sortBy = null, 
-					$sortOrder = null, 
+					$sortOrder = null,
 					$limit = null, 
 					$fieldNameLike = null, 
 					$like = null,
@@ -354,5 +362,5 @@ class blogs extends MY_Controller {
 				}else{
 					echo json_encode('blog not found');
 				}
-}
+	}
 }

@@ -1,8 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class main extends CI_Controller {
-
+class main extends MY_Controller {
+	public function __construct(){
+		parent::__construct();
+	}
 
 	public function index()
 	{
@@ -12,8 +14,18 @@ class main extends CI_Controller {
 		echo(file_get_contents("application/views/others/robots.txt"));
 	}
 	public function sitemap(){
-		header("Content-type: text/xml");
-		$this->load->view('others/sitemap.php');
+
+		$res = $this->_getRecordsData(
+			$selectfields = array('*'), 
+			$tables = array('blogs_tbl'),$fieldName = null, $where = null,$join = null,$joinType = null,$sortBy = null, 
+			$sortOrder = null, $limit = null, $fieldNameLike = null, $like = null,$whereSpecial = null, $groupBy = null );
+
+			$data = array(
+				'res' => $res,
+			);
+
+			header("Content-type: text/xml");
+			$this->load->view('others/sitemap.php',$data);
 	}
 	public function subscribe(){
 		$this->db->where('ip',$_GET["ip"]);

@@ -126,9 +126,18 @@
     <!-- view urls -->
     <div class="modal fade" id="viewurls" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div id="viewurls_container" class="modal-body">
-            
+        <div class="modal-content container">
+        <tbody><div id="viewurls_container" class="modal-body"></tbody>
+              <table class="table table table-dark table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Modify</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Date created</th>
+                  </tr>
+                </thead>
+              </table>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

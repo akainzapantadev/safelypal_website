@@ -14,6 +14,7 @@ $route['blogs'] = 'blogs/blogs';
 $route['admin-blogs'] = 'blogs/adminBlogs';
 $route['addBlog'] = 'blogs/addBlog';
 $route['updateBlog'] = 'blogs/updateBlog';
+$route['deleteBlog'] = 'blogs/deleteBlog';
 $route['countBlogs'] = 'blogs/countBlogs';
 $route['getUrls'] = 'blogs/getUrls';
 $route['getBlog'] = 'blogs/getBlog';
