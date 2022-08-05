@@ -132,12 +132,6 @@
     const d = new Date();
     let year = d.getFullYear();
     document.getElementById("year_now").innerHTML = year;
-
-    // $("meta[property='og\\title']").attr("content", seoTitle);
-    // $("meta[property='og\\description']").attr("content", seoDesc);
-    // $("meta[property='og\\url']").attr("content", seoUrl);
-    // $("meta[name='title']").attr("content", seoTitle);
-    // $("meta[name='description']").attr("content", seoDesc);
-    // $("meta[name='keywords']").attr("content", seoKeywords);
+    
 </script>
 

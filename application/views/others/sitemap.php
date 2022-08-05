@@ -8,12 +8,12 @@
     <lastmod>2022-07-14T13:33:39+00:00</lastmod>
     <priority>1.00</priority>
   </url>
-  <?php 
-    for ($i=0; $i < count($res); $i++) { 
-  echo '<url>';
-  echo   '<loc>http://safelypal.com/blogs/'.$res[$i]->routeLink.'</loc>';
-  echo   '<priority>0.80</priority>';
-  echo '</url>';
+  <?php
+    for ($i=0; $i < count($res); $i++) {
+      echo '<url>';
+      echo   '<loc>http://safelypal.com/blogs/'.$res[$i]->routeLink.'</loc>';
+      echo   '<priority>0.80</priority>';
+      echo '</url>';
     }
   ?>
 </urlset>
