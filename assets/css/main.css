@@ -26,7 +26,8 @@ html {
 	--black-color: #0c0c0c;
 	--main-color: #5426de;
 	--sec-color: #b0de26;
-	--footer-bg: rgba(0, 0, 0, 0.035);
+	--footer-bg: #220e5d;
+	--mute-color: #6c757d;
 	--main-font: "Poppins", sans-serif;
 	--sec-font: "JetBrains Mono", monospace;
 }
@@ -265,6 +266,13 @@ html {
 	background-color: var(--light-color);
 }
 #explore_hover {
+	width: 30rem;
+	height: auto;
+	z-index: 10;
+	position: absolute;
+	background-color: var(--light-color);
+}
+#about_hover {
 	width: 30rem;
 	height: auto;
 	z-index: 10;
@@ -588,7 +596,7 @@ html {
 }
 /* footer */
 .sec-link {
-	color: var(--main-color);
+	color: var(--mute-color);
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
@@ -601,6 +609,9 @@ html {
 /* nav media */
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
+	#burgerbtn {
+		display: block;
+	}
 	.navbar {
 		/* height:100px; */
 	}
@@ -731,6 +742,9 @@ html {
 }
 /* // Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) and (min-width: 576px) {
+	#burgerbtn {
+		display: block;
+	}
 	.splash-text {
 		font-size: 4.2rem !important;
 	}
@@ -783,4 +797,31 @@ html {
 }
 .cursorpointer:hover {
 	cursor: pointer;
+}
+
+.longp {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+#getsafelypal_container {
+	margin-top: 5rem !important;
+	margin-bottom: 15rem !important;
+}
+
+.burger-btn {
+	width: 20px;
+	height: 30px;
+}
+
+#burgerbtn {
+	right: 1.5rem !important;
+	position: absolute;
+}
+
+#burger_container {
+	background-color: rgba(0, 0, 0, 0.9) !important;
+}
+#burger_links {
+	color: white;
 }

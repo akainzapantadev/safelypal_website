@@ -28,12 +28,15 @@
   <body>
     <!-- nav section /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
       <nav class="navbar navbar-expand-md">
-        <div class="container">
+          <div id="burgerbtn" class="dnone burger-click" onclick="$('#burger_container').toggleClass('dnone')">
+            <i class="fa fa-bars main-color fa-lg burger-click" aria-hidden="true"></i>
+          </div>
+        <div class="container-fluid">
           <div class="navbar-brand">
-            <img class="dnone" src="assets/imgs/safetypal_logo.png">
             <img src="assets/imgs/safetypal_main_logo.png">
           </div>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+          
+          <div class="collapse navbar-collapse justify-content-center" id="topnavbarcontent">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a id="features_nav" class="nav-link navlink hover-link-test" onclick="gotofeatures()" href="#">Features</a>
@@ -44,9 +47,21 @@
               <li class="nav-item">
                 <a id="explore_nav"  onclick="window.open('http://www.reddit.com/user/SafelyPal/', '_blank');" class="nav-link navlink" href="#">Explore</a>
               </li>
+              <li class="nav-item">
+                <a id="about_nav"  onclick="gotoabout()" class="nav-link navlink" href="#">About</a>
+              </li>
+              <script>
+                function gotoabout(){
+                  $('html, body').animate({
+                              scrollTop: $("#about_container").offset().top
+                          }, 100);
+
+                  window.open('http://www.SafelyPal.com/about', '_blank');
+                }
+              </script>
             </ul>
           </div>
-          <a id="dl_apk_link" class="light-color" href="assets\apk\safelypal.apk"><button id="dl_apk" class="round-btn main-btn-ui btn-size-1">Download apk</button></a>
+          <a id="dl_apk_link" class="light-color" href="#getsafelypal_container"><button id="dl_apk" class="round-btn main-btn-ui btn-size-1">Download app</button></a>
           <i id="menu_nav" class="fa fa-bars fa-inverse dnone" aria-hidden="true"></i>
         </div>
       </nav>
@@ -127,7 +142,7 @@
       <div id="guides_hover" class="dnone black-color radius-sm p-2">
         <div class="boxshad p-4">
           <h1 class="main-color font-lg">Guides</h1>
-          <small class="text-muted font1halfrem">how to use SafelyPal</small>
+          <small class="text-muted font1halfrem">How to use SafelyPal</small>
         </div>
       </div>
 
@@ -161,8 +176,43 @@
           </div>
         </div>
       </div>
+
+      <div id="about_hover" class="dnone radius-sm p-2">
+        <div class="boxshad p-4">
+          <div class= p-2">
+            <h1 class="main-color font-lg">About</h1>
+            <small class="text-muted font1halfrem">All about Safelypal </small>
+          </div>
+          <div class="row mt-2">
+            <div class="col-10">
+              <div class="py-1 hover-links-style" onclick="window.open('https://www.SafelyPal.com/about', '_blank');">
+                <span class="font-sm hover-links-style"> History</span><br>
+                <span class="font-xsm text-muted"> Evolution of the awesome wallet</span>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-10">
+              <div class="py-1 hover-links-style" onclick="window.open('https://www.SafelyPal.com/about', '_blank');">
+                <div class=""><span id="blogs_" class="font-sm hover-links-style">Mission and Vision</span></div>
+                <span class="font-xsm text-muted"> How Safelypal will contribute to the crypto space</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- nav link hover end///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- splash section //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      
+      <div id="burger_container" class="container-fluid py-2 dnone burger-click">
+          <div id="burger_links" class="burger-click">
+            <a id="features_nav" class="nav-link navlink hover-link-test burger-click" onclick="gotofeatures()" href="#">Features</a>
+            <a id="guides_nav" onclick="window.open('http://www.reddit.com/user/SafelyPal/comments/vyvk06/safelypal_newest_crypto_wallet/', '_blank');" class="nav-link navlink burger-click" href="#">Guides</a>
+            <a id="explore_nav"  onclick="window.open('http://www.reddit.com/user/SafelyPal/', '_blank');" class="nav-link navlink burger-click" href="#">Explore</a>
+            <a id="about_nav"  onclick="gotoabout()" class="nav-link navlink burger-click" href="#">About</a>
+          </div>
+      </div>
+
       <div class="card">
         <img src="https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=639&q=80" class="w-100 img-fluid">
         <div class="card-img-overlay text-center p-5">
@@ -204,8 +254,8 @@
       </div>
     <!-- splash section end///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- main section ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-      <main>
-        <div id="main_container" class="p-1 mt-5">
+    <main>
+      <div id="main_container" class="p-1 mt-5">
           <!-- learn more -->
             <div id="learnmore_container" class="container">
               <div class="row">
@@ -387,9 +437,10 @@
                           <img class="fcard-img" src="https://source.unsplash.com/600x900/?defi,blockchain">
                     </div>
                   </div>
+
                   <div id="breaker1" class="container-fluid text-center mt-5">
                       <div class="container">
-                        <div class="row justify-content-between">
+                        <div class="row justify-content-around">
                           <div class="col-lg-3 my-5 mini-logo-rightborder">
                               <div class="mini-logo-title">
                                 Rise and fall
@@ -428,6 +479,25 @@
                       </div>
                     </div>
                   </div>
+
+                  <div id="about_container" class="container light-color">
+
+                    <div class="text-start pt-1 my-5">
+                      <h6 class="font-bold sec-color">About Safelypal</h6>
+                      <div class="text-justify pb-2 text1-media lh-base">
+                      SafelyPal is a Crypto Wallet Platform where you can trade, earn or simply store your crypto assets with prestige privacy and security.
+
+                      In recent years, the cryptocurrency market has evolved rapidly, and as more investors join the trend, it's critical to safeguard your investments.
+
+                      The following advice will assist you in keeping your coins safe from theft or loss.
+
+                      You can rest easy knowing that all of your arduously won cryptos are kept in the safest location with these security measures in place.
+                        <a href="https://safelypal.com/about" class="sec-color font-bold font-xsm">Go to about page</a>
+                      </div>
+                    </div>
+
+                  </div> 
+
                 </div>
               </div>
             </div>
@@ -556,12 +626,72 @@
             </div><!-- community-logo -->
           </div>
         </div>
-        <div id="getsafelypal_container" class="container my-5 text-center">
-          <div class="text-center pt-1 main-color"><h6 class="font-bold">Get safelypal</h6></div>
-            <div class="mini-logo-title">Use safelypal browser <span class="main-color cursorpointer" onclick="window.open('https://www.wallet.safelypal.com', '_blank');">click here</span></div>
-            <div class="mini-logo-title">Download safelypal APK <a class="main-color cursorpointer" href="assets\apk\safelypal.apk">click here</a> </div>
+        <div id="getsafelypal_container" class="container text-center">
+        <div class="text-center pt-3 main-color"><h6 class="font-bold">Get SafelyPal</h6></div>
+              <div class="text-center"><h3 class="font-w500">Available on Mobile and Web application</h3></div>
+              <div class="text-center">
+                <h3 class="text-muted font-thin font-1rem"> 
+                  <span class="main-color font-normal">SafelyPal</span> 
+                  on Android, IOS, and Desktop View. <br> Smart security at your hands wherever you are, whenever you need.
+                </h3>
+              </div>
+          <div id="breaker1" class="container-fluid text-center mb-5" style="">
+            <div class="container">
+              <div class="row justify-content-between">
+                <div class="col-lg-3 col-sm-12 mt-5">
+                    <div class="mini-logo-container p-3">
+                      <img class="mini-logo" src="assets\imgs\mini-logo\monitor.png">
+                    </div>
+                    <div class="mini-logo-title">
+                      Desktop View
+                    </div>
+                    <div class="text-muted">
+                      Access SafelyPal anytime anywhere on the web <a class="main-color font-bold font-xsm" target="_blank" href="https://wallet.safelypal.com">Click here</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-12 my-5">
+                    <div class="mini-logo-container p-3"> 
+                      <img class="mini-logo" src="assets\imgs\mini-logo\android.png">
+                    </div>
+                    <div class="mini-logo-title">
+                      Android App
+                    </div>
+                    <div class="text-muted">
+                      Latest android versions compatible. Download the latest SafelyPal APK here <a class="main-color font-bold font-xsm" target="_blank" href="assets\apk\safelypal.apk">download</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-12 my-5">
+                    <div class="mini-logo-container p-3">
+                      <img class="mini-logo" src="assets\imgs\mini-logo\ios.png">
+                    </div>
+                    <div class="mini-logo-title">
+                      IOS App
+                    </div>
+                    <div class="text-muted">
+                      SafelyPal Team is currently developing IOS version for apple lovers <span class="main-color font-bold font-xsm" onclick="">Coming soon</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-12 my-5">
+                    <div class="mini-logo-container p-3">
+                      <img class="mini-logo" src="assets\imgs\mini-logo\gplay.png">
+                    </div>
+                    <div class="mini-logo-title">
+                      Google play store
+                    </div>
+                    <div class="text-muted">
+                      Approved and secured by google play store. <a class="main-color font-bold font-xsm" target="_blank" href="https://play.google.com/store/apps/details?id=com.wallet.safelypalsecurity">Proceed to app</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-      </main>
+            <!-- <div class="mini-logo-title">Use safelypal browser <span class="main-color cursorpointer" onclick="window.open('https://www.wallet.safelypal.com', '_blank');">click here</span></div>
+            <div class="mini-logo-title">Download safelypal APK <a class="main-color cursorpointer" href="assets\apk\safelypal.apk">click here</a> </div> -->
+          </div>
+
+      </div>
+    </main>
     <!-- main section end/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- footer section //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
       <div id="footer_container">
@@ -569,7 +699,7 @@
           <style>
             footer {
               display: block;
-              color : black!important;
+              color : white!important;
             }
             .subscribe_btn{
               background-color: var(--main-color);
@@ -618,7 +748,7 @@
           </div>
 
           <div class="d-flex justify-content-center py-4 my-4 border-top">
-            <p class="">© <span id="year_now"></span> <span class="sec-link">SafelyPal</span>. All rights reserved.</p>
+            <p class="">© <span id="year_now"></span> <span class="sec-color">SafelyPal</span>. All rights reserved.</p>
             
           </div>
         </footer>
@@ -651,6 +781,7 @@
           features_hover.setAttribute("style", "display:block;");
           guides_hover.setAttribute("style", "display:none;");
           explore_hover.setAttribute("style", "display:none;");
+          about_hover.setAttribute("style", "display:none;");
           var xl1 = getOffset( document.getElementById('features_nav')).left;
           var yl1 = getOffset( document.getElementById('features_nav')).top;
           $('#features_hover').css('top',yl1+50+'px');
@@ -678,6 +809,7 @@
           guides_hover.setAttribute("style", "display:block;");
           features_hover.setAttribute("style", "display:none;");
           explore_hover.setAttribute("style", "display:none;");
+          about_hover.setAttribute("style", "display:none;");
           var xl2 = getOffset( document.getElementById('guides_nav')).left;
           var yl2 = getOffset( document.getElementById('guides_nav')).top;
           $('#guides_hover').css('top',yl2+50+'px');
@@ -688,6 +820,7 @@
           guides_hover.setAttribute("style", "display:none;");
           features_hover.setAttribute("style", "display:none;");
           explore_hover.setAttribute("style", "display:none;");
+          about_hover.setAttribute("style", "display:none;");
         }
         $(document).mouseup(function(e){
           var container1 = $("#guides_hover");
@@ -705,6 +838,7 @@
         function mOverl3() {
           explore_hover.setAttribute("style", "display:block;");
           guides_hover.setAttribute("style", "display:none;");
+          about_hover.setAttribute("style", "display:none;");
           features_hover.setAttribute("style", "display:none;");
           var xl3 = getOffset( document.getElementById('explore_nav')).left;
           var yl3 = getOffset( document.getElementById('explore_nav')).top;
@@ -716,13 +850,45 @@
           explore_hover.setAttribute("style", "display:none;");
           guides_hover.setAttribute("style", "display:none;");
           features_hover.setAttribute("style", "display:none;");
+          about_hover.setAttribute("style", "display:none;");
         }
 
         $(document).mouseup(function(e){
-          var container2 = $("#guides_hover");
+          var container2 = $("#explore_hover");
           if (!container2.is(e.target) && container2.has(e.target).length === 0) 
             {
               explore_hover.setAttribute("style", "display:none;");
+            }
+        });
+                ////////////////////////////////////////////////about
+        var about_nav = document.querySelector("#about_nav");
+        about_nav.addEventListener("mouseover", mOverl4, false);
+        about_hover.addEventListener("mouseover", mOverl4, false);
+        about_hover.addEventListener("mouseout", mOutl4, false);
+
+        function mOverl4() {
+          about_hover.setAttribute("style", "display:block;");
+          explore_hover.setAttribute("style", "display:none;");
+          guides_hover.setAttribute("style", "display:none;");
+          features_hover.setAttribute("style", "display:none;");
+          var xl4 = getOffset( document.getElementById('about_nav')).left;
+          var yl4 = getOffset( document.getElementById('about_nav')).top;
+          $('#about_hover').css('top',yl4+50+'px');
+          $('#about_hover').css('left',xl4+(-50)+'px');
+        }
+
+        function mOutl4() {  
+          explore_hover.setAttribute("style", "display:none;");
+          guides_hover.setAttribute("style", "display:none;");
+          features_hover.setAttribute("style", "display:none;");
+          about_hover.setAttribute("style", "display:none;");
+        }
+
+        $(document).mouseup(function(e){
+          var container2 = $("#about_hover");
+          if (!container2.is(e.target) && container2.has(e.target).length === 0) 
+            {
+              about_hover.setAttribute("style", "display:none;");
             }
         });
         //////////////////////////////////////////////////////////////////////////
@@ -735,26 +901,6 @@
                 el = el.offsetParent;
           }
           return { top: _y, left: _x };
-        }
-
-        function ajaxShortLink(url,data){
-          var retVals;
-
-          jQuery.ajax({
-              url: url,
-              data: data,
-              type: "GET",
-              async: false,
-              success: function(response) {  
-                // console.log(response);
-                retVals = JSON.parse(response);
-              },
-              error: function(error) {
-                  console.log('Error:', error);
-              }
-          });
-
-          return retVals;
         }
 
         $.getJSON("https://api.ipify.org/?format=json", function(e) {
@@ -800,13 +946,13 @@
     });
 
     $( "#blogs_" ).click(function() {
-      // bootbox.alert({
-      //     message: ajaxLoadPage('quickLoadPage',{'pagename':'blogs'}),
-      //     size: 'large',
-      //     centerVertical: true,
-      //     closeButton: false
-      //   });
       window.open('blogs', '_blank');
     });
+
+    $(document).ready(function(){
+    $('*').not('.burger-click').click(function(){
+
+    })
+  })
   </script>
 <!-- script section -->

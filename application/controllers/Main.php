@@ -6,9 +6,11 @@ class main extends MY_Controller {
 		parent::__construct();
 	}
 
-	public function index()
-	{
+	public function index(){
 		$this->load->view('index');
+	}
+	public function about(){
+		$this->load->view('about');
 	}
 	public function robots(){
 		echo(file_get_contents("application/views/others/robots.txt"));
@@ -45,5 +47,6 @@ class main extends MY_Controller {
 			echo false;
 		}
 	}
+
 
 }

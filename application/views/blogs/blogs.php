@@ -44,7 +44,7 @@
                 <div class="card-img-overlay text-center">
                     <div id="splash_container" class="">
                         <span class="splash-text">SafelyPal Blogs</span>
-                        <p class="splash-subtext text-muted">Blogs from safelypal team</p>
+                        <p class="splash-subtext text-muted">Blogs from safelypal team. <a href="https://safelypal.com" class="main-color font-bold font-xsm text-center">SafelyPal Website</a></p>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,6 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
-                    
                         <?php 
                             echo '<div id="blogs_container_limited" class="post-preview">';
                                 for ($i=0; $i < 5; $i++) { 
@@ -87,7 +86,8 @@
                         ?>
                     </div>
                     <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" onclick="display_all_blogs()"><span id="olderPostSpan" value="older">Older Posts →</span></a></div>
+                    <div class="d-flex justify-content-center mb-4"><a class="btn btn-primary text-uppercase" onclick="display_all_blogs()"><span id="olderPostSpan" value="older">Older Posts →</span></a></div>
+                    <a href="https://safelypal.com" class="main-color font-bold font-xsm text-center mb-4">Visit SafelyPal Website</a>
                 </div>
             </div>
         </div>

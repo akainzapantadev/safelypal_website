@@ -4361,7 +4361,7 @@ fieldset:disabled .btn {
 		flex-basis: auto;
 	}
 	.navbar-expand-sm .navbar-toggler {
-		display: none;
+		display: block;
 	}
 	.navbar-expand-sm .offcanvas-header {
 		display: none;
@@ -11765,4 +11765,8 @@ header.masthead .post-heading .meta a {
 
 .dnone {
 	display: none;
+}
+
+.main-color {
+	color: #5426de;
 }

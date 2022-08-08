@@ -8,6 +8,10 @@
     <lastmod>2022-07-14T13:33:39+00:00</lastmod>
     <priority>1.00</priority>
   </url>
+  <url>
+    <loc>http://safelypal.com/blogs</loc>
+    <priority>0.80</priority>
+  </url>
   <?php
     for ($i=0; $i < count($res); $i++) {
       echo '<url>';
