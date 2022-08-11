@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <?php include 'srcs.php';?>
+    <link rel="stylesheet" href="assets/css/about.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1 ,maximum-scale=1.0">
     <meta name="title" content="SafelyPal - Smart Security at your hands">
@@ -39,43 +40,63 @@
       </nav>
       <div id="main_container" class="">
 
-        <div class="card">
-              <img src="https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=639&q=80" class="w-100 img-fluid">
-              <div class="card-img-overlay text-center p-5">
-                <div id="splash_container" class="mt-5">
-                  <span class="splash-text">About SafelyPal</span>
-                  <p class="splash-subtext"></p>
-                </div>
-              </div>
-        </div>
+        <div id="about_container" class="text-center px-5 longp lh-lg">
+            <div id="about" style="margin-top:5rem">
+              <h3 class="font-w500 pb-2 display-4 text-start">SafelyPal</h3>
+              <div class="text-justify pb-2 text-start text-muted">
 
-        <div id="history_container" class="text-center px-5 longp lh-sm">
-          <div id="devhistory">
-            <h3 class="font-w500">Development History</h3>
-            <div class="text-justify pb-2 text1-media">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              <p><strong>SafelyPal</strong> is a cryptocurrency wallet platform where you may trade, earn, or just simply store your crypto assets with unparalleled privacy and security. Has top-notch protection without putting their privacy at risk, and uses our services to earn significant benefits. It contains features where users may have a whale of time and make money, including Rise Fall Contract, Long Short Contract, Daily Mining, and Regular Mining.</p>
+
+              <p>Rise Fall Contract and Long Short Contract have the same mechanics but different scale of winnings. It gives traders the chance to benefit from both soaring and collapsing markets. Additionally, it provides an opportunity for investors to profit from changes in market prices without really owning the underlying asset.</p>
+
+              <p>In Regular and Daily Mining, the minimum purchase amount for each coin might vary, and users have a 24-hour window in which to mine whatever coin they want. Additionally, they can choose the length of time they want to receive additional payments as well as a lump sum percentage of profits.</p>
+
+              <p>Similar to other networks in the cryptocurrency industry, SafelyPal rewards users for every invitation they send out. It enables users to share the platform with their closest friends or family members and earn alongside them.</p>
+
+              
             </div>
           </div>
         </div>
 
-        <div id="missionandvision_container" class="p-5 longp lh-sm">
+        <div id="history_container" class="text-center px-5 longp lh-lg">
+          <div id="devhistory" style="margin-top:5rem">
+            <h3 class="font-w500 pb-2 display-4 text-start">History</h3>
+            <div class="text-justify pb-2 text-start text-muted">
+
+            <p>Early in 2020, SafelyPal began to take shape and was first unveiled as Security Wallet together w with other popular wallets in cryptocurrency space. In the form of a Security Wallet, its sole intent is to allow withdrawals and deposits.</p> 
+            
+            <p>After a few months, the creators had the bright idea to expand the platform's functionality beyond just withdrawal and deposit to include the ability to purchase and trade cryptocurrencies, which will be convenient for users.</p>
+
+            <p>As a result of popular demand, SafelyPal has switched over to Tri Network, where Tronscan is excellently utilized. A native cryptocurrency system known as TRX powers Tronscan, a decentralized operating system built on the blockchain. It includes analytics such as entire node statistics, DApp interactions, and triggers from smart contracts.</p>
+
+            <p>Seeing its potential as a website platform, the creators continued. Daily, the team considers methods to improve the user experience, and as a result, they have come up with the concept of developing an application that users can use and benefit from.</p>
+
+            <p>The developers have been working incredibly hard to produce a masterpiece that will fully satisfy the needs of future traders and investors. It was rebuilt to accommodate ever-increasing features and is also sometimes referred to as a one-stop shop for anyone new to cryptocurrencies. Launched in the first quarter of 2022, SafelyPal has pleasantly surprised the public by succeeding in its goal.</p>
+
+            <p>SafelyPal presently runs in over a hundred nations. Now, it can be used on web-based computers, Android and iOS smartphones, which is highly convenient for Bitcoin lovers and cryptocurrency investors. SafelyPal is associated with the Blockchain Technology for the security of all parties that ensures safety and ease of use for all transactions.</p>
+            
+          </div>
+          </div>
+        </div>
+
+        <div id="missionandvision_container" class="p-5 longp lh-lg">
           <div id="mission_container" class="text-center">
-            <h3 class="font-w500">Mission</h3>
-            <div class="text-justify pb-2 text1-media">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <h3 class="font-w500 text-start">Mission</h3>
+            <div class="text-start pb-5 text1-media text-muted">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
             </div>
           </div>
 
           <div id="vision_container"class="text-center">
-            <h3 class="font-w500">Vision</h3>
-            <div class="text-justify pb-2 text1-media">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <h3 class="font-w500 text-start">Vision</h3>
+            <div class="text-start pb-2 text1-media text-muted">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
             </div>
           </div>
         </div>
 
         <div class="text-center mb-4">
-          <a href="https://www.SafelyPal.com/" class="btn btn-primary text-uppercase">
+          <a href="https://www.SafelyPal.com/" class="text-uppercase " style="text-decoration:underline">
             <span id="backtowebsite"  >Back to Safelypal Website</span>
           </a>
         </div>
@@ -89,7 +110,7 @@
           <style>
             footer {
               display: block;
-              color : black!important;
+              color : white!important;
             }
             .subscribe_btn{
               background-color: var(--main-color);
@@ -138,8 +159,13 @@
           </div>
 
           <div class="d-flex justify-content-center py-4 my-4 border-top">
-            <p class="">© <span id="year_now"></span> <span class="sec-link">SafelyPal</span>. All rights reserved.</p>
+            <p class="">© <span id="year_now"></span> <span class="sec-color">SafelyPal</span>. All rights reserved.</p>
             
           </div>
         </footer>
       </div>
+      <script>
+                const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("year_now").innerHTML = year;
+      </script>

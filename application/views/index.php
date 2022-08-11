@@ -7,7 +7,7 @@
     <meta name="title" content="SafelyPal - Smart Security at your hands">
     <meta name="description" content="Safelypal is a Crypto Wallet Platform where you can trade, earn or simply store your crypto assets with prestige privacy and security.">
 
-    <meta name="keywords" content="safelypal, safelypal.com, safelypal crypto, safelypal wallet, safelypal crypto wallet, safelypal blog, safelypal.com blog, safelypal review, safelypal.com review, what is safelypal, web 3 wallet metamask, web3 wallet example, best crypto wallet, crypto defi wallet review, best web3 wallet, is coinbase a web3 wallet, web3 wallet extension, web3 wallet github, web 3.0 crypto wallet, web 3 0 crypto list, web 3 0 crypto projects, web 3 0 crypto price, best web 3 0 crypto, top 5 web 3 0 crypto, web 3 0 definition, when will web 3 0 be released, web 3 0 stocks, web3 0 crypto projects, web3 0 crypto coins list, web3 0 crypto list, web3. 0 crypto, web3 0 crypto coins, best web3 0 crypto, will crypto go to 0, best web to buy crypto, buy crypto 0 fees, can crypto go to 0, web3.0 examples, web3.0 features, what is web3.0, web3 get token symbol, buy crypto zero fees, how to buy crypto on webull desktop, crypto wallet app, crypto wallet canada, crypto wallet australia, crypto wallet hardware, crypto wallet uk, crypto wallet address, crypto wallet robinhood, crypto wallet online, crypto wallet exodus, best crypto wallet, robinhood crypto wallet, best crypto wallet app, exodus crypto wallet, safest crypto wallet, best crypto wallet canada, best crypto wallet australia, best crypto wallet reddit, best crypto wallet uk, hardware crypto wallet, cryptocurrency wallet, crypto.com defi wallet, crypto hardware wallet, crypto cold wallet, crypto hard wallet, crypto.com wallet address, crypto.com to trust wallet, cryptocurrency best wallet, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for nft, crypto wallet hardware, crypto wallet for mining, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for nft, crypto wallet metamask, crypto wallet for mining, crypto wallets list, best crypto wallet 2022">
+    <meta name="keywords" content="safelypal, safelypal.com, safelypal crypto, safelypal wallet, safelypal crypto wallet, safelypal blog, safelypal.com blog, safelypal review, safelypal.com review, what is safelypal, web 3 wallet metamask, web3 wallet example, best crypto wallet, crypto defi wallet review, best web3 wallet, is coinbase a web3 wallet, web3 wallet extension, web3 wallet github, web 3.0 crypto wallet, web 3 0 crypto list, web 3 0 crypto projects, web 3 0 crypto price, best web 3 0 crypto, top 5 web 3 0 crypto, web 3 0 definition, when will web 3 0 be released, web 3 0 stocks, web3 0 crypto projects, web3 0 crypto coins list, web3 0 crypto list, web3. 0 crypto, web3 0 crypto coins, best web3 0 crypto, will crypto go to 0, best web to buy crypto, buy crypto 0 fees, can crypto go to 0, web3.0 examples, web3.0 features, what is web3.0, web3 get token symbol, buy crypto zero fees, how to buy crypto on webull browser, crypto wallet app, crypto wallet canada, crypto wallet australia, crypto wallet hardware, crypto wallet uk, crypto wallet address, crypto wallet robinhood, crypto wallet online, crypto wallet exodus, best crypto wallet, robinhood crypto wallet, best crypto wallet app, exodus crypto wallet, safest crypto wallet, best crypto wallet canada, best crypto wallet australia, best crypto wallet reddit, best crypto wallet uk, hardware crypto wallet, cryptocurrency wallet, crypto.com defi wallet, crypto hardware wallet, crypto cold wallet, crypto hard wallet, crypto.com wallet address, crypto.com to trust wallet, cryptocurrency best wallet, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for nft, crypto wallet hardware, crypto wallet for mining, crypto wallet app, best crypto wallet, free crypto wallet, crypto wallet for nft, crypto wallet metamask, crypto wallet for mining, crypto wallets list, best crypto wallet 2022">
 
     <meta name="robots" content="index,follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -41,9 +41,9 @@
               <li class="nav-item">
                 <a id="features_nav" class="nav-link navlink hover-link-test" onclick="gotofeatures()" href="#">Features</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a id="guides_nav" onclick="window.open('http://www.reddit.com/user/SafelyPal/comments/vyvk06/safelypal_newest_crypto_wallet/', '_blank');" class="nav-link navlink" href="#">Guides</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a id="explore_nav"  onclick="window.open('http://www.reddit.com/user/SafelyPal/', '_blank');" class="nav-link navlink" href="#">Explore</a>
               </li>
@@ -59,6 +59,16 @@
                   window.open('http://www.SafelyPal.com/about', '_blank');
                 }
               </script>
+              <li class="nav-item">
+                <a id="FAQ_nav" onclick="gotoFAQ()" class="nav-link navlink" href="#">FAQ</a>
+              </li>
+                      <script>
+                        function gotoFAQ(){
+                          $('html, body').animate({
+                              scrollTop: $("#FAQ_container").offset().top
+                          }, 100);
+                        }
+                      </script>
             </ul>
           </div>
           <a id="dl_apk_link" class="light-color" href="#getsafelypal_container"><button id="dl_apk" class="round-btn main-btn-ui btn-size-1">Download app</button></a>
@@ -259,12 +269,12 @@
           <!-- learn more -->
             <div id="learnmore_container" class="container">
               <div class="row">
-                <div class="col-lg-5 col-sm-12">
+                <div class="col-lg-6 col-sm-12">
                   <div id="mobile_screenshot">
-                    <img class="img-fluid" src="assets/imgs/homeview-1.png">
+                    <center><img class="img-fluid" src="assets/imgs/proview.png"></center>
                   </div>
                 </div>
-                <div class="col-lg-7 col-sm-12 mt-5 py-5 pl-5">
+                <div class="col-lg-6 col-sm-12 mt-5 py-5 pl-5">
                   <div class="display-4 mobile-screenshot-title text-start splash-res">
                     Earn rewards on mobile and web app!
                   </div>
@@ -511,6 +521,47 @@
                   </div>
                 </div>
               </div>
+          <!-- FAQ -->
+          <div id="FAQ_container" class="py-5">
+            <div class="container">
+              <div class="text-center pt-1 main-color"><h6 class="font-bold zlevel2">Frequently asked questions</h6></div>
+              <div id="community_title" class="display-4 font-bolder zlevel2 text-center ">
+                <span>FAQ</span>
+              </div>
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
           <!-- buy crypto -->
             <div id="buycrypto_container" class="py-5">
               <div id="buycrypto_container_inner" class="my-5 py-5 container">
@@ -632,7 +683,7 @@
               <div class="text-center">
                 <h3 class="text-muted font-thin font-1rem"> 
                   <span class="main-color font-normal">SafelyPal</span> 
-                  on Android, IOS, and Desktop View. <br> Smart security at your hands wherever you are, whenever you need.
+                  on Android, IOS, and Browser View. <br> Smart security at your hands wherever you are, whenever you need.
                 </h3>
               </div>
           <div id="breaker1" class="container-fluid text-center mb-5" style="">
@@ -643,7 +694,7 @@
                       <img class="mini-logo" src="assets\imgs\mini-logo\monitor.png">
                     </div>
                     <div class="mini-logo-title">
-                      Desktop View
+                      Browser View
                     </div>
                     <div class="text-muted">
                       Access SafelyPal anytime anywhere on the web <a class="main-color font-bold font-xsm" target="_blank" href="https://wallet.safelypal.com">Click here</a>

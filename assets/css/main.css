@@ -799,11 +799,6 @@ html {
 	cursor: pointer;
 }
 
-.longp {
-	max-width: 900px;
-	margin: 0 auto;
-}
-
 #getsafelypal_container {
 	margin-top: 5rem !important;
 	margin-bottom: 15rem !important;
