@@ -48,5 +48,25 @@ class main extends MY_Controller {
 		}
 	}
 
+	public function insertContactUs(){
+		$name = $_GET['name'];
+		$emailaddress = $_GET['emailaddress'];
+		$message = $_GET['message'];
+
+		$insert_contactus = array(
+			'name'=>$name,
+			'emailaddress'=>$emailaddress,
+			'message'=>$message,
+			'dateCreated' => $this->_getTimeStamp24Hours(),
+		);
+
+		$insertcontactus = $this->_insertRecords('contactus_tbl', $insert_contactus);
+
+		if ($insertcontactus) {
+			echo true;
+		}else{
+			echo false;
+		}
+	}
 
 }

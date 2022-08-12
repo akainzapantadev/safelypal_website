@@ -353,7 +353,8 @@
                           Blockhain Technology
                         </div>
                         <div class="text-muted">
-                          Feel safe in a blockchain environment technology. <span class="main-color font-bold font-xsm">Learn more</span>
+                          Feel safe in a blockchain environment technology. 
+                          <!-- <span class="main-color font-bold font-xsm">Learn more</span> -->
                         </div>
                       </div>
                       <div class="col-lg-3 col-sm-12 my-5 mini-logo-rightborder">
@@ -386,7 +387,8 @@
                           Fast human support
                         </div>
                         <div class="text-muted">
-                          Our representatives are always happy to support and help you. <span class="main-color font-bold font-xsm">Support page</span>
+                          Our representatives are always happy to support and help you. 
+                          <!-- <span class="main-color font-bold font-xsm">Support page</span> -->
                         </div>
                       </div>
                     </div>
@@ -452,34 +454,34 @@
                       <div class="container">
                         <div class="row justify-content-around">
                           <div class="col-lg-3 my-5 mini-logo-rightborder">
-                              <div class="mini-logo-title">
+                              <div class="text-start mini-logo-title">
                                 Rise and fall
                               </div>
-                              <div class="text-muted px-3">
+                              <div class="text-start text-muted pr-3">
                                 It offers an opportunity to traders to make profit from both rising and falling markets.
                               </div>
                             </div>
                             <div class="col-lg-3 my-5 mini-logo-rightborder">
-                              <div class="mini-logo-title">
+                              <div class="text-start mini-logo-title">
                                 Short and Long
                               </div>
-                              <div class="text-muted px-3">
+                              <div class="text-start text-muted pr-3">
                                 It gives the investors a chance to benefit from changes in market prices without owning the underlying asset.
                               </div>
                             </div>
                             <div class="col-lg-3 my-5 mini-logo-rightborder">
-                              <div class="mini-logo-title">
+                              <div class="text-start mini-logo-title">
                                 Daily mining
                               </div>
-                              <div class="text-muted px-3">
+                              <div class="text-start text-muted pr-3">
                                 Users can choose any coin to mine with different minimum purchase amount alloted for 24 hours time frame.
                               </div>
                             </div>
                             <div class="col-lg-3 my-5">
-                              <div class="mini-logo-title">
+                              <div class="text-start mini-logo-title">
                                 Regular mining
                               </div>
-                              <div class="text-muted px-3 ">
+                              <div class="text-start text-muted pr-3 ">
                                 <span class="zlevel2">
                                   Users can select their chosen time period for receiving more and a lump sum proportion of profit.
                                 </span> 
@@ -494,7 +496,7 @@
 
                     <div class="text-start pt-1 my-5">
                       <h6 class="font-bold sec-color">About Safelypal</h6>
-                      <div class="text-justify pb-2 text1-media lh-base">
+                      <div class="text-justify pb-2 text1-media lh-base text-muted">
                       SafelyPal is a Crypto Wallet Platform where you can trade, earn or simply store your crypto assets with prestige privacy and security.
 
                       In recent years, the cryptocurrency market has evolved rapidly, and as more investors join the trend, it's critical to safeguard your investments.
@@ -502,7 +504,7 @@
                       The following advice will assist you in keeping your coins safe from theft or loss.
 
                       You can rest easy knowing that all of your arduously won cryptos are kept in the safest location with these security measures in place.
-                        <a href="https://safelypal.com/about" class="sec-color font-bold font-xsm">Go to about page</a>
+                        <a href="https://safelypal.com/about" class="font-bold font-xsm">Go to about page</a>
                       </div>
                     </div>
 
@@ -522,44 +524,120 @@
                 </div>
               </div>
           <!-- FAQ -->
-          <div id="FAQ_container" class="py-5">
+          <div id="FAQ_container" class="pb-5">
             <div class="container">
               <div class="text-center pt-1 main-color"><h6 class="font-bold zlevel2">Frequently asked questions</h6></div>
               <div id="community_title" class="display-4 font-bolder zlevel2 text-center ">
-                <span>FAQ</span>
+                <span>FAQs</span>
               </div>
-              <div class="accordion accordion-flush" id="accordionFlushExample">
+              <center>
+                <div class="accordion accordion-flush container mt-3" id="accordionFlushExample" style="max-width:50rem;">
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        Accordion Item #1
+                      What is crypto wallet?
                       </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                      <div class="accordion-body">
+                        In general, <code>crypto wallets</code> are either software-based or hardware-based. 
+                        Although they all operate somewhat differently, they are all made to let you safely access any cryptocurrency you may own.
+                      </div>
                     </div>
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingTwo">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Accordion Item #2
+                        How do I install SafelyPal?
                       </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      <div class="accordion-body">
+                        Go to <code><a href="www.safelypal.com">SafelyPal Website</a></code> and click the “Download” button, or you can search “SafelyPal” in Google Play Store 
+                        for Android and App Store for iOS.
                     </div>
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingThree">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Accordion Item #3
+                        How to deposit?
                       </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      <div class="accordion-body">
+                      SafelyPal is connected with <code>PayPal</code> where you can deposit directly. You can also use other cryptocurrency exchanges to deposit. 
+                      What you need to do is to copy your address in SafelyPal and paste it to your preferred exchange platform.
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading4">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapseThree">
+                      What are the Crypto Exchange Platforms that can be used for SafelyPal?
+                      </button>
+                    </h2>
+                    <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      Binance, Binance.Us, Coinbase, Kraken, Crypto.com, Gemini, KuCoin, Bitstamp, Bittrex, bitFlyer, and many more
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading5">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapseThree">
+                      How to earn from inviting?
+                      </button>
+                    </h2>
+                    <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      In SafelyPal, you can also earn crypto or money by referring friends. What you just need to do is go to your account and copy your referral link then send it to your friends and family. 
+                      Referral fee will appear to your account shortly after your friend is done with the sign-up.
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading6">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapseThree">
+                      How to withdraw?
+                      </button>
+                    </h2>
+                    <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      Same with deposit, you can also withdraw your assets thru other cryptocurrency exchange platform like Binance, Binance.US, Coinbase etc.
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading7">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Which tokens does SafelyPal support?
+                      </button>
+                    </h2>
+                    <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      SafelyPal supports Tron (TRC20) , Binance Smart Chain (BEC20), and Ethereum (ERC20) networks.
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading8">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapseThree">
+                      How do I keep my wallet safe?
+                      </button>
+                    </h2>
+                    <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      Always make sure to take note of your personal details. Our chat support is 24/7 online, feel free to message or email us at safelypal@gmail.com.
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading9">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Where can I go if I have more questions?
+                      </button>
+                    </h2>
+                    <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                      For further questions, kindly email us at <code>safelypal@gmail.com</code>.
                     </div>
                   </div>
                 </div>
+              </center>
             </div>
           </div>
           <!-- buy crypto -->
@@ -740,7 +818,41 @@
             <!-- <div class="mini-logo-title">Use safelypal browser <span class="main-color cursorpointer" onclick="window.open('https://www.wallet.safelypal.com', '_blank');">click here</span></div>
             <div class="mini-logo-title">Download safelypal APK <a class="main-color cursorpointer" href="assets\apk\safelypal.apk">click here</a> </div> -->
           </div>
+          <!-- <div id="contact_container"class="text-center lh-sm">
+            <h3 class="font-w500">Contact Us</h3>
+            <div class="text-start pb-2 text1-media text-muted">
+            <p class="text-center">FACEBOOK : <a href="www.facebook.com/safelypal">FB SafelyPal</a><br>
+              INSTAGRAM : <a href="www.instagram.com/safelypal">IG SafelyPal</a><br>
+              TWITTER : <a href="www.twitter.com/safelypal">Twitter SafelyPal</a><br>
+              REDDIT : <a href="www.reddit.com/user/safelypal">Reddit SafelyPal</a><br>
+              LINKEDIN : <a href="www.linkedin.com/safelypal-wallet">LinkedIn SafelyPal</a><br>
+              YOUTUBE : <a href="www.youtube.com/channel/UCEcuLhtr-8fZKwUrOBtzekA">Yt SafelyPal</a><br>
+              EMAIL: safelypal@gmail.com
+            </p>
+            </div>
+          </div> -->
+        </div>
+        <div id="contactform_container" class="container my-5 pb-5" style="max-width:800px;">
+          <div class="text-start sec-color "><h6 class="font-bold">Contact</h6></div>
+          <div class="text-start pb-1"><h2 class="font-bold sub-media">Contact us, Let us know what you think</h2></div>
+          <div class="mb-3">
+            <input class="form-control" id="name_contactus_input" type="text" placeholder="Name" data-sb-validations="required"/>
+          </div>
 
+          <div class="mb-3">
+            <input class="form-control" id="emailaddress_contactus_input" type="email" placeholder="Email Address" data-sb-validations="required, email"/>
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" id="message_contactus_input" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+          </div>
+
+          <div class="d-grid">
+            <center>
+            <button class="btn btn-outline-transparent main-color btn-lg" style="width:400px;" onclick="contactus_()"><code>Submit</code></button>
+            </center>
+          </div>
+        </div>
       </div>
     </main>
     <!-- main section end/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -1005,5 +1117,39 @@
 
     })
   })
+
+  function contactus_(){
+    var name = $('#name_contactus_input').val()
+    var email = $('#emailaddress_contactus_input').val()
+    var message = $('#message_contactus_input').val()
+
+    var data = [
+      {
+        name: "name",
+        value: name
+      },
+      {
+        name: "emailaddress",
+        value: email
+      },
+      {
+        name: "message",
+        value: message
+      }
+    ]
+
+    var res = ajaxShortLink('main/insertContactUs',data);
+    console.log(res);
+
+    if(res==1){
+      alert('Thank you for messaging us!')
+    }else{
+      alert('Submit error, please try again')
+    }
+
+    $('#name_contactus_input').val('')
+    $('#emailaddress_contactus_input').val('')
+    $('#message_contactus_input').val('')
+  }
   </script>
 <!-- script section -->

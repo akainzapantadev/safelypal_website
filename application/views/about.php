@@ -83,21 +83,27 @@
           <div id="mission_container" class="text-center">
             <h3 class="font-w500 text-start">Mission</h3>
             <div class="text-start pb-5 text1-media text-muted">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+              <p>
+              Our team aims to provide customers top-notch security without having risk of their privacy and take advantage of our features to earn extensive rewards. 
+              Our shared objective of financial freedom will be accomplished with each other's assistance.
+              </p>
             </div>
           </div>
 
           <div id="vision_container"class="text-center">
             <h3 class="font-w500 text-start">Vision</h3>
             <div class="text-start pb-2 text1-media text-muted">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+              <p>
+              Our vision is to make people’s use of cryptocurrency wallets effortless. By making it possible, 
+              we think we can considerably better people's lives all across the world.
+              </p>
             </div>
           </div>
         </div>
 
         <div class="text-center mb-4">
-          <a href="https://www.SafelyPal.com/" class="text-uppercase " style="text-decoration:underline">
-            <span id="backtowebsite"  >Back to Safelypal Website</span>
+          <a href="https://www.SafelyPal.com/">
+            <span id="backtowebsite"  ><code>Go back to Safelypal Website</code></span>
           </a>
         </div>
 
