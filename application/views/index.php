@@ -840,7 +840,7 @@
           </div>
 
           <div class="mb-3">
-            <input class="form-control" id="emailaddress_contactus_input" type="email" placeholder="Email Address" data-sb-validations="required, email"/>
+            <input class="form-control" id="emailaddress_contactus_input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" placeholder="Email Address" data-sb-validations="required, email"/>
           </div>
 
           <div class="mb-3">
@@ -1138,18 +1138,22 @@
       }
     ]
 
-    var res = ajaxShortLink('main/insertContactUs',data);
-    console.log(res);
-
-    if(res==1){
-      alert('Thank you for messaging us!')
+    if(name==''||email==''||message==''){
+      alert('please fill out fields')
     }else{
-      alert('Submit error, please try again')
-    }
+      var res = ajaxShortLink('main/insertContactUs',data);
+      console.log(res);
 
-    $('#name_contactus_input').val('')
-    $('#emailaddress_contactus_input').val('')
-    $('#message_contactus_input').val('')
+      if(res==1){
+        alert('Thank you for messaging us!')
+      }else{
+        alert('Submit error, please try again')
+      }
+
+      $('#name_contactus_input').val('')
+      $('#emailaddress_contactus_input').val('')
+      $('#message_contactus_input').val('')
+    }
   }
   </script>
 <!-- script section -->

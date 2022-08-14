@@ -161,4 +161,11 @@
       
     })
   })
+
+  $(document).on('change', '#title_input', function() {
+    
+    var x = $('#title_input').val().split(' ').join('-');
+    $('#routeLink_input').val(x)
+    $('#author_input').val('SafelyPal Team')
+  });
 </script>
