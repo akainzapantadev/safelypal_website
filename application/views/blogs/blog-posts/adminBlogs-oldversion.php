@@ -45,17 +45,52 @@
     </div>
     <div class="mb-2 mt-4">
       <span class="h2">Content</span>
-      <button class="btn btn-outline-transparent" onclick="window.open('https://wordtohtml.net/site/index', '_blank')">Editor</button>
+      <button class="btn btn-outline-transparent" data-bs-toggle="modal" data-bs-target="#viewcontents" onclick="viewcontents_()">View contents</button>
     </div>
     
     <div class="my-2"></div>
     <div>
       <div id="content_container" class="my-2">
-      <div class="input-group">
-        <span class="input-group-text text-muted"> Contents</span>
-        <textarea id="contents_input" class="form-control" aria-label="With textarea" placeholder="paste mo dito yung galing sa editor ate gin"></textarea>
+      <!-- contents appends here -->
       </div>
+
+      <ul class="nav nav-tabs content_btn_container" id="" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="main_btns-tab" data-bs-toggle="tab" data-bs-target="#main_btns_div" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Main</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="bullet_btns-tab" data-bs-toggle="tab" data-bs-target="#bullet_btns_div" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Bullet</button>
+        </li>
+        <!-- <li class="nav-item" role="presentation">
+          <button class="nav-link" id="num_bnts-tab" data-bs-toggle="tab" data-bs-target="#num_bnts_div" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Numerical</button>
+        </li> -->
+      </ul>
+
+      <div class="tab-content content_btn_container" id="">
+        <div class="tab-pane fade show active" id="main_btns_div" role="tabpanel" aria-labelledby="main_btns-tab" tabindex="0">
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('p')">Paragraph</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('t')">Title</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('t1')">Title1</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('t2')">Title2</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('c')">Conclusion</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('d')">Disclaimer</button>
+        </div>
+
+        <div class="tab-pane fade" id="bullet_btns_div" role="tabpanel" aria-labelledby="bullet_btns-tab" tabindex="0">
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('b')">Bullets</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('bt')">Bullets_t</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('bt1')">Bullets_t1</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('bt2')">Bullets_t2</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('n')">num </button>
+        </div>
+
+        <!-- <div class="tab-pane fade" id="num_bnts_div" role="tabpanel" aria-labelledby="num_bnts-tab" tabindex="0">
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('nt')">num title</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('nt1')">num title1</button>
+          <button class="btn btn-secondary mt-1 content_btns" type="button" onclick="addcontent('nt2')">num title2</button>
+        </div> -->
       </div>
+    </div>
 
     <div class="mb-2 mt-4"><span class="h2">Seo</span></div>
 

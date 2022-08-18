@@ -86,7 +86,7 @@
                         ?>
                     </div>
                     <!-- Pager-->
-                    <div class="d-flex justify-content-center mb-4"><a class="btn btn-primary text-uppercase" onclick="display_all_blogs()"><span id="olderPostSpan" value="older">Older Posts →</span></a></div>
+                    <div class="d-flex justify-content-center mb-4"><a class="btn btn-primary text-uppercase" onclick="display_all_blogs()"><span id="olderPostSpan" value="older">View All Posts →</span></a></div>
                     <a href="https://safelypal.com" class="main-color font-bold font-xsm text-center mb-4">Visit SafelyPal Website</a>
                 </div>
             </div>
@@ -140,6 +140,6 @@
         $('#blogs_container').empty()
         $('#blogs_container_full').toggleClass('dnone')
         $('#blogs_container_limited').toggleClass('dnone')
-        $('#olderPostSpan').text() == 'Older Posts →' ? $('#olderPostSpan').text('back') : $('#olderPostSpan').text('Older Posts →')
+        $('#olderPostSpan').text() == 'View All Posts →' ? $('#olderPostSpan').text('back') : $('#olderPostSpan').text('View All Posts →')
     }
 </script>
