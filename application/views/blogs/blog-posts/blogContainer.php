@@ -19,7 +19,7 @@
         <meta property="og:image" content=""/>
         <meta property="og:url" content="<?php echo $dataContainer['url']?>"/>
 
-        <title class="main-color">Tips on crypto trading</title>
+        <title class="main-color"><?php echo $dataContainer['title']?></title>
 
         
         
