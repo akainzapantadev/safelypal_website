@@ -531,111 +531,20 @@
                 <span>FAQs</span>
               </div>
               <center>
+                
                 <div class="accordion accordion-flush container mt-3" id="accordionFlushExample" style="max-width:50rem;">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      What is crypto wallet?
-                      </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        In general, <code>crypto wallets</code> are either software-based or hardware-based. 
-                        Although they all operate somewhat differently, they are all made to let you safely access any cryptocurrency you may own.
+                  <div id="faqlist"></div>
+                    <!-- <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-heading9">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Where can I go if I have more questions?
+                        </button>
+                      </h2>
+                      <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                        For further questions, kindly email us at <code>safelypal@gmail.com</code>.
                       </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        How do I install SafelyPal?
-                      </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        Go to <code><a href="www.safelypal.com">SafelyPal Website</a></code> and click the “Download” button, or you can search “SafelyPal” in Google Play Store 
-                        for Android and App Store for iOS.
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        How to deposit?
-                      </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                      SafelyPal is connected with <code>PayPal</code> where you can deposit directly. You can also use other cryptocurrency exchanges to deposit. 
-                      What you need to do is to copy your address in SafelyPal and paste it to your preferred exchange platform.
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading4">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapseThree">
-                      What are the Crypto Exchange Platforms that can be used for SafelyPal?
-                      </button>
-                    </h2>
-                    <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                      Binance, Binance.Us, Coinbase, Kraken, Crypto.com, Gemini, KuCoin, Bitstamp, Bittrex, bitFlyer, and many more
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading5">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapseThree">
-                      How to earn from inviting?
-                      </button>
-                    </h2>
-                    <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                      In SafelyPal, you can also earn crypto or money by referring friends. What you just need to do is go to your account and copy your referral link then send it to your friends and family. 
-                      Referral fee will appear to your account shortly after your friend is done with the sign-up.
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading6">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapseThree">
-                      How to withdraw?
-                      </button>
-                    </h2>
-                    <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                      Same with deposit, you can also withdraw your assets thru other cryptocurrency exchange platform like Binance, Binance.US, Coinbase etc.
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading7">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapseThree">
-                      Which tokens does SafelyPal support?
-                      </button>
-                    </h2>
-                    <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                      SafelyPal supports Tron (TRC20) , Binance Smart Chain (BEC20), and Ethereum (ERC20) networks.
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading8">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapseThree">
-                      How do I keep my wallet safe?
-                      </button>
-                    </h2>
-                    <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                      Always make sure to take note of your personal details. Our chat support is 24/7 online, feel free to message or email us at safelypal@gmail.com.
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-heading9">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapseThree">
-                      Where can I go if I have more questions?
-                      </button>
-                    </h2>
-                    <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                      For further questions, kindly email us at <code>safelypal@gmail.com</code>.
-                    </div>
-                  </div>
+                    </div> -->
                 </div>
               </center>
             </div>
@@ -921,7 +830,6 @@
 </html>
 <!-- <a target="_blank" href="https://icons8.com/icon/60014/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
 <!-- script section -->
- 
   <script>
       // global
       var ip;
@@ -1107,6 +1015,7 @@
           }
         }
     });
+    
 
     $( "#blogs_" ).click(function() {
       window.open('blogs', '_blank');
@@ -1155,5 +1064,32 @@
       $('#message_contactus_input').val('')
     }
   }
+
+  var loadfaq = loadJsonViaURL('https://wallet.safelypal.com/admin/loadFaq')
+  console.log(loadfaq)
+
+  for (let index = 0; index < loadfaq.length; index++) {
+
+  $('#faqlist').append(
+
+  '<div class="accordion-item">'+
+    '<h2 class="accordion-header" id="flush-heading'+loadfaq[index].id+'">'+
+      '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse'+loadfaq[index].id+'" aria-expanded="false" aria-controls="flush-collapse'+loadfaq[index].id+'">'+
+      loadfaq[index].faq+
+      '</button>'+
+    '</h2>'+
+    '<div id="flush-collapse'+loadfaq[index].id+'" class="accordion-collapse collapse" aria-labelledby="flush-heading'+loadfaq[index].id+'" data-bs-parent="#accordionFlushExample">'+
+      '<div class="accordion-body">'+
+        '<p>'+
+        loadfaq[index].answer+
+      '</div>'+
+    '</div>'+
+  '</div>'
+  )
+    
+  }
+  
+  
+
   </script>
 <!-- script section -->

@@ -25,5 +25,6 @@ $route['countBlogs'] = 'blogs/countBlogs';
 $route['getUrls'] = 'blogs/getUrls';
 $route['getBlog'] = 'blogs/getBlog';
 $route['checkIfBlogExist'] = 'blogs/checkIfBlogExist';
+$route['admin/loadFaq'] = 'admin/loadFaq';
 
 $route['blogs/(:any)'] = 'blogs/blogLoad/$1';

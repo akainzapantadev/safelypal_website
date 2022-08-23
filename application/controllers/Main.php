@@ -40,7 +40,7 @@ class main extends MY_Controller {
 			'ip' => $_GET["ip"],
 			'timestamp' => $timeStamp,
 		);
-		$saveQueryNotif = $this->db->insert("subscribers_tbl",$insertRecord);
+		$saveQueryNotif = $this->db->escape("subscribers_tbl",$insertRecord);
 		if ($saveQueryNotif) {
 			echo true;
 		}else{
