@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+    <script src="assets/Thirdparty/js-toast-master/toast.min.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/adminblogs.js"></script>
     <link href="assets/Thirdparty/fontawesome6/css/all.css" rel="stylesheet">
@@ -53,10 +54,15 @@
       <div id="content_container" class="my-2">
       <div class="input-group">
         <span class="input-group-text text-muted"> Contents</span>
-        <textarea id="contents_input" class="form-control" aria-label="With textarea" placeholder="paste mo dito yung galing sa editor ate gin"></textarea>
+        <textarea id="contents_input" class="form-control" aria-label="With textarea" placeholder="paste contents here"></textarea>
       </div>
       </div>
-
+      <div class="mb-2 mt-4">
+        <span class="h2">Content</span>
+        <button class="btn btn-outline-transparent" onclick="window.open('https://tinypng.com/', '_blank')">Tiny PNG</button>
+      </div>
+    <div id="upload_view"></div>
+      
     <div class="mb-2 mt-4"><span class="h2">Seo</span></div>
 
     <div class="input-group mb-2">
@@ -74,10 +80,8 @@
       <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewurls"><span>View Added Blogs</span></button>
     </div>
 
-
-
   </div>
-    <!-- view contents -->
+  <!-- view contents -->
     <div class="modal fade" id="viewcontents" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -88,7 +92,7 @@
         </div>
       </div>
     </div>
-    <!-- view urls -->
+  <!-- view urls -->
     <div class="modal fade" id="viewurls" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content container">
@@ -133,4 +137,9 @@
     $('#routeLink_input').val(x)
     $('#author_input').val('SafelyPal Team')
   });
+
+    $(function(){
+      $("#upload_view").load("upload_view"); 
+    });
+
 </script>

@@ -11770,3 +11770,8 @@ header.masthead .post-heading .meta a {
 .main-color {
 	color: #5426de;
 }
+
+#blogImage {
+	width: clamp(700px, 10rem, 100%);
+	height: clamp(700px, 10rem, 100%);
+}

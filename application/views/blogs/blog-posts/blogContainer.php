@@ -10,13 +10,13 @@
         <meta name="author" content="SAFELYPAL-DEV">
         <meta name="google-site-verification" content="" />
 
-        <meta name="title" content="<?php echo $dataContainer['title']?>">
+        <!-- <meta name="title" content="<?php echo $dataContainer['title']?>"> -->
         <meta name="description" content="<?php echo $dataContainer['description']?>">
         <meta name="keywords" content="<?php echo $dataContainer['keywords']?>">
 
         <meta property="og:title" content="<?php echo $dataContainer['title']?>"/>
         <meta property="og:description" content="<?php echo $dataContainer['description']?>"/>
-        <meta property="og:image" content=""/>
+        <meta property="og:image" content="https://safelypal.com/<?php echo $blogImage; ?>"/>
         <meta property="og:url" content="<?php echo $dataContainer['url']?>"/>
 
         <title class="main-color"><?php echo $dataContainer['title']?></title>
@@ -40,7 +40,7 @@
         <nav class="navbar navbar-expand-md">
             <div class="container">
             <div class="navbar-brand">
-                <img src="../assets/imgs/safetypal_main_logo.png">
+                <img src="../assets/imgs/safetypal_main_logo.png" alt="">
             </div>
             </div>
         </nav>
@@ -72,10 +72,15 @@
         <!-- Post Content-->
         <article class="mb-4">
             <div class="container px-4 px-lg-5">
+                <center>
+                    <div >
+                        <img id="blogImage" src="../<?php echo $blogImage; ?>" class="img-fluid py-5" alt="Responsive image">
+                    </div>
+                </center>
 
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <?php
+                         <?php
                             echo $contents;
                         ?>
 
@@ -132,6 +137,11 @@
     const d = new Date();
     let year = d.getFullYear();
     document.getElementById("year_now").innerHTML = year;
-    
+
+    var altImage = $('#blogImage').attr('src').replace('../assets/imgs/blogimages/','SafelyPal Blog ')
+    var x = altImage.replace('.png','')
+    var y = x.replaceAll('-',' ')
+
+    $('#blogImage').attr('alt',y)
 </script>
 

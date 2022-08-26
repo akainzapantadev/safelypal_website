@@ -1,6 +1,8 @@
 // gvars
   var globalID = 0
   var contents=''
+  var blogImageName = ''
+  var blogImagePath = 'assets/imgs/blogimages/'
 
 function addblog_(){
   var titleVar = $('#title_input').val()
@@ -10,6 +12,16 @@ function addblog_(){
   var descVar = $('#desc_input').val()
   var keywordsVar = $('#keywords_input').val()
   var blogContents = $('#contents_input').val()
+
+  var uploaderName = $('#blogImage').attr('name')
+  var uploaderFile = $('#blogImage')[0].files[0]
+  var uploaderFileName = $('#blogImage')[0].files[0].name
+
+  var imageUploadFormData = new FormData();
+  imageUploadFormData.append(uploaderName,uploaderFile,uploaderFileName)
+  var upload = backendHandleFormData('upload_file',imageUploadFormData)
+
+  console.log(upload)
 
   if(
     titleVar != '' &&
@@ -23,17 +35,23 @@ function addblog_(){
     // var checkIfBlogExist = ajaxShortLink("checkIfBlogExist",{"id":111}) // for testing
     var checkIfBlogExist = ajaxShortLink("checkIfBlogExist",{"id":globalID})
       if(checkIfBlogExist==1){
-        var updateresult = 
-            ajaxShortLink("updateBlog",{
-            "title":titleVar,
-            "routeLink":routeVar,
-            "author":authorVar,
-            "sdesc":sdescVar,
-            "content":blogContents,
-            "desc":descVar,
-            "keywords":keywordsVar,
-            "id":globalID,
-          })
+        var getImagePath = ajaxShortLink("getBlog",{"id":globalID})
+        var test = ajaxShortLink("deleteBlogImageBeforeUpdatingBlogDetails",{"ImagePath":getImagePath.blogImage})
+
+        console.log(test)
+        // var updateresult = 
+        //     ajaxShortLink("updateBlog",{
+        //     "title":titleVar,
+        //     "routeLink":routeVar,
+        //     "author":authorVar,
+        //     "sdesc":sdescVar,
+        //     "content":blogContents,
+        //     "blogImage":blogImageName,
+        //     "desc":descVar,
+        //     "keywords":keywordsVar,
+        //     "id":globalID,
+        //   })
+
           alertthis('Blog updated')
       }else{
             var addresult = 
@@ -43,10 +61,11 @@ function addblog_(){
             "author":authorVar,
             "sdesc":sdescVar,
             "content":blogContents,
+            "blogImage":blogImageName,
             "desc":descVar,
             "keywords":keywordsVar,
           })
-          console.log(addresult)
+
           alertthis('Blog added')
       }
   }else{
@@ -104,13 +123,13 @@ function editblog(id){
   var author = editblog['blogDetails'][0].author
   var contents = editblog.contents
   
-  
   $('#title_input').val(title)
   $('#routeLink_input').val(RouteLink)
   $('#author_input').val(author)
   $('#sdesc_input').text(shortDesc)
   $('#desc_input').text(fullDesc)
   $('#keywords_input').text(keywords)
+  $('#blogImagePreview').attr('src',editblog.blogImage)
 
   $('#viewurls').modal('toggle')
   $('#addblog_span').text('Update Blog')
@@ -130,10 +149,11 @@ function editblog(id){
 }
   function deleteblog(id){
 
+  var getImagePath = ajaxShortLink("getBlog",{"id":id})
   var x = window.prompt("Kindly input 'bwakanang delete this' to proceed", "")
 
   if(x=='bwakanang delete this'){
-    ajaxShortLink("deleteBlog",{"id":id})
+    ajaxShortLink("deleteBlog",{"id":id,"ImagePath":getImagePath.blogImage})
     alertthis('Blog removed!');
   }else if(x == "null" || x == null || x == ""){
     return;
@@ -141,3 +161,14 @@ function editblog(id){
     alert('try again')
   }
 }
+
+  function previewBlogImg(){
+    blogImage.onchange = evt => {
+      blogImageName = blogImagePath+blogImage.files[0].name
+      const [file] = blogImage.files
+      if (file) {
+        blogImagePreview.src = URL.createObjectURL(file)
+      }
+    }
+  }
+

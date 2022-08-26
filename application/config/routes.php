@@ -15,6 +15,10 @@ $route['about'] = 'main/about';
 $route['main/subscribe'] = 'main/subscribe';
 $route['main/insertContactUs'] = 'main/insertContactUs';
 
+// library
+$route['upload_view'] = 'library/upload';
+$route['upload_file'] = 'library/upload/do_upload';
+
 // blogs
 $route['blogs'] = 'blogs/blogs';
 $route['admin-blogs'] = 'blogs/adminBlogs';
@@ -26,5 +30,7 @@ $route['getUrls'] = 'blogs/getUrls';
 $route['getBlog'] = 'blogs/getBlog';
 $route['checkIfBlogExist'] = 'blogs/checkIfBlogExist';
 $route['admin/loadFaq'] = 'admin/loadFaq';
+$route['uploadBlogImage'] = 'main/uploadBlogImage';
+
 
 $route['blogs/(:any)'] = 'blogs/blogLoad/$1';

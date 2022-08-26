@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class blogs extends MY_Controller {
 	public function __construct(){
 		parent::__construct();
+
+		$this->uploadPath = "assets/imgs/blogimages/";
 	}
 	public function adminBlogs()
 	{
@@ -55,6 +57,7 @@ class blogs extends MY_Controller {
 					"
 						blogs_tbl.*, 
 						blog_content_tbl.content AS blog_content, 
+						blog_content_tbl.blogImage AS blogImage, 
 						DATE_FORMAT(blogs_tbl.dateCreated, '%W %M %e %Y') AS dateCreated,
 					"), 
 				$tables = array('blogs_tbl','blog_content_tbl'),
@@ -99,6 +102,7 @@ class blogs extends MY_Controller {
 				$data = array(
 					'blogDetails' => $res,
 					'contents' => $res[0]->blog_content,
+					'blogImage' => $res[0]->blogImage,
 					'title' => $res[0]->title,
 					'desc' => $res[0]->desc,
 					'dateCreated' => $res[0]->dateCreated,
@@ -128,6 +132,9 @@ class blogs extends MY_Controller {
 			$author = $_GET['author'];
 
 			$content = $_GET['content'];
+			$blogImage = $_GET['blogImage'];
+
+			// echo json_encode($blogImage);
 
 			$desc = $_GET['desc'];
 			$keywords = $_GET['keywords'];
@@ -149,6 +156,7 @@ class blogs extends MY_Controller {
 				$insert_blog_content_tbl = array(
 					'blog_id'=>$id_blogs_tbl,
 					'content'=>$content,
+					'blogImage'=>$blogImage,
 				);
 				$this->_insertRecords($blog_content_tbl, $insert_blog_content_tbl);
 
@@ -194,6 +202,8 @@ class blogs extends MY_Controller {
 			$routeLink = $_GET['routeLink'];
 			$author = $_GET['author'];
 
+			$blogImage = $_GET['blogImage'];
+
 			$content = $_GET['content'];
 
 			$desc = $_GET['desc'];
@@ -215,6 +225,7 @@ class blogs extends MY_Controller {
 				
 				$update_blog_content_tbl = array(
 					'content'=>$content,
+					'blogImage'=>$blogImage,
 				);
 
 				$this->_updateRecords($blog_content_tbl,array('blog_id'), array($id), $update_blog_content_tbl);
@@ -254,12 +265,23 @@ class blogs extends MY_Controller {
 		}
 		public function deleteBlog(){
 			$id = $_GET['id'];
+			$ImagePath = $_GET['ImagePath'];
+
+			unlink($ImagePath);
 
 			$this->_deleteRecords($tableName = 'blogs_tbl',$fieldName = array('id'),$where = array($id));
 			$this->_deleteRecords($tableName = 'blog_content_tbl',$fieldName = array('blog_id'),$where = array($id));
 			$this->_deleteRecords($tableName = 'seo_tags_tbl',$fieldName = array('blog_id'),$where = array($id));
 
 		}
+
+		public function deleteBlogImageBeforeUpdatingBlogDetails(){
+			$ImagePath = $_GET['ImagePath'];
+			$deleteImage = unlink($ImagePath);
+
+			echo json_encode($deleteImage);
+		}
+
 		public function checkIfBlogExist(){
 			$id = $_GET['id'];
 
@@ -314,6 +336,7 @@ class blogs extends MY_Controller {
 						"
 							blogs_tbl.*, 
 							blog_content_tbl.content AS blog_content, 
+							blog_content_tbl.blogImage AS blogImage, 
 							DATE_FORMAT(blogs_tbl.dateCreated, '%W %M %e %Y') AS dateCreated,
 						"), 
 					$tables = array('blogs_tbl','blog_content_tbl'),
@@ -350,6 +373,7 @@ class blogs extends MY_Controller {
 					$data = array(
 						'blogDetails' => $res,
 						'contents' => $res[0]->blog_content,
+						'blogImage' => $res[0]->blogImage,
 						'title' => $res[0]->title,
 						'desc' => $res[0]->desc,
 						'dateCreated' => $res[0]->dateCreated,
@@ -362,4 +386,5 @@ class blogs extends MY_Controller {
 					echo json_encode('blog not found');
 				}
 	}
+
 }

@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class main extends MY_Controller {
 	public function __construct(){
 		parent::__construct();
+		$this->load->library('upload');
 	}
 
 	public function index(){
