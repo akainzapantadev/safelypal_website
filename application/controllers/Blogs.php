@@ -279,7 +279,7 @@ class blogs extends MY_Controller {
 			$ImagePath = $_GET['ImagePath'];
 			$deleteImage = unlink($ImagePath);
 
-			echo json_encode($deleteImage);
+			echo json_encode($ImagePath);
 		}
 
 		public function checkIfBlogExist(){

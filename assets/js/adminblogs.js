@@ -38,19 +38,19 @@ function addblog_(){
         var getImagePath = ajaxShortLink("getBlog",{"id":globalID})
         var test = ajaxShortLink("deleteBlogImageBeforeUpdatingBlogDetails",{"ImagePath":getImagePath.blogImage})
 
-        console.log(test)
-        // var updateresult = 
-        //     ajaxShortLink("updateBlog",{
-        //     "title":titleVar,
-        //     "routeLink":routeVar,
-        //     "author":authorVar,
-        //     "sdesc":sdescVar,
-        //     "content":blogContents,
-        //     "blogImage":blogImageName,
-        //     "desc":descVar,
-        //     "keywords":keywordsVar,
-        //     "id":globalID,
-        //   })
+        // console.log(test)
+        var updateresult = 
+            ajaxShortLink("updateBlog",{
+            "title":titleVar,
+            "routeLink":routeVar,
+            "author":authorVar,
+            "sdesc":sdescVar,
+            "content":blogContents,
+            "blogImage":blogImageName,
+            "desc":descVar,
+            "keywords":keywordsVar,
+            "id":globalID,
+          })
 
           alertthis('Blog updated')
       }else{

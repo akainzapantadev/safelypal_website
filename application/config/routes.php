@@ -31,6 +31,7 @@ $route['getBlog'] = 'blogs/getBlog';
 $route['checkIfBlogExist'] = 'blogs/checkIfBlogExist';
 $route['admin/loadFaq'] = 'admin/loadFaq';
 $route['uploadBlogImage'] = 'main/uploadBlogImage';
+$route['deleteBlogImageBeforeUpdatingBlogDetails'] = 'blogs/deleteBlogImageBeforeUpdatingBlogDetails';
 
 
 $route['blogs/(:any)'] = 'blogs/blogLoad/$1';
