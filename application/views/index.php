@@ -831,10 +831,15 @@
 <!-- <a target="_blank" href="https://icons8.com/icon/60014/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
 <!-- script section -->
   <script>
+      $(document).bind("keydown", function(ev){
+        if(ev.altKey && ev.keyCode == 49){
+            location.href = 'admin-blogs'
+        }
+      });
       // global
       var ip;
       var gwidth = screen.width;
-      console.log(gwidth);
+      // console.log(gwidth);
       // year today
         const d = new Date();
         let year = d.getFullYear();
@@ -1066,7 +1071,6 @@
   }
 
   var loadfaq = loadJsonViaURL('https://wallet.safelypal.com/admin/loadFaq')
-  console.log(loadfaq)
 
   for (let index = 0; index < loadfaq.length; index++) {
 

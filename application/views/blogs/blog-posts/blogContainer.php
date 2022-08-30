@@ -73,7 +73,7 @@
         <article class="mb-4">
             <div class="container px-4 px-lg-5">
                 <center>
-                    <div >
+                    <div>
                         <img id="blogImage" src="../<?php echo $blogImage; ?>" class="img-fluid py-5" alt="Responsive image">
                     </div>
                 </center>

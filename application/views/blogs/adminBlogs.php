@@ -17,6 +17,7 @@
     <script src="assets/Thirdparty/js-toast-master/toast.min.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/adminblogs.js"></script>
+    <script src="assets/js/md5.js"></script>
     <link href="assets/Thirdparty/fontawesome6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/blogs.css">
     <link rel="icon" href="assets/imgs/icon-text.png" type="image/gif">
@@ -27,7 +28,7 @@
       background-color:green!important;
     }
   </style>
-  <body>
+  <body class="m-d-none">
   <div class="container py-5">
     <div class="my-5"><span class="display-1">Safelypal Blogs admin</span></div>
     <div class="my-2"><span class="h2">Blogs <span id="countBlog_id"></span></span></div>
@@ -117,6 +118,50 @@
   </body>
 </html>
 <script>
+
+  (function(seconds) {
+      var refresh,       
+          intvrefresh = function() {
+              clearInterval(refresh);
+              refresh = setTimeout(function() {
+              // location.href = location.href; //refresh
+              document.cookie = 'initialLoad=false'
+              }, seconds * 1000);
+          };
+
+      $(document).on('keypress click', function() { intvrefresh() });
+      intvrefresh();
+
+  }(900)); // define seconds of no activity
+
+  var getPin = ajaxShortLink('main/getPin')
+  var pin = getPin[0].pin
+
+  if(getCookie('initialLoad') == 'true'){
+      console.log('welcome back arl')
+      $('body').removeClass('m-d-none')
+  }else{
+      var prompt = prompt("Please enter pin", "")
+      if(prompt!=null && md5(prompt)==pin){
+          console.log('Welcome back arl')
+          $('body').removeClass('m-d-none')
+          document.cookie = 'initialLoad=true'
+      }else{
+          location.href = 'main';
+      }
+  }
+
+  function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+  }
+
   var countBlogs = ajaxShortLink("countBlogs")
   $('#countBlog_id').text(countBlogs)
   getUrls()

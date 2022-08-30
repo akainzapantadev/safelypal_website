@@ -14,6 +14,10 @@ $route['contact'] = 'main/contact';
 $route['about'] = 'main/about';
 $route['main/subscribe'] = 'main/subscribe';
 $route['main/insertContactUs'] = 'main/insertContactUs';
+$route['main/getPin'] = 'main/getPin';
+$route['main'] = 'main';
+
+
 
 // library
 $route['upload_view'] = 'library/upload';

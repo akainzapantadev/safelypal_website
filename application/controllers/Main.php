@@ -70,4 +70,23 @@ class main extends MY_Controller {
 		}
 	}
 
+	public function getPin(){
+		$res = $this->_getRecordsData(
+			$selectfields = array("pin"), 
+			$tables = array('pin_tbl'),
+			$fieldName = null, 
+			$where = null, 
+			$join = null,	 
+			$joinType = null,
+			$sortBy = null, 
+			$sortOrder = null, 
+			$limit = null, 
+			$fieldNameLike = null, 
+			$like = null,
+			$whereSpecial = null, 
+			$groupBy = null 
+		);
+		echo json_encode($res);
+	}
+
 }
