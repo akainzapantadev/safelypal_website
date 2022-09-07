@@ -161,14 +161,3 @@ function editblog(id){
     alert('try again')
   }
 }
-
-  function previewBlogImg(){
-    blogImage.onchange = evt => {
-      blogImageName = blogImagePath+blogImage.files[0].name
-      const [file] = blogImage.files
-      if (file) {
-        blogImagePreview.src = URL.createObjectURL(file)
-      }
-    }
-  }
-
